@@ -75,15 +75,29 @@
         </page>
 
         <page id="foyer" class="first">
-            <p>There are 3 Pokémon here! They are inside the PokéBalls. You can have one. Choose! <show paragraph="street">Charmander</show>, <turn to="bar" id="south">Squirtle</turn>, or <turn to="cloakroom">Bulbasaur</turn>.</p>
+            <p>There are 3 Pokémon here! They are inside the PokéBalls. You can have one. Choose! <turn to="Charmander">Charmander</turn>, <turn to="bar" id="south">Squirtle</turn>, or <turn to="Bulbasaur">Bulbasaur</turn>.</p>
 
-            <paragraph id="street">
-                You've only just arrived, and besides, the weather outside seems to be getting worse.
-            </paragraph>
         </page>
 
-        <page id="cloakroom">
-            The walls of this small room were clearly once lined with hooks, though now only <interact with="hook">one</interact> remains. The exit is a door to the <turn to="foyer">east</turn>.
+        <page id="Charmander">
+            <p>Charmander<br><br>Lizard | HT : 2'00" | WT : 19.0 lb<br><br>Obviously prefers hot places. When it rains, steam is said to spout from the tip of its tail.<br><br>So! You want the fire Pokémon Charmander? <turn to="Charmander1">Yes</turn>. <turn to="foyer">No</turn>.</p>
+        </page>
+
+        <page id="Charmander1">
+            <p>Char char</p>
+        </page>
+
+        <page id="Bulbasaur">
+            <p>Bublasaur<br><br>Seed | HT : 2'04" | WT : 15.0 lb<br><br>A strange seed was planted on its back at birth. The plant sprouts and grows with this Pokémon.<br><br>So! You want the grass Pokémon Bulbasaur? <turn to="Bulbasaur1">Yes</turn>. <turn to="foyer">No</turn>.</p></p>
+        </page>
+
+        <page id="Bulbasaur1">
+            <p>Bulba bulba</p>
+        </page>
+
+
+
+                <interact with="hook">one</interact> remains. The exit is a door to the <turn to="foyer">east</turn>.
 
             <obj id="hook">
                 <action id="Examine">
@@ -94,8 +108,8 @@
 
         <page id="bar">
             {{? !story.cloakPutOn}}
-                <p>It's pitch black here. You can't see a thing. You can see a dim light to the <turn to="foyer">entrace</turn> of the bar</p>
-                <p>You can try moving around to the <show paragraph="movingInTheDark">northeast</show>, <show paragraph="movingInTheDark">east</show>, <show paragraph="movingInTheDark">southeast</show>, <show paragraph="movingInTheDark">south</show>, <show paragraph="movingInTheDark">southwest</show>, <show paragraph="movingInTheDark">west</show> or <show paragraph="movingInTheDark">northwest</show></p>
+                <p>Squirtle<br><br>Tiny Turtle | HT : 1'08" | WT : 20.0 lb<br><br>After birth, its back swells and hardens into a shell. Powerfully sprays foam from its mouth.<br><br>So! You want the water Pokémon Squirtle? <turn to="Squirtle1">Yes</turn>. <turn to="foyer">No</turn>.</p>
+        
             {{??}}
                 {{? story.cloakJustPutOn }}
                     <p>The cloak seems to absorb the darkness and you can gradually see the room.</p>
@@ -123,6 +137,10 @@
                 Blundering around in the dark isn't a good idea!
                 {{story.messageDamage += 2;}}
             </paragraph>
+        </page>
+        
+        <page id="Squirtle1">
+            <p>Squir squir</p>
         </page>
 
         <!-- Paragraphs -->

@@ -18,135 +18,260 @@
         <initscript>
             story.messageDamage  = 0;
             story.messageScrewed = function () { return story.messageDamage < 2; };
-            story.cloakPutOn     = false;
-            story.cloakJustPutOn = false;
+            story.featherPutOn     = false;
+            story.featherJustPutOn = false;
+            story.shieldPutOn      = false;
+            story.shieldJustPutOn  = false;
         </initscript>
 
-        <!-- Novel -->
+        <!-- - - - - - - - - - - - Others - - - - - - - - - - - -->
+
         <title>Dindledoo Entertainment presents</title>
 
-        <!-- Objects -->
-        <obj id="cloak" inventoryName="Cloak">
+
+        <!-- - - - - - - - - - - - Objects - - - - - - - - - - - -->
+        <obj id="feather" inventoryName="Rare Feather">
             <action id="Examine">
-                {{? story.currentPageIs('bar') && !story.cloakPutOn}}
-                    {{ story.showParagraph('darkWarning'); }}
-                {{??}}
-                    A handsome cloak, of velvet trimmed with satin, and slightly spattered with raindrops. Its blackness is so deep that it almost seems to suck light from the room.
-                {{?}}
+                    <i>A handsome feather, consisting of blue and green, and slightly spattered with raindrops. Its pigments are so deep that it almost seems to reflect or suck light from the room.</i>
             </action>
 
             <action id="Get">
-                <when>!story.isInInventory('cloak')</when>
-                You take the cloak from the hung with you.
-                {{ story.putInInventory('cloak'); }}
+                <when>!story.isInInventory('feather')</when>
+                You take the feather from the ground with you.
+                {{ story.putInInventory('feather'); }}
             </action>
 
             <action id="Drop">
-                <when>story.isInInventory('cloak')</when>
-
-                {{? story.currentPageIs('bar') && !story.cloakPutOn }}
-                    {{ story.showParagraph('darkWarning'); }}
-                {{??}}
-                    This isn't the best place to leave a smart cloak lying around.
-                {{?}}
+                <when>story.isInInventory('feather')</when>
+                    This isn't the best place to leave a rare feather lying around.
             </action>
 
-            <action id="Put On">
-                <when>story.isInInventory('cloak') && !story.cloakPutOn</when>
-                {{ story.cloakPutOn = true; }}
-                {{? story.currentPageIs('bar')}}
-                    {{story.cloakJustPutOn = true;}}
-                    {{story.turnTo('bar');}}
+            <action id="Equip">
+                <when>story.isInInventory('feather') && !story.featherPutOn</when>
+                {{ story.featherPutOn = true; }}
+                {{? story.currentPageIs('TrapHole')}}
+                {{story.featherJustPutOn = true;}}
+                {{story.turnTo('TrapHole');}}
                 {{??}}
-                    You put on the cloak. It dresses fine on you!.
+                    You are now a <show paragraph="POD">Prince of Darkness</show>.
                 {{?}}
             </action>
         </obj>
 
-        <!-- Pages -->
+        <obj id="shield" inventoryName="Shield of Despair">
+            <action id="Examine">
+                    <i>Made of wood, animal hide, and woven reeds. The painted pattern represents that it used to belong to someone of a high rank... </i>
+            </action>
+
+            <action id="Get">
+                <when>!story.isInInventory('shield')</when>
+                You are now carrying the shield.
+                {{ story.putInInventory('shield'); }}
+            </action>
+
+            <action id="Drop">
+                <when>story.isInInventory('shield')</when>
+                    Don't. Drop. This. Shield.
+            </action>
+
+            <action id="Equip">
+                <when>story.isInInventory('shield') && !story.shieldPutOn</when>
+                {{ story.shieldPutOn = true; }}
+                {{? story.currentPageIs('Altar')}}
+                {{story.shieldJustPutOn = true;}}
+                {{story.turnTo('Altar');}}
+                {{??}}
+                    You are now a <show paragraph="ZGT">Zulu Grand Templar</show>.
+                {{?}}
+            </action>
+        </obj>
+
+
+
+        <obj id="heal" inventoryName="Paralysis Heal">
+            <action id="Examine">
+                    <i>What is this...? </i>
+            </action>
+
+            <action id="Get">
+                <when>!story.isInInventory('heal')</when>
+                You've picked up Paralysis heal.
+                {{ story.putInInventory('heal'); }}
+            </action>
+
+            <action id="Drop">
+                <when>story.isInInventory('heal')</when>
+                    I don't know how to code drop... sorry.
+            </action>
+        </obj>
+
+
+        <!-- - - - - - - - - - - - Pages - - - - - - - - - - - -->
         <page id="intro">
             <p>Hello there! Welcome to the world of Pokémon! My name is Jeffrey and people call me Poké-Professor Dindledoo! This world is inhabited by creatures called Pokémon!</p>
 
-            <div class="first">Some people think Pokémon are pets. Others use them for fights. Your very own Pokémon legend is about to unfold. A world of dreams and adventures with Pokémon awaits... Let's go!<br><br> *Walking through the grass, you've encounter a Pidgey!*</div>
+            <div class="first">The PokéWorld isn't always a happy place... The Two Punch Man, formerly known as the The Protagonist, is threatening the PokéWorld and only YOU can stop him... Let's go!<br><br> *Walking through the grass, you've encounter a Pidgey!*</div>
 
             <br>
 
             <div class="first">Dindledoo: Hey! Wait! It's unsafe. Wild Pokémon live in tall grass. You need your own Pokémon for your protection.</div>
         </page>
 
-        <page id="foyer" class="first">
-            <p>There are 3 Pokémon here! They are inside the PokéBalls. You can have one. Choose! <turn to="Charmander">Charmander</turn>, <turn to="bar" id="south">Squirtle</turn>, or <turn to="Bulbasaur">Bulbasaur</turn>.</p>
 
+
+        <page id="starter3" class="first">
+            <p>There are 3 Pokémon here! They are inside the PokéBalls. You can have one. Choose! <turn to="Charmander">Charmander</turn>, <turn to="Squirtle">Squirtle</turn>, or <turn to="Bulbasaur">Bulbasaur</turn>.</p>
         </page>
+
+
 
         <page id="Charmander">
-            <p>Charmander<br><br>Lizard | HT : 2'00" | WT : 19.0 lb<br><br>Obviously prefers hot places. When it rains, steam is said to spout from the tip of its tail.<br><br>So! You want the fire Pokémon Charmander? <turn to="Charmander1">Yes</turn>. <turn to="foyer">No</turn>.</p>
+            <p>CHARMANDER<br><br>Lizard | HT : 2'00" | WT : 19.0 lb<br><br>Obviously prefers hot places. When it rains, steam is said to spout from the tip of its tail.<br><br>So! You want the fire Pokémon Charmander? <turn to="Charmander1">Yes</turn>. <turn to="starter3">No</turn>.</p>
+        </page>
+        <page id="Charmander1">
+            <p>You have chosen Charmander, the fire type Pokémon!<br><br>What will Charmander do? <show paragraph="CharmanderSkills">Fight</show></p>
+        </page>
+        <page id="Charmander2">
+            <p>Pidgey survived, but flew away. You see a <interact with="feather">feather</interact> on the ground.<br><br>You hear something ahead. <turn to="Maze00">Continue</turn>.</p>
+        </page>
+        <page id="CharmanderEmber">
+            Pidgey fainted. A <interact with="shield">shield</interact> was found next to it.<br><br>You hear something ahead. <turn to="Maze00">Continue</turn>.</p>
         </page>
 
-        <page id="Charmander1">
-            <p>Char char</p>
-        </page>
+
+
 
         <page id="Bulbasaur">
-            <p>Bulbasaur<br><br>Seed | HT : 2'04" | WT : 15.0 lb<br><br>A strange seed was planted on its back at birth. The plant sprouts and grows with this Pokémon.<br><br>So! You want the grass Pokémon Bulbasaur? <turn to="Bulbasaur1">Yes</turn>. <turn to="foyer">No</turn>.</p></p>
+            <p>BULBASAUR<br><br>Seed | HT : 2'04" | WT : 15.0 lb<br><br>A strange seed was planted on its back at birth. The plant sprouts and grows with this Pokémon.<br><br>So! You want the grass Pokémon Bulbasaur? <turn to="Bulbasaur1">Yes</turn>. <turn to="starter3">No</turn>.</p></p>
         </page>
-
         <page id="Bulbasaur1">
             <p>Bulba bulba</p>
         </page>
-
-
-
-                <interact with="hook">one</interact> remains. The exit is a door to the <turn to="foyer">east</turn>.
-
-            <obj id="hook">
-                <action id="Examine">
-                    It's just a small brass hook {{? story.isInInventory('cloak')}}screwed to the wall{{??}}with a <interact with="cloak">cloak</interact> hanging on it{{?}}.
-                </action>
-            </obj>
+        <page id="Squirtle">
+            <p>SQUIRTLE<br><br>Tiny Turtle | HT : 1'08" | WT : 20.0 lb<br><br>After birth, its back swells and hardens into a shell. Powerfully sprays foam from its mouth<br><br>So! You want the water Pokémon Squirtle? <turn to="Squirtle1">Yes</turn>. <turn to="starter3">No</turn>.</p></p>
         </page>
 
-        <page id="bar">
-            {{? !story.cloakPutOn}}
-                <p>Squirtle<br><br>Tiny Turtle | HT : 1'08" | WT : 20.0 lb<br><br>After birth, its back swells and hardens into a shell. Powerfully sprays foam from its mouth.<br><br>So! You want the water Pokémon Squirtle? <turn to="Squirtle1">Yes</turn>. <turn to="foyer">No</turn>.</p>
-        
-            {{??}}
-                {{? story.cloakJustPutOn }}
-                    <p>The cloak seems to absorb the darkness and you can gradually see the room.</p>
-                    <p>You put on the cloak. It dresses fine on you!.</p>
-                    {{story.cloakJustPutOn = false;}}
-                {{?}}
-                The bar, much rougher than you'd have guessed after the opulence of the <turn to="foyer">foyer</turn>, is completely empty. There seems to be some sort of <interact with="message">message</interact> scrawled in the sawdust on the floor.
-            {{?}}
 
-            <obj id="message">
-                <action id="Read">
-                    {{? story.messageScrewed() }}
-                        The message, neatly marked in the sawdust, reads...
-                        <div class="center">*** You have won ***</div>
-                        {{story.endGame();}}
-                    {{??}}
-                        The message has been carelessly trampled, making it difficult to read. You can just distinguish the words...
-                        <div class="center">*** You have lost ***</div>
-                        {{story.endGame();}}
-                    {{?}}
-                </action>
-            </obj>
-
-            <paragraph id="movingInTheDark">
-                Blundering around in the dark isn't a good idea!
-                {{story.messageDamage += 2;}}
-            </paragraph>
-        </page>
 
         <page id="Squirtle1">
             <p>Squir squir</p>
         </page>
 
-        <!-- Paragraphs -->
-        <paragraph id="darkWarning">
-            It is very dark here, you can't even see your hands.
+        <page id="Maze00">
+            <p><i>"Bwarrrk. Bwarrkk."</i><br><br>It was just the Pidgey from before. It has led you to a maze... Careful... falling into a trap hole will force you to start over... Can you figure it out? <br><br><show paragraph="Wall">Up</show> | <show paragraph="Wall">Down</show> | <show paragraph="Wall">Left</show> | <turn to="Maze10">Right</turn>
+
+            </p>
+        </page>
+        <page id="Maze10">
+            <i>You've moved forward...</i><br><br><show paragraph="Wall">Up</show> | <turn to="Maze11">Down</turn> | <turn to="Maze00">Left</turn> | <turn to="Maze20">Right</turn>
+        </page>
+        <page id="Maze20">
+            <i>You've moved forward.......</i><br><br><show paragraph="Wall">Up</show> | <show paragraph="Wall">Down</show> | <turn to="Maze10">Left</turn> | <turn to="Maze30">Right</turn>
+        </page>
+        <page id="Maze30">
+            <i>You've moved forward......</i><br><br><show paragraph="Wall">Up</show> | <turn to="Maze31">Down</turn> | <turn to="Maze20">Left</turn> | <turn to="TrapHole">Right</turn>
+        </page>
+        <page id="Maze01">
+            <i>You've moved forward..</i><br><br><show paragraph="Wall">Up</show> | <turn to="Maze02">Down</turn> | <show paragraph="Wall">Left</show> | <turn to="Maze11">Right</turn>
+        </page>
+        <page id="Maze11">
+            <i>You've moved forward.....</i><br><br><turn to="Maze10">Up</turn> | <show paragraph="Wall">Down</show> | <turn to="Maze01">Left</turn> | <turn to="Maze21">Right</turn>
+        </page>
+        <page id="Maze21">
+            <i>You've moved forward........</i><br><br><show paragraph="Wall">Up</show> | <turn to="Maze22">Down</turn> | <turn to="Maze11">Left</turn> | <show paragraph="Wall">Right</show>
+        </page>
+        <page id="Maze31">
+            <i>You've moved forward.</i><br><br><turn to="Maze30">Up</turn> | <turn to="Maze32">Down</turn> | <show paragraph="Wall">Left</show> | <turn to="TrapHole">Right</turn>
+        </page>
+        <page id="Maze02">
+            <i>You've moved forward...</i><br><br><turn to="Maze01">Up</turn> | <turn to="Maze03">Down</turn> | <turn to="TrapHole">Left</turn> | <show paragraph="Wall">Right</show>
+        </page>
+        <page id="Maze12">
+            <i>You've moved forward..</i><br><br><show paragraph="Wall">Up</show> | <turn to="Maze13">Down</turn> | <turn to="TrapHole">Left</turn> | <turn to="Maze13">Right</turn>
+        </page>
+        <page id="Maze22">
+            <i>You've moved forward.....</i><br><br><turn to="Maze21">Up</turn> | <turn to="Maze23">Down</turn> | <show paragraph="Wall">Left</show> | <show paragraph="Wall">Right</show>
+        </page>
+        <page id="Maze32">
+            <i>You've moved forward.........</i><br><br><turn to="Maze31">Up</turn> | <show paragraph="Wall">Down</show> | <show paragraph="Wall">Left</show> | <show paragraph="Wall">Right</show>
+        </page>
+        <page id="Maze03">
+            <i>You've moved forward.</i><br><br><turn to="Maze02">Up</turn> | <show paragraph="Wall">Down</show> | <interact with="heal">Left</interact> | <turn to="Maze13">Right</turn>
+        </page>
+        <page id="Maze13">
+            <i>You've moved forward.......</i><br><br><turn to="Maze12">Up</turn> | <show paragraph="Wall">Down</show> | <turn to="Maze03">Left</turn> | <show paragraph="Wall">Right</show>
+        </page>
+        <page id="Maze23">
+            <i>You've moved forward......</i><br><br><turn to="Maze22">Up</turn> | <turn to="TrapHole">Down</turn> | <show paragraph="Wall">Left</show> | <turn to="Maze33">Right</turn>
+        </page>
+        <page id="Maze33">
+            <i>You've moved forward...</i><br><br><show paragraph="Wall">Up</show> | <turn to="Altar">Down</turn> | <turn to="Maze23">Left</turn> | <turn to="TrapHole">Right</turn>
+        </page>
+
+
+
+        <page id="TrapHole">
+            {{? !story.featherPutOn}}
+            <p><i>You fell into a trap hole. Try again...</i> <turn to="Maze00">Continue</turn>.</p>
+            {{??}}
+
+            <p>Since you are the <i>Prince of Darkness</i>, crows helped you escape the Trap Hole. You can fly straight pass the maze if you want... <turn to="Altar">Yes</turn> | <turn to="Maze00">No</turn></p>
+            {{?}}
+
+        </page>
+
+
+
+        <page id="Altar">
+            Congratulations! You have passed the maze. 
+            <br><br><i>"AoooOOooGAHH. AooooOOooGAWHH."</i><br><br>[BOSS] Two Punch Man has appeared... He has paralyzed your Pokémon and now you are helpless.<br><br><turn to="Altar2">Continue</turn>.
+        </page>
+        <page id="Altar2">
+            
+            {{? !story.isInInventory('heal')}}
+            Two Punch Man went into Super Saiyan mode and became ONE Punch Man... You have one turn left...<br><br><turn to="Altar3">Continue</turn>.             
+            {{??}}
+            Two Punch Man went into Super Saiyan mode and became ONE Punch Man... You have one turn left...
+            <br><br>
+            You have healed your Pokémon.<br><br><turn to="Altar3.2">Continue</turn>.
+            {{?}}
+        </page>
+        <page id="Altar3">
+            
+            {{? !story.shieldPutOn}}
+            One Punch Man unleashed his Final Form... You have lost.
+            {{??}}
+
+            Since you are the <i>Zulu Grand Templar</i>, you have revived. <turn to="Altar">Continue</turn>.
+            {{?}}
+        </page>
+        <page id="Altar3.2">
+            You attacked with your Pokémon once in the direction of One Punch Man. <i>One Direction Attack.</i><br><br><i>You have won.</i>
+        </page>
+
+
+
+        <!-- - - - - - - - - - - - Paragraphs - - - - - - - - - - - -->
+
+        <paragraph id="CharmanderSkills">
+            <turn to="Charmander2">Scratch</turn> | <turn to="CharmanderEmber">Ember</turn>
         </paragraph>
+        <paragraph id="WindMage">
+            <i>I have no memory of my past. But if memory serves me well, I can harness the power of <show paragraph="birds">birds</show> to my willing. I simply forgot...
+            </i>
+        </paragraph>
+        <paragraph id="POD">
+            <i>Prince of Darkness has the ability to call upon crows.</i>
+        </paragraph>
+        <paragraph id="Wall">
+            <i>This is a deadend...</i>
+        </paragraph>
+        <paragraph id="ZGT">
+            <i>Zulu Grand Templar has the ability to see life after death.</i>
+        </paragraph>
+
+        <!-- - - - - - - - - - - - Other - - - - - - - - - - - -->
+
 
     </div>
 

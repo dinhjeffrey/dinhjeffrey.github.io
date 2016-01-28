@@ -1,0 +1,263 @@
+* {
+  font-family: 'lucida grande';
+  font-size: 11px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(http://2.bp.blogspot.com/-_kC4OgbmTCA/Tp5g6s7Kh3I/AAAAAAAAAJs/bef01UZkkzg/s1600/AppleLinen-1.png);
+  background-size: 1200px;
+}
+
+#lock {
+  background: rgb(210, 208, 214);
+  height: 200px;
+  width: 200px;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px;
+  text-align: center;
+  position: relative;
+  left: 41%;
+  margin-top: 15%;
+}
+
+.parent {
+  border-radius: 100%;
+  height: 43%;
+  width: 43%;
+  background: rgb(230, 230, 230);
+  position: relative;
+  left: 28%;
+  top: 10%;
+  box-shadow: 0 1px 5px;
+  overflow: hidden;
+}
+
+.picture {
+  border-radius: 100%;
+  height: 94%;
+  width: 94%;
+  background: url(https://scontent-lax3-1.xx.fbcdn.net/hphotos-xtf1/v/t1.0-9/12003391_1140877672606425_3967425921388990616_n.jpg?oh=77d8e378559de8ce6ee7eb6f415cc0a5&oe=5734821A);
+  background-repeat: no-repeat;
+  background-position: 57% 69%;
+  background-size: 85px;
+  position: relative;
+  left: 3.2%;
+  top: 3.5%;
+}
+
+.name {
+  position: relative;
+  margin-top: 15%;
+}
+
+input {
+  height: 20px;
+  width: 70%;
+  border-radius: 3px;
+  padding-left: 3px;
+  margin-top: 10%;
+  border: 1px solid transparent;
+  position: relative;
+  line-height: 1em;
+}
+
+#icon {
+  border: 2px solid #f8f8ff;
+  color: #f8f8ff;
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 12px;
+  margin-left: 3px;
+}
+
+.cancel {
+  position: relative;
+  left: 43%;
+  margin-top: 220px;
+  color: #ddd;
+  font-size: 9px;
+  cursor: pointer;
+}
+
+.clickedBody {
+  background: black;
+  z-index: 100000;
+}
+
+.clickedIcon {
+  opacity: 0;
+}
+
+.personal-sites {
+  color: black;
+  font-weight: bold;
+  font-size: 40px;
+  font-family: Lobster;
+  text-decoration: none;
+}
+
+.about {
+  color: white;
+  font-weight: bold;
+  font-family: Lobster;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.span5 {
+  margin-right: 5px;
+}
+.span30 {
+  margin-right: 30px;
+}
+
+.imageContainer {
+  width: 100px;
+  height: 100px;
+  overflow: auto;
+  position: relative;
+}
+
+#about-toolbar {
+  color: black;
+  font-family: courier;
+  background-color: #ddd;
+  width: 400px;
+  font-size: 16px;
+  position: absolute;
+  left: 50%;
+  margin-left: -220px;
+  border-radius: 3px
+}
+
+#about2 {
+  color: white;
+  font-size: 18px;
+  font-family: courier;
+  width: 400px;
+  height: 150px;
+  overflow: auto;
+  position: absolute;
+  left: 50%;
+  margin-left: -200px;
+  background-color: black;
+  border-radius: 3px
+}
+
+#projects-toolbar {
+  color: black;
+  font-family: courier;
+  background-color: #ddd;
+  postion: absolute;
+  font-size: 16px;
+  height: 21px;
+  border-radius: 3px
+}
+
+#projects {
+  color: white;
+  font-size: 18px;
+  font-family: courier;
+  height: 400px;
+  overflow: auto;
+  position: absolute;
+  left: 0%;
+  background-color: black;
+  border-radius: 3px;
+}
+
+
+.wrapper-with-intrinsic-ratio {
+    position: relative;
+    padding-bottom: 20%; /* Adjust this to suit the aspect ratio of the image */
+    height: 0;
+    width: 100%;
+}
+.element-to-stretch {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("http://placehold.it/350x150/000/fff");
+    background-size: cover;
+}
+.element-to-stretch:hover {
+    background-image: url("http://placehold.it/350x150/ccc/fff");
+}
+
+.resize {
+  width: 350px;
+  height: auto;
+}
+
+#rqm {
+  position: relative;
+  display: inline;
+}
+.random-quote-machine {
+  position: relative;
+  font-size: 300px;
+  color: green;
+}
+
+#jsc{
+  position: relative;
+  display: inline;
+}
+.javascript-calculator {
+  position: relative;
+  font-size: 300px;
+  color: orange;
+}
+#pdt{
+  position: relative;
+  display: inline;
+}
+.pomodoro-timer {
+  position: relative;
+  font-size: 300px;
+  color: red;
+}
+
+
+
+
+
+
+
+
+
+
+.article-listing li {
+  width: 247px;
+  height: 250px;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.image-column {
+  background: #cecece;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+}
+
+.image-column a img {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  max-width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}

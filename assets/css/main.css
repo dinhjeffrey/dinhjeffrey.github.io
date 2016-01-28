@@ -142,7 +142,7 @@ input {
   font-size: 18px;
   font-family: courier;
   width: 400px;
-  height: 150px;
+  height: 130px;
   overflow: auto;
   position: absolute;
   left: 50%;
@@ -155,10 +155,9 @@ input {
   color: black;
   font-family: courier;
   background-color: #ddd;
-  postion: absolute;
   font-size: 16px;
   height: 21px;
-  border-radius: 3px
+  border-radius: 3px;
 }
 
 #projects {

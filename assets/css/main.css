@@ -159,6 +159,8 @@ input {
   height: 21px;
   border-radius: 3px;
   left: 0%;
+  margin-left: -7px;
+  margin-right:-7px;
 }
 
 #projects {

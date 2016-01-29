@@ -142,7 +142,7 @@ input {
   font-size: 18px;
   font-family: courier;
   width: 400px;
-  height: 130px;
+  height: 160px;
   overflow: auto;
   position: absolute;
   left: 50%;
@@ -219,7 +219,21 @@ input {
   color: blue;
 }
 
-
+.fa-flag-fb:hover {
+    color: #0033aa;
+}
+.fa-flag-link:hover{
+  color: #4875B4;
+}
+.fa-flag-yt:hover{
+  color: #FF3333;
+}
+.fa-flag-git:hover{
+  color: white;
+}
+.fa-flag-projects:hover{
+  color:#3b5998;
+}
 
 
 

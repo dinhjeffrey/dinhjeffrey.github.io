@@ -206,7 +206,7 @@ input {
 }
 .random-quote-machine {
   position: relative;
-  font-size: 300px;
+  font-size: 290px;
   color: green;
 }
 
@@ -216,7 +216,7 @@ input {
 }
 .javascript-calculator {
   position: relative;
-  font-size: 300px;
+  font-size: 290px;
   color: orange;
 }
 #pdt{
@@ -225,7 +225,7 @@ input {
 }
 .pomodoro-timer {
   position: relative;
-  font-size: 300px;
+  font-size: 290px;
   color: red;
 }
 #rpg{
@@ -234,7 +234,7 @@ input {
 }
 .text-rpg {
   position: relative;
-  font-size: 300px;
+  font-size: 290px;
   color: blue;
 }
 

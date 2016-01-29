@@ -22,7 +22,7 @@ http://2.bp.blogspot.com/-_kC4OgbmTCA/Tp5g6s7Kh3I/AAAAAAAAAJs/bef01UZkkzg/s1600/
   box-shadow: 0 2px 10px;
   text-align: center;
   position: relative;
-  left: 41%;
+  left: 39%;
   margin-top: 15%;
 }
 
@@ -67,36 +67,9 @@ input {
   line-height: 1em;
 }
 
-#icon {
-  border: 2px solid #f8f8ff;
-  color: #f8f8ff;
-  width: 18px;
-  height: 18px;
-  border-radius: 100%;
-  text-align: center;
-  font-size: 15px;
-  font-weight: bold;
-  line-height: 12px;
-  margin-left: 3px;
-}
 
-.cancel {
-  position: relative;
-  left: 43%;
-  margin-top: 220px;
-  color: #ddd;
-  font-size: 9px;
-  cursor: pointer;
-}
-%
-.clickedBody {
-  background: black;
-  z-index: 100000;
-}
 
-.clickedIcon {
-  opacity: 0;
-}
+
 
 
 
@@ -257,7 +230,7 @@ input {
     height: auto;
     max-width: 43%;
 }
-.img-wrap:hover img {
+.img-wrap:active img {
   -webkit-animation: animation 3000ms linear both;
   animation: animation 3000ms linear both;
   box-shadow: 0 2px 10px;

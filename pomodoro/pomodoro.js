@@ -28,18 +28,19 @@ var resetTimer = function(){
 }
 
 // This is what makes the clock tick downwards
-var countdown = function(){ // calls function countdown, which begins when pressing the start button. when secsLeft hits 0, it sets it to 60, then counts down.
-	console.log("countdown");
-	if(secsLeft.innerText<=0){
+var countdown = function(){ // calls function countdown, which begins when pressing the start button. 
+	console.log("countdown"); 
+	if(secsLeft.innerText<=0){ // so basically, at 0, it resets to 60, then counts down.
 		secsLeft.innerText=60;
-		minsLeft.innerText--;		
+		minsLeft.innerText--; // minute goes down by one when secs = 60		
 	};
-	secsLeft.innerText--; // occurs 
+	secsLeft.innerText--; // keeps the seconds going down by one.  
 	
-	if(secsLeft.innerText<=0 && minsLeft.innerText<=0){
-		window.clearInterval(begin);
+	if(secsLeft.innerText<=0 && minsLeft.innerText<=0){ // when mins and sec == 0, it will play the audio
+		window.clearInterval(begin); 
 		var audio = new Audio('wc3-im-awake.wav');
-		audio.play();
+		audio.load();
+		audio.play(); // audio doesn't work on mobile
 	};
 }
 

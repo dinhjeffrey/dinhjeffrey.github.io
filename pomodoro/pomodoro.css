@@ -1,0 +1,35 @@
+.container{
+	width:800px;
+	margin:0 auto;
+	background-color: #eee;
+	padding: 20px;
+	text-align: center;
+	font-family: 'Slabo 27px', serif;
+}
+
+.set-time{
+	border: 1px solid #fff;
+}
+
+.set-time p{
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#more:hover,#less:hover{
+	cursor: pointer; cursor: hand;
+	color: green;
+}
+
+#timer{
+	height: 200px;
+	font-size: 50px;
+	width: 300px;
+	margin: 0 auto;
+}
+
+.clock{
+	background-color: #000;
+	color:red;
+	padding: 20px
+}

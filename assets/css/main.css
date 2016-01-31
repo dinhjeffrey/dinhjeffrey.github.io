@@ -42,7 +42,7 @@ http://2.bp.blogspot.com/-_kC4OgbmTCA/Tp5g6s7Kh3I/AAAAAAAAAJs/bef01UZkkzg/s1600/
   border-radius: 100%;
   height: 94%;
   width: 94%;
-  background: url(https://scontent-lax3-1.xx.fbcdn.net/hphotos-xtf1/v/t1.0-9/12003391_1140877672606425_3967425921388990616_n.jpg?oh=77d8e378559de8ce6ee7eb6f415cc0a5&oe=5734821A);
+  background: url("https://scontent-lax3-1.xx.fbcdn.net/hphotos-xtf1/v/t1.0-9/12003391_1140877672606425_3967425921388990616_n.jpg?oh=77d8e378559de8ce6ee7eb6f415cc0a5&oe=5734821A");
   background-repeat: no-repeat;
   background-position: 57% 69%;
   background-size: 85px;
@@ -50,7 +50,6 @@ http://2.bp.blogspot.com/-_kC4OgbmTCA/Tp5g6s7Kh3I/AAAAAAAAAJs/bef01UZkkzg/s1600/
   left: 3.2%;
   top: 3.5%;
 }
-
 .name {
   position: relative;
   margin-top: 15%;

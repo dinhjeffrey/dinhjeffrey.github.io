@@ -1,0 +1,32 @@
+<html>
+<head>
+	<link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="pomodoro.css">
+</head>
+<body>
+
+<div class="container">
+<h1>Pomodoro Timer</h1>
+	<div class="set-time">
+		<h4>Choose the length of your pomodoro</h4>
+		<p><span id="mins">25</span> minutes<br><span id="more" onclick="more()"><i class="fa fa-plus-square-o"></i></span> <span id="less" onclick="less()"><i class="fa fa-minus-square-o"></i></span></p>
+	</div>
+	
+	<div id="timer">
+		<!-- secs-left gets assigned to secsLeft in JS -->
+		<div class="clock"><span id="mins-left">25</span>m <span id="secs-left">00</span>s</div>
+		<!-- start is a variable that gets change to startButton in JS
+		startTimer() function in JS gets executed set to the "Start" button ON CLICK-->
+	<button id="start" onclick="startTimer()">Start</button> 
+
+	<button id="stop" onclick="stopTimer()">Stop</button>
+
+	<button id="reset" onclick="resetTimer()">Reset</button>
+	</div>
+</div>
+
+<script src="pomodoro.js">
+</script>
+</body>
+</html>

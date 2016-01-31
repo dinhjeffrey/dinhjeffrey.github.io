@@ -28,13 +28,13 @@ var resetTimer = function(){
 }
 
 // This is what makes the clock tick downwards
-var countdown = function(){ // when secsLeft hits 0, it sets it to 60, then counts down.
+var countdown = function(){ // calls function countdown, which begins when pressing the start button. when secsLeft hits 0, it sets it to 60, then counts down.
 	console.log("countdown");
 	if(secsLeft.innerText<=0){
 		secsLeft.innerText=60;
 		minsLeft.innerText--;		
 	};
-	secsLeft.innerText--;
+	secsLeft.innerText--; // occurs 
 	
 	if(secsLeft.innerText<=0 && minsLeft.innerText<=0){
 		window.clearInterval(begin);

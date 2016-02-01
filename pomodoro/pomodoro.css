@@ -1,25 +1,22 @@
-.container{
-	width:800px;
-	margin:0 auto;
-	background-color: #eee;
-	padding: 20px;
+
+
+
+#body{
 	text-align: center;
-	font-family: 'Slabo 27px', serif;
+	background-color: #f03939;
+	position: relative;
 }
 
-.set-time{
-	border: 1px solid #fff;
-}
+
+
+
 
 .set-time p{
 	font-size: 30px;
 	font-weight: bold;
 }
 
-#more:hover,#less:hover{
-	cursor: pointer; cursor: hand;
-	color: green;
-}
+
 
 #timer{
 	height: 200px;
@@ -29,7 +26,33 @@
 }
 
 .clock{
-	background-color: #000;
-	color:red;
-	padding: 20px
+	background-color: #f03939;
+	color:white;
+	padding: 20px;
+	font-family: avenir;
+	font-size: 70px;
 }
+
+
+
+.box {
+	font-family: avenir;
+    margin: auto;
+    position: relative;
+    right: -45%;
+    top: 30px;
+
+}
+
+
+
+
+.count-box {
+	font-family: lobster;
+	color: white;
+	font-weight: bold;
+	font-size: 25px;
+}
+
+
+

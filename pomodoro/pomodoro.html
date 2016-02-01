@@ -5,23 +5,38 @@
 	<!-- this allows red url bar in mobile -->
 <meta name="theme-color" content="red">
 	<!-- slabo font and fa fa fonts-->
-	<link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+<link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<!-- local ccs-->
 <link rel="stylesheet" href="pomodoro.css">
+
+
 </head>
-<body>
+<body id="body">
+
 
 <div class="container">
-<h1>Pomodoro Timer</h1>
+
+
+
+
+
 	<div class="set-time">
-		<h4>Choose the length of your pomodoro</h4>
-		<p><span id="mins">25</span> minutes<br><span id="more" onclick="more()"><i class="fa fa-plus-square-o"></i></span> <span id="less" onclick="less()"><i class="fa fa-minus-square-o"></i></span></p>
-	</div>
+			
+		<p align="center" class="box">
+
+
+			<input id="mins-textfield" min="0" max="60" type='number'  placeholder="m"/><b></b><br>
+
+			<input id="secs-textfield" min='0' max='60' type="number" placeholder="s"/><b></b><br>
+
+			<input id="setButton" type="submit" value="SET" onclick="change()"/></div>
+
+	
 	
 	<div id="timer">
 		<!-- secs-left gets assigned to secsLeft in JS -->
-		<div class="clock"><span id="mins-left">25</span>m <span id="secs-left">00</span>s</div>
+		<div class="clock"><span id="mins-left">25</span> : <span id="secs-left">00</span></div>
 		<!-- start is a variable that gets change to startButton in JS
 		startTimer() function in JS gets executed set to the "Start" button ON CLICK-->
 	<button id="start" onclick="startTimer()">Start</button> 
@@ -29,10 +44,22 @@
 	<button id="stop" onclick="stopTimer()">Stop</button>
 
 	<button id="reset" onclick="resetTimer()">Reset</button>
+
+
 	</div>
 </div>
 
+
+
+<div class="count-box">
+		<p>Pomodoro count is : <span id="count">0</span></p>
+	</div>
+
+
+
 <script src="pomodoro.js">
+
+
 </script>
 </body>
 </html>

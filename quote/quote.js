@@ -14,7 +14,7 @@ $(document).ready(function() {
         [getName, '', 0],
         [displayString, ["If at any time you forget what I can do you can ask for help.", 'main'], 500],
         [displayString, ["Simply type 'help'.", 'main'], 750],
-        [displayString, ["I have a wonderful databse of interesting quotations.", 'main'], 500],
+        [displayString, ["I have a wonderful database of interesting quotations.", 'main'], 500],
         [displayString, ["Would you like to hear one? Y/N", 'main'], 0],
         [initialQuote, '', 0],
         [steadyState, '', 0]
@@ -266,7 +266,8 @@ $(document).ready(function() {
   function getQuote(callback) {
     var quoteQueue;
     
-    $.getJSON("https://jsonp.afeld.me/?callback=?&url=http%3A%2F%2Fquotes.stormconsultancy.co.uk%2Frandom").
+    $.getJSON("http://quotes.stormconsultancy.co.uk/random.json").
+    // random quote site : https://jsonp.afeld.me/?callback=?&url=http%3A%2F%2Fquotes.stormconsultancy.co.uk%2Frandom
     done(function(request) {
       quote = request.quote;
       author = request.author;

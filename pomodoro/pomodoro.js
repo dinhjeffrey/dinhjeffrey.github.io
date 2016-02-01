@@ -10,7 +10,7 @@ var countMinJS = document.getElementById('countMin');
 
 var startTimer = function(){
 	console.log("Start");
-  begin = setInterval(countdown, 10); // Call countdown function every 1000 milliseconds and defines begin
+  begin = setInterval(countdown, 1000); // Call countdown function every 1000 milliseconds and defines begin
 	startButton.disabled=true; // disables element in HTML. grays it out.
 	stopButton.disabled=false; // the order of these don't matter.
 	resetButton.disabled=true;

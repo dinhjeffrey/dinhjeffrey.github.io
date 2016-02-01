@@ -1,64 +1,70 @@
 <html>
 <head>
-	 <!-- this allows emojis in comment -->
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<!-- this allows emojis in comment -->
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<!-- this allows red url bar in mobile -->
-<meta name="theme-color" content="red">
-	<!-- slabo font and fa fa fonts-->
-<link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+	<meta name="theme-color" content="red">
+	<!-- slabo font and fa fa fonts and css buttons-->
+	<link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<!-- icon -->
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+	<!-- icon -->
 
 	<link rel="shortcut icon" sizes="57x57" href="tomato.png" >
 
 	<!-- local ccs-->
-<link rel="stylesheet" href="pomodoro.css">
+	<link rel="stylesheet" href="pomodoro.css">
 
-<title>Pomodoro</title>
+	<title>Pomodoro</title>
 
 </head>
 <body id="body">
 
 
-<div class="container">
+	<div class="container">
 
 
 
 
 
-	<div class="set-time">
+		<div class="set-time">
 			
-		<p align="center" class="box">
+			<p align="center" class="box">
 
 
-			<input id="mins-textfield" min="0" max="60" type='number'  placeholder="m"/><b></b><br>
+				<input id="mins-textfield" min="0" max="60" type='number'  placeholder="m"/><b></b><br>
 
-			<input id="secs-textfield" min='0' max='60' type="number" placeholder="s"/><b></b><br>
+				<input id="secs-textfield" min='0' max='60' type="number" placeholder="s"/><b></b><br>
 
-			<input id="setButton" type="submit" value="SET" onclick="change()"/></div>
+				<input id="setButton" type="submit" value="SET" onclick="change()"/></div>
 
-	
-	
-	<div id="timer">
-		<!-- secs-left gets assigned to secsLeft in JS -->
-		<div class="clock"><span id="mins-left">25</span> : <span id="secs-left">00</span></div>
+				
+				
+				<div id="timer">
+					<!-- secs-left gets assigned to secsLeft in JS -->
+					<div class="clock"><span id="mins-left">25</span> : <span id="secs-left">00</span></div>
 		<!-- start is a variable that gets change to startButton in JS
 		startTimer() function in JS gets executed set to the "Start" button ON CLICK-->
-	<button id="start" onclick="startTimer()">Start</button> 
-
-	<button id="stop" onclick="stopTimer()">Stop</button>
-
-	<button id="reset" onclick="resetTimer()">Reset</button>
 
 
-	</div>
-</div>
 
+		<div id="outer">
+			<div class='inner'><button id="start" onclick="startTimer()"><i class="fa fa-play"></i></button></div>
 
+			<div class='inner'><button id="stop" onclick="stopTimer()"><i class="fa fa-stop"></i></button></div>
+
+			<div class='inner'><button id="reset" onclick="resetTimer()"><i class="fa fa-repeat"></i></button></div>
+
+		</div>
 
 <div class="count-box">
 		<p>Pomodoro count is : <span id="count">0</span></p>
 	</div>
+	</div>
+
+</div>
+
+</div>
 
 
 

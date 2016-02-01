@@ -6,7 +6,7 @@ var countJS = document.getElementById('count');
 var resetButton = document.getElementById('reset');
 
 
-	
+
 
 var startTimer = function(){
 	console.log("Start");
@@ -66,27 +66,27 @@ function change() {
 	jsSecsTextfield = Math.floor(jsSecsTextfield);
 	
 
-	 if( jsMinsTextfield<0 || jsSecsTextfield<0){
-       alert('Please use positive numbers.');
-       return;}
-     if (jsSecsTextfield>=60){
-     	alert('Acceptable values for seconds are from : 0 - 59');
-    return;
-   }
-   if (jsMinsTextfield == 0 && jsSecsTextfield == 0){
-   	alert('Please set a higher value.');
-   	return;
-   }
-   
+	if( jsMinsTextfield<0 || jsSecsTextfield<0){
+		alert('Please use positive numbers.');
+		return;}
+		if (jsSecsTextfield>=60){
+			alert('Acceptable values for seconds are from : 0 - 59');
+			return;
+		}
+		if (jsMinsTextfield == 0 && jsSecsTextfield == 0){
+			alert('Please set a higher value.');
+			return;
+		}
+		
 
 
-	jsMinsLeft = document.getElementById('mins-left');
-	jsSecsLeft = document.getElementById('secs-left');
-	jsMinsLeft.innerHTML = jsMinsTextfield;
-	jsSecsLeft.innerHTML = jsSecsTextfield;
-	startButton.disabled = false;
-stopTimer();
-	
-}
+		jsMinsLeft = document.getElementById('mins-left');
+		jsSecsLeft = document.getElementById('secs-left');
+		jsMinsLeft.innerHTML = jsMinsTextfield;
+		jsSecsLeft.innerHTML = jsSecsTextfield;
+		startButton.disabled = false;
+		stopTimer();
+		
+	}
 
 

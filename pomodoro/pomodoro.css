@@ -37,10 +37,10 @@
 
 .box {
 	font-family: avenir;
-    margin: auto;
-    position: relative;
-    right: -45%;
-    top: 30px;
+	margin: auto;
+	position: relative;
+	right: -45%;
+	top: 30px;
 
 }
 
@@ -52,7 +52,53 @@
 	color: white;
 	font-weight: bold;
 	font-size: 25px;
+	top: 110px;
 }
 
 
+
+#start {
+	color: white;
+	font-size: 75%;
+	background: rgb(28, 184, 65); /* this is a green */
+}
+#start:disabled {
+
+	background: #f6f6f6; /* this is a light blue */
+	color: #ddd;
+
+}        
+
+#stop {
+	font-size: 75%;
+	color: white;
+	background: rgb(202, 60, 60); /* this is a maroon */
+}
+#stop:disabled {
+	background: #f6f6f6; 
+	color: #ddd;
+
+
+}
+#reset {
+	font-size: 75%;
+	color: white;
+	background: rgb(66, 184, 221); /* this is a light blue */
+}
+
+#reset:disabled {
+	background: #f6f6f6; 
+	color: #ddd;
+}
+
+/* outer id and inner class to keep buttons on the same line*/
+#outer
+{
+	width:100%;
+	text-align: center;
+}
+.inner 
+{
+	display: inline-block;
+}
 

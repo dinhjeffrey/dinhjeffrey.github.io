@@ -77,7 +77,7 @@ function change() {
    	alert('Please set a higher value.');
    	return;
    }
-   stopTimer();
+   
 
 
 	jsMinsLeft = document.getElementById('mins-left');
@@ -85,7 +85,7 @@ function change() {
 	jsMinsLeft.innerHTML = jsMinsTextfield;
 	jsSecsLeft.innerHTML = jsSecsTextfield;
 	startButton.disabled = false;
-
+stopTimer();
 	
 }
 

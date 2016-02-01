@@ -2,15 +2,15 @@ var startButton = document.getElementById("start"); // gives different variable 
 var stopButton = document.getElementById("stop");
 var minsLeft = document.getElementById("mins-left"); // this is a span id. <span> tag is used to group inline-elements in a document.
 var secsLeft = document.getElementById("secs-left"); // this is a span id
-var countJS = document.getElementById('count');
 var resetButton = document.getElementById('reset');
+var countMinJS = document.getElementById('countMin');
 
 
 
 
 var startTimer = function(){
 	console.log("Start");
-  begin = setInterval(countdown, 1000); // Call countdown function every 1000 milliseconds and defines begin
+  begin = setInterval(countdown, 10); // Call countdown function every 1000 milliseconds and defines begin
 	startButton.disabled=true; // disables element in HTML. grays it out.
 	stopButton.disabled=false; // the order of these don't matter.
 	resetButton.disabled=true;
@@ -40,16 +40,19 @@ var countdown = function(){ // calls function countdown, which begins when press
 	console.log("countdown"); 
 	if(secsLeft.innerHTML<=0){ // so basically, at 0, it resets to 60, then counts down.
 		secsLeft.innerHTML=60;
-		minsLeft.innerHTML--; // minute goes down by one when secs = 60		
+		minsLeft.innerHTML--; // minute goes down by one when secs = 60			
 	};
-	secsLeft.innerHTML--; // keeps the seconds going down by one.  
+	secsLeft.innerHTML--; // keeps the seconds going down by one. 
+
+	if (secsLeft.innerHTML == 01) { // if secs = 01, add 1 to countMinJS
+		countMinJS.innerHTML++;
+	} 
 	
 	if(secsLeft.innerHTML<=0 && minsLeft.innerHTML<=0){ // when mins and sec == 0, it will play the audio
 		stopButton.disabled=true;
 		window.clearInterval(begin);  // stops the watch at 0, still allows below to execute.
 		var audio = new Audio('wc3-im-awake.wav');
 		audio.play(); // audio doesn't work on mobile
-		countJS.innerHTML++;
 		resetButton.disabled = false;
 	};
 }

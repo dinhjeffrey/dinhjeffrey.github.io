@@ -1,10 +1,8 @@
-function set(op) {
-
+function set(op) { // ex. set('+'). adds the operator to the display
     document.getElementById("display").value += op;
-
 }
 
-function answer() { 
+function answer() { // evaluates whatever is on the display. Wow it could do that! :o
     var Exp = document.getElementById("display");
     var Exp1 = Exp.value;
     var result = eval(Exp1);
@@ -12,7 +10,7 @@ function answer() {
     Exp.value = result;
     var display2JS = document.getElementById('display2');
     display2JS.value = result;
-    lastAnsJS = Exp.value; 
+    lastAnsJS = Exp.value; // sets lastAnsJS when equal button is pushed and answer() is executed
 }
 
 function ce() {

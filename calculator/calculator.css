@@ -73,7 +73,7 @@ input[type=noText] {
     opacity: 0.5;
 }
 
-input[name=btnAnsOp] {
+input[name=btnAnsOp] { /* change color for answer button*/
     background-color: #FF9900;
     background-image: linear-gradient(top, #4d90fe, #4787ed);
     border: 1px solid #FF8800;

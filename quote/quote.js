@@ -266,7 +266,7 @@ $(document).ready(function() {
   function getQuote(callback) {
     var quoteQueue;
     
-    $.getJSON("http://quotes.stormconsultancy.co.uk/random.json").
+    $.getJSON("quote.me").
     // random quote site : https://jsonp.afeld.me/?callback=?&url=http%3A%2F%2Fquotes.stormconsultancy.co.uk%2Frandom
     done(function(request) {
       quote = request.quote;

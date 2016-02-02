@@ -1,3 +1,12 @@
+
+// document.onkeypress = function (e) { // when user presses 'enter', it evaluates by calling upon answer()
+//     if (e.keyCode == 13) {
+//         answer();
+//     }
+// }
+
+
+
 function set(op) { // ex. set('+'). adds the operator to the display
     document.getElementById("display").value += op;
 }

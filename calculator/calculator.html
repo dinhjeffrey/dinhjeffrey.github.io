@@ -80,13 +80,14 @@ th = table header. (also a cell but bold and centered).
                     <input id="btnFact" type="button" name="operator" value="" disabled/>
                 </td>
                 <td>
-                    <input id="btn7" type="button" value="7" onclick="set('7'); answer2();" />
+                    <!-- onkeydown="if (event.keyCode == 13) { answer(); return false; }" makes it evaluate answer() and not input the number again -->
+                    <input id="btn7" type="button" value="7" onclick="set('7'); answer2();" onkeydown="if (event.keyCode == 13) { answer(); return false; }"/>
                 </td>
                 <td>
-                    <input id="btn8" type="button" value="8" onclick="set('8'); answer2();" />
+                    <input id="btn8" type="button" value="8" onclick="set('8'); answer2();" onkeydown="if (event.keyCode == 13) { answer(); return false; }"/>
                 </td>
                 <td>
-                    <input id="btn9" type="button" value="9" onclick="set('9'); answer2();" />
+                    <input id="btn9" type="button" value="9" onclick="set('9'); answer2();" onkeydown="if (event.keyCode == 13) { answer(); return false; }"/>
                 </td>
                 <td>
                     <input id="btnDiv" type="button" name="operator" value="÷" onclick="set('/')" />
@@ -103,13 +104,13 @@ th = table header. (also a cell but bold and centered).
                     <input id="btnLN" type="button" name="operator" value="" disabled/>
                 </td>
                 <td>
-                    <input id="btn4" type="button" value="4" onclick="set('4'); answer2();" />
+                    <input id="btn4" type="button" value="4" onclick="set('4'); answer2();" onkeydown="if (event.keyCode == 13) { answer(); return false; }"/>
                 </td>
                 <td>
-                    <input id="btn5" type="button" value="5" onclick="set('5'); answer2();" />
+                    <input id="btn5" type="button" value="5" onclick="set('5'); answer2();" onkeydown="if (event.keyCode == 13) { answer(); return false; }"/>
                 </td>
                 <td>
-                    <input id="btn6" type="button" value="6" onclick="set('6'); answer2();" />
+                    <input id="btn6" type="button" value="6" onclick="set('6'); answer2();" onkeydown="if (event.keyCode == 13) { answer(); return false; }"/>
                 </td>
                 <td>
                     <input id="btnMul" type="button" name="operator" value="×" onclick="set('*')" />
@@ -126,13 +127,13 @@ th = table header. (also a cell but bold and centered).
                     <input id="btnLog" type="button" name="operator" value="" onclick="fLog()" disabled/>
                 </td>
                 <td>
-                    <input id="btn1" type="button" value="1" onclick="set('1'); answer2();" />
+                    <input id="btn1" type="button" value="1" onclick="set('1'); answer2();" onkeydown="if (event.keyCode == 13) { answer(); return false; }"/>
                 </td>
                 <td>
-                    <input id="btn2" type="button" value="2" onclick="set('2'); answer2();" />
+                    <input id="btn2" type="button" value="2" onclick="set('2'); answer2();" onkeydown="if (event.keyCode == 13) { answer(); return false; }"/>
                 </td>
                 <td>
-                    <input id="btn3" type="button" value="3" onclick="set('3'); answer2();" />
+                    <input id="btn3" type="button" value="3" onclick="set('3'); answer2();" onkeydown="if (event.keyCode == 13) { answer(); return false; }"/>
                 </td>
                 <td>
                     <input id="btnSub" type="button" name="operator" value="-" onclick="set('-')" />

@@ -1,42 +1,130 @@
 body {
-  background: transparent; /* background color for entire page*/
+  background-color: tan; /* if no background, sets it tan */
+  /* stretches background to fill entire page */
+  background-size: cover; 
+  /* fixes background so you can see the entire page instead of zoomed*/
+  background-attachment: fixed;
 }
-.background {
+
+
+
+.container {
+  text-align: center;
+  background-color: rgba(255,255,255, 0.6);
+  padding-bottom: 20px;
+  box-shadow: 0px 0px 12px #ccc;
+  position: relative;
+  width: auto;
+  top: auto;
+  height: 1000px;
+}
+
+#quote {
+  width: 800px;
+  text-align: left;
+  margin: auto;
+  margin-top: 50px;
+  font-family: avenir;
+  font-size: 32px;
+  opacity: 1;
+}
+
+#quotebutton {
+  margin-left:44%;
+  margin-top: 20px;
+  color: white;
+  padding-top: 10px;
+  font-size: 108px;
+  width: 0px; /* makes it so you can only click on the arrow to get the next quote */
+}
+
+#quotebutton:hover{
+  color: #EEEEEE;
+}
+
+
+.author {
+  margin-top: 20px;
+  float: right;
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: zapfino;
+
+}
+
+#moreinfo {
+  width: 1000px;
+  margin-top:0px;
+  scrollbars: false;
+  height: 1000px;
+  margin: auto;
+}
+
+iframe {
+  width: 1000px;
+  margin-top:0px;
+  scrollbars: false;
+  height: 1000px;
+  margin: auto;
+}
+
+.moreinfo {
+  float: right;
+  padding-right:40px;
+  font-weight: bold;
+  color: #000;
+  position: absolute;
+  left: 50%;
+}
+
+.moreinfo:hover {
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#info {
+  width: 100%;
+  text-align: center;
+  margin-top: 800px;
+}
+
+.top {
+  background-color: rgba(255,255,255, 0.6);
+  margin-left:0%;
+  color: white;
+  font-size: 108px;
+  width: 5px;
   position: relative;
 }
-.dos { 
-  width: 100%; 
-  height: 400px;
-  background: transparent;
-  margin: 10px auto;
-  padding:30px;  
-  font-family: avenir;
-  font-size: 20px;
-  font-weight: bold;
-  color: black; /* black text */
-  text-align: left; 
-  overflow: auto; 
-  border-top: 1px solid #909090;
-  border-right: 1px solid #909090; 
-  border-bottom: 1px solid #909090; 
-  border-left: 1px solid #909090; 
 
-  border-radius: 1px;
+
+.twitter-share-button{
+  font-size: 50px;
+  position: relative;
+  left: 28%;
 }
-.userEntry {
-  background: transparent; /* background for user input is transparent*/
-  border: none;
-  margin: 0px;
-  
-}
-.line {
-  background: white; /* background color for lines of computer text */
-}
-.background {
-  position: absolute;
-  z-index: -500;
-  width: 100%;
-  height: 100%;
-  left: 0;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

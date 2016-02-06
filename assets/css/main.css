@@ -225,6 +225,16 @@ input {
   color:#3b5998;
 }
 
+#twh{
+  position: relative;
+  display: inline;
+}
+.twitch {
+  position: relative;
+  font-size: 290px;
+  color: #6441A5;
+}
+
 
 
 /* for icon */

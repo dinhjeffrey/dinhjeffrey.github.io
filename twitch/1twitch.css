@@ -1,0 +1,90 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700|Droid+Serif:400,400italic);
+body {
+  background: url("http://i1167.photobucket.com/albums/q633/mattkuo/website-backgrounds/escheresque_ste_zps4eq0cibc.png");
+  font-family: avenir;
+  font-size: 11px;
+
+}
+
+
+
+
+
+.container {
+  background-color:#ddd;
+  margin: 0px auto;
+  padding: 0px;
+  max-width: 400px;
+
+
+}
+
+.row {
+  margin: 1px 0px;
+  padding: 5px;
+  line-height: 70px;
+
+}
+
+
+.logo {
+  max-width: 50px;
+  max-height: 50px;
+  border-radius: 50%;
+  border: 0px;
+}
+
+.offline {
+  background-color: white;
+}
+
+.online {
+  background-color: white;
+  color: #5c5457;
+}
+
+
+
+#name, #streaming {
+  line-height: 25px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .container {
+    margin: 10px auto;
+  }
+
+  #name, #streaming {
+    line-height: 50px;
+    height: 50px;
+  }
+}
+
+#all:active{
+}
+#online{
+  color: #27ae60;
+}
+#offline{
+  color: #c0392b;
+}
+
+.selector{
+	display:inline-table;
+	font-size: 30px;
+	width:32%;
+	padding:10px;
+}
+.selector:hover {
+	background-color:#eee;
+}
+.selector.active {
+  -moz-box-shadow: 0 5px 0 0 #4aa3df inset;
+  -webkit-box-shadow: 0 5px 0 0 #4aa3df inset;
+  box-shadow: 0 5px 0 0 #4aa3df inset;
+  background-color: white;
+}

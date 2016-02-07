@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
-<html ng-app="stream">
+
+<html ng-app="stream"> <!-- calls id in js. angularJS -->
 
 
 <head>
@@ -25,7 +26,7 @@
 
 
 	<title>Twitch</title>
-	
+
 	  <!-- google analytics -->
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -54,19 +55,23 @@
         </dl>
       </section>
 
+
       <section id="streamList" ng-controller="StreamListController as streamList">
         <div class="search clearfix" ng-controller="AddStreamController as addStreamCtrl">
           <i class="fa fa-search"></i>
-          <input type="text" placeholder="Search..." ng-model="streamList.searchText" ng-focus="addStreamCtrl.toggleAnimation(false)" ng-blur="addStreamCtrl.toggleAnimation(true)">
-          <a href class="add-streamer" ng-class="{activated:addStreamCtrl.isAddClicked}" ng-click="addStreamCtrl.onAddStreamClicked()">
+          <input type="text" placeholder="Add streamer..." ng-model="addStreamCtrl.newStreamer" ng-focus="addStreamCtrl.toggleAnimation(false)" ng-blur="addStreamCtrl.toggleAnimation(true)">
+
+          <a href class="add-streamer" ng-click="addStreamCtrl.submitNewStreamer()">
             <i class="fa fa-user-plus"></i>
           </a>
-          <div class="bubble clearfix" ng-show="addStreamCtrl.isAddClicked">
+
+ <!--          <div class="bubble clearfix" ng-show="addStreamCtrl.isAddClicked">
             <form ng-submit="addStreamCtrl.submitNewStreamer()">
               <input type="text" placeholder="Add streamer..." ng-model="addStreamCtrl.newStreamer"/>
               <input type="submit" class="fa fa-plus" value="&#xf067;"/>
             </form>
-          </div>
+          </div> -->
+
         </div>
         
         <ul>
@@ -80,7 +85,7 @@
                 <div class="status-icon" ng-class="{online:streamer.online}"></div>
               </div>
               <div class="info">
-                <div class="display-name">{{ streamer.display_name }}</div>
+                <div class="display-name">{{ streamer.display_name }} <p class='viewers'>{{ streamer.game }}</p> </div>
                 <div ng-show="streamer.online" class="status">{{ streamer.status }}</div>
               </div>
             </a>
@@ -92,6 +97,10 @@
       </section>
     </div>
 
+
+
+
+ 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular-animate.min.js'></script>
 <script src='twitch.js'></script>

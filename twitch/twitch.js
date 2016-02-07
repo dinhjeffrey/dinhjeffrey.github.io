@@ -1,5 +1,7 @@
+
 (function() {
-  var app = angular.module('stream', ['ngAnimate']);
+
+  var app = angular.module('stream', ['ngAnimate']); // angular js
 
   app.controller('GlobalController', ['$scope', '$timeout', function($scope, $timeout) {
     myThis = this;
@@ -56,27 +58,41 @@
 
     var getStreamData = function(streamer) {
       var streamUrl = 'https://api.twitch.tv/kraken/streams/' + streamer + '?callback=JSON_CALLBACK';
-
       $http.jsonp(streamUrl).success(function(data) {
         if (data && data.stream) {
+        	
           var channel = data.stream.channel;
           myThis.streamers.push({
             'online': true,
             'display_name': channel.display_name,
             'status': channel.status,
-            'game': channel.game,
+            'game': data.stream.viewers,
             'url': 'http://www.twitch.tv/' + streamer,
             'logo': channel.logo || 'http://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_150x150.png'
           });
         } else if (data.error) {
-          $scope.$emit('getUserFailed', data.message);
+          accountClosed(streamer);
         } else {
-          getUserData(streamer);
+          offlineStatus(streamer);
         }
       });
     };
 
-    var getUserData = function(streamer) {
+    var accountClosed = function(streamer) {
+      var userUrl = 'https://api.twitch.tv/kraken/users/' + streamer + '?callback=JSON_CALLBACK';
+      $http.jsonp(userUrl).success(function(data) {
+      	if (data.display_name.toString() === 'undefined'){ // makes it so you can't add undefined accounts
+      		return;
+      	}
+        myThis.streamers.push({
+          'online': false,
+          'display_name': data.display_name + "'s account is closed.",
+          'logo': 'http://images.chesscomfiles.com/images/banneduser.gif'
+        });
+      })
+    };
+
+    var offlineStatus = function(streamer) {
       var userUrl = 'https://api.twitch.tv/kraken/users/' + streamer + '?callback=JSON_CALLBACK';
       $http.jsonp(userUrl).success(function(data) {
         myThis.streamers.push({
@@ -85,9 +101,7 @@
           'url': 'http://www.twitch.tv/' + streamer,
           'logo': data.logo || 'http://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_150x150.png'
         });
-      }).error(function(data) {
-        $scope.$emit('getUserFailed', data.message);
-      });
+      })
     };
 
     this.addStream = function(name) {
@@ -99,8 +113,15 @@
     });
 
     $scope.$on('streamerSubmitted', function(event, streamer) {
+    	if (streamer==''){
+    		return;
+    	}
+
       myThis.addStream(streamer);
+
     });
+
+
 
     this.removeStreamer = function(streamer) {
       for (var i = 0; i < this.streamers.length; i++) {
@@ -124,6 +145,6 @@
     };
   });
 
-  var defaultStreamers = ["Doublelift", "Phantoml0rd", "TheOddOne", "medrybw", "Bjergson"];
+  var defaultStreamers = ["medrybw", "marmaladenightmare","brunofin", "kjasi", "doctorshenanigan"];
 
 })();

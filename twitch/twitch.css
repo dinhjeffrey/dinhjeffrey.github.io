@@ -57,12 +57,22 @@ body {
   background: #4aa3df;
   color: white;
 }
+#streamList .search a.add-streamer:active:hover {
+
+  background: #ddd;
+}
+#streamList .search a.add-streamer:hover {
+
+  background: #93CCEA;
+}
 #streamList .search a.add-streamer > i {
   line-height: 2.3125rem;
+
 }
 #streamList .search a.add-streamer.activated {
-  background-color: #2980b9;
+  background-color: #2980b9; 
 }
+
 #streamList .search .bubble {
   opacity: 0.9;
   position: absolute;
@@ -225,4 +235,11 @@ body {
 .tabs dd a {
   text-align: center;
   font-size: 1.575rem;
+}
+
+.viewers {
+  display:inline;
+  font-size: 15px;
+  color: red;
+  font-family:courier;
 }

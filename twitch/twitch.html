@@ -59,7 +59,15 @@
       <section id="streamList" ng-controller="StreamListController as streamList">
         <div class="search clearfix" ng-controller="AddStreamController as addStreamCtrl">
           <i class="fa fa-search"></i>
-          <input type="text" placeholder="Add streamer..." ng-model="addStreamCtrl.newStreamer" ng-focus="addStreamCtrl.toggleAnimation(false)" ng-blur="addStreamCtrl.toggleAnimation(true)">
+
+        
+          <input type="text" placeholder="Add streamer..." ng-model="addStreamCtrl.newStreamer" ng-focus="addStreamCtrl.toggleAnimation(false)" ng-blur="addStreamCtrl.toggleAnimation(true)"  class="myClass">
+          <div id="login_submit"></div>
+
+          <!-- allows search and add -->
+
+          <input type="hidden" ng-model="streamList.searchText" value="{{streamList.searchText=addStreamCtrl.newStreamer}}"/> 
+
 
           <a href class="add-streamer" ng-click="addStreamCtrl.submitNewStreamer()">
             <i class="fa fa-user-plus"></i>
@@ -100,7 +108,26 @@
 
 
 
- 
+<script> $(function(){
+
+  $('input[name="butAssignProd"]').click(function(){
+    alert('Hello...!');
+  });
+  
+  
+  //press enter on text area..
+  
+ $('#txtSearchProdAssign').keypress(function (e) {
+ var key = e.which;
+ if(key == 13)  // the enter key code
+  {
+    $('input[name = butAssignProd]').click();
+    return false;  
+  }
+});
+  
+});</script>
+
 <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular-animate.min.js'></script>
 <script src='twitch.js'></script>

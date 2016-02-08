@@ -67,6 +67,7 @@
             'online': true,
             'display_name': channel.display_name,
             'status': channel.status,
+            // used game to get viewers because 'viewers': doesn't work.
             'game': data.stream.viewers,
             'url': 'http://www.twitch.tv/' + streamer,
             'logo': channel.logo || 'http://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_150x150.png'

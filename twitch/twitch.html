@@ -60,9 +60,9 @@
         <div class="search clearfix" ng-controller="AddStreamController as addStreamCtrl">
           <i class="fa fa-search"></i>
 
-        <!-- input box to add a streamer -->
+        <!-- input box to add a streamer. also allows to click enter to add -->
        
-          <input type="text" placeholder="Add streamer..." ng-model="addStreamCtrl.newStreamer" ng-focus="addStreamCtrl.toggleAnimation(false)" ng-blur="addStreamCtrl.toggleAnimation(true)" onkeyup="if (event.keyCode == 13) {addUsingEnter(); return false;}"/>
+          <input type="text" placeholder="Add streamer..." ng-model="addStreamCtrl.newStreamer" ng-focus="addStreamCtrl.toggleAnimation(false)" ng-blur="addStreamCtrl.toggleAnimation(true)" onkeyup="if (event.keyCode == 13) {document.getElementById('addButton').click(); return false;}"/>
 
 
             <!-- allows search and add. hidden -->
@@ -107,15 +107,6 @@
       </section>
     </div>
 
-
-
-
-<script> 
-// allows to add user using enter
-function addUsingEnter(){
-  document.getElementById('addButton').click();
-}       
-</script>
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular-animate.min.js'></script>

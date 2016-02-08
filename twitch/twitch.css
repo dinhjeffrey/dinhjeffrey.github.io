@@ -2,7 +2,7 @@
 body {
   background: url("http://pre02.deviantart.net/c123/th/pre/f/2014/277/3/6/deemo_by_rmck2-d81n2e6.jpg");
   background-size: 100%, auto;
-
+  background-attachment: fixed;
   /*http://i1167.photobucket.com/albums/q633/mattkuo/website-backgrounds/escheresque_ste_zps4eq0cibc.png*/
   font-family: Raleway, Helvetica, Roboto, Arial, sans-serif;
 }
@@ -103,6 +103,8 @@ body {
   -webkit-animation: flipInX 0.8s;
   animation: flipInX 0.8s;
 }
+
+
 #streamList .search .bubble input[type="text"] {
   float: left;
   width: 80%;
@@ -165,6 +167,7 @@ body {
   -webkit-animation: fadeIn 0.3s;
   animation: fadeIn 0.3s;
 }
+
 #streamList ul li.ng-enter {
   -moz-animation: zoomInLeft 0.5s;
   -webkit-animation: zoomInLeft 0.5s;

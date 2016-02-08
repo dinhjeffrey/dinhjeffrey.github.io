@@ -1,4 +1,6 @@
 
+
+
 (function() {
 
   var app = angular.module('stream', ['ngAnimate']); // angular js
@@ -60,7 +62,6 @@
       var streamUrl = 'https://api.twitch.tv/kraken/streams/' + streamer + '?callback=JSON_CALLBACK';
       $http.jsonp(streamUrl).success(function(data) {
         if (data && data.stream) {
-        	
           var channel = data.stream.channel;
           myThis.streamers.push({
             'online': true,
@@ -112,13 +113,13 @@
       getStreamData(streamer);
     });
 
+    // adds streamer
+
     $scope.$on('streamerSubmitted', function(event, streamer) {
     	if (streamer==''){
     		return;
     	}
-
       myThis.addStream(streamer);
-
     });
 
 

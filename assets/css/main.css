@@ -321,3 +321,15 @@ input {
   box-shadow: 0 2px 10px;
 
 }
+
+
+/* For mobile : like samsung grand(480 * 800): */
+@media screen and (max-width : 480px){}
+
+
+/* For iphone: */
+@media screen and (max-width : 320px){} 
+
+
+/* For ipad: */
+@media screen and (max-width : 768px){} 

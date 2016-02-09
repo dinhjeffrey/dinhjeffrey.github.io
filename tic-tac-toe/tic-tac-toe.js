@@ -97,7 +97,7 @@ function GameUi() {
 					oEndInfo.innerHTML = 'WIN';
 					break;
 				case 'no':
-					oEndInfo.innerHTML = 'ITE';
+					oEndInfo.innerHTML = 'TIE';
 					break;
 			}
 			oScreen.style['display'] = 'block';

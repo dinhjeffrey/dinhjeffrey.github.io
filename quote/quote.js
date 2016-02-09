@@ -4,13 +4,14 @@ var wiki = [];
 
 // display random array quote
 function nextquote() {  
-  var rand = Math.random() * 9; // 1 - 10. up to 10 quotes (includes 0).
+  var rand = Math.random() * 10; // 1 - 10. up to 10 quotes (includes 0).
   rand = parseInt(rand); // get whole integer
   document.body.style.backgroundImage = background[rand];
   $('#moreinfo').attr('src', wiki[rand]); // src wiki to iframe id #moreinfo
+  // document.getElementById("quote").className = "animation-target";
   $('#quote').html(quotes[rand]);
   var index = quotes[rand].indexOf("<span");
-  twitterQuote = quotes[rand].substring(0, index-1);
+  twitterQuote = quotes[rand].substring(1, index-1);
   var indexAuthor1 = quotes[rand].indexOf('"author">');
   var indexAuthor2 = quotes[rand].indexOf("</span>");
   twitterAuthor = quotes[rand].substring(indexAuthor1 + 9, indexAuthor2);
@@ -26,7 +27,7 @@ quotes[5] = '\"I\'ve become a big fan of Vietnamese and Cambodian food. Because 
 quotes[6] = '\"Balancing family life and hobbies being President is hard - truthfully the main thing other than work is just making sure that I\'m spending enough time with michelle and the girls. So we make sure that when I\'m in DC I never miss dinner with them at 6:30 pm - even if I have to go back down to the Oval for work later in the evening. I do work out every morning as well, and try to get a basketball or golf game in on the weekends just to get out of the bubble.\"<span class="author">Barack Obama</span>';
 quotes[7] = '\"It would be nice if all governments were as rational as the Nordic governments - reaching compromise and providing services broadly. The Economist had a nice special section on this last week. Africa governments have often been weak but you can\'t write a check to change that.\"<span class="author">Bill Gates</span>';
 quotes[8] = '\"Winning once is better than winning twice.\"<span class="author">Joseph Dinh</span>';
-
+quotes[9] = '\"You can read all you want in the world, but you aren\'t going to be effective if you don\'t take action. Action, research, review, create a more effective plan, help of friends, and consistency is what I believe is the key to success in any field.\"<span class="author">Jeffrey Dinh</span>';
 
 
 background[0] = "url('z-elon.jpg')";
@@ -38,7 +39,7 @@ background[5] = "url('z-gordon.jpeg')";
 background[6] = "url('z-barack.jpg')";
 background[7] = "url('z-bill.jpg')";
 background[8] = "url('z-joseph.jpg')";
-
+background[9] = "url('z-dinh.jpg')";
 
 wiki[0] = "https://en.wikipedia.org/wiki/Elon_Musk";
 wiki[1] = "https://en.wikipedia.org/wiki/Warren_Buffett";
@@ -49,6 +50,7 @@ wiki[5] = 'https://en.wikipedia.org/wiki/Gordon_Ramsay';
 wiki[6] = 'https://en.wikipedia.org/wiki/Barack_Obama';
 wiki[7] = 'https://en.wikipedia.org/wiki/Bill_Gates';
 wiki[8] = 'https://en.wikipedia.org/wiki/Hippopotamus';
+wiki[9] = 'https://en.wikiquote.org/wiki/Success';
 
 $('#quotebutton').click(function(){
   nextquote();

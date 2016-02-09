@@ -299,6 +299,7 @@ input {
 .animation-target {
   -webkit-animation: animation 3000ms linear both;
   animation: animation 3000ms linear both;
+   -webkit-filter: blur(0);
 }
 
 /* Generated with Bounce.js. Edit at http://goo.gl/T9nvrR */

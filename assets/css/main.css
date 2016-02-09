@@ -1,3 +1,5 @@
+
+/* below is for mac login icon */
 * {
   font-family: 'lucida grande';
   font-size: 11px;
@@ -70,9 +72,7 @@ input {
 
 
 
-
-
-
+/* end of mac login icon */
 
 
 
@@ -233,6 +233,25 @@ input {
   color: #6441A5;
 }
 
+#ttt{
+  position: relative;
+  display: inline;
+}
+.tic-tac-toe {
+  position: relative;
+  font-size: 260px;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 /* for icon */
@@ -296,14 +315,9 @@ input {
   100% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } 
 }
 
-
-
-
 .img-wrap:active img {
   -webkit-animation: animation 3000ms linear both;
   animation: animation 3000ms linear both;
   box-shadow: 0 2px 10px;
 
 }
-
-

@@ -240,12 +240,44 @@ input {
 .tic-tac-toe {
   position: relative;
   font-size: 260px;
+  color: #b09e8b;
+}
+#wtr{
+  position: relative;
+  display: inline;
+}
+.weather {
+  position: relative;
+  font-size: 260px;
+  color: yellow;
+}
+#smn{
+  position: relative;
+  display: inline;
+}
+.simon {
+  position: relative;
+  font-size: 260px;
+  color:  #e862aa;
+}
+#sty{
+  position: relative;
+  display: inline;
+}
+.stylize-stories {
+  position: relative;
+  font-size: 260px;
+  color: #2897d5;
+}
+#wik{
+  position: relative;
+  display: inline;
+}
+.wikipedia {
+  position: relative;
+  font-size: 260px;
   color: white;
 }
-
-
-
-
 
 
 

@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+<head>
+  <!-- this allows emojis in comment -->
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  <!--  this is the css, lobster font, fa fa font, website icon, mobile url bar color  -->
+  <link rel='stylesheet' href="wikipedia.css" type="text/css" charset="utf-8">
+  <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" sizes="57x57" href="w.png" >
+  <meta name="theme-color" content="white">
+
+  <!--  this makes the phone screens zoom way in -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <title>Wikipedia</title>
+
+  <!-- google analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69817751-2', 'auto');
+  ga('send', 'pageview');
+  </script>
+
+</head>
+
+
+<body>
+<main ng-app="WikiApp" ng-controller="MainCtrl">
+  <div id="search" class="wrapper fullHeight"><a href="http://en.wikipedia.org/wiki/Special:Random" target="_blank" class="white-text">Click here for a random article</a><br/>
+    <form ng-submit="search()">
+      <input type="text" ng-model="searchTxt"/>
+      <div class="eks"></div>
+    </form>
+    <p id="help" class="white-text">Click icon to search</p>
+  </div>
+  <div class="wrapper">
+    <ul><a ng-href="{{result.page}}" target="_blank" ng-repeat="result in results">
+        <li>
+          <h1>{{result.title}}</h1>
+          <p>{{result.body}}</p>
+        </li></a></ul>
+  </div>
+</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.2/angular-animate.min.js"></script>
+<script src="wikipedia.js"></script>
+
+</body></html>

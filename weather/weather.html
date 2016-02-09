@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+<head>
+  <!-- this allows emojis in comment -->
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  <!--  this is the css, lobster font, fa fa font, website icon, mobile url bar color  -->
+  <link rel='stylesheet' href="weather.css" type="text/css" charset="utf-8">
+  <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.3.0/animate.css">
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCpqvFHXBZ2AAG0IbC4J_7XSbzD7zAM8A">
+  </script>
+  <link rel="shortcut icon" sizes="57x57" href="sun.png" >
+  <meta name="theme-color" content="yellow">
+
+  <!--  this makes the phone screens zoom way in -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <title>Weather</title>
+
+  <!-- google analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69817751-2', 'auto');
+  ga('send', 'pageview');
+  </script>
+
+</head>
+
+
+<body>
+<div class="body">
+  <div class="main"></div>
+  <div class="block">
+    <div class="weather animated zoomIn">
+      <div class="temp">
+        <li id="icon"><span> </span></li>
+        <li id="temp"><span></span></li>
+        <button id="convert">F</button><br/>
+        <li id="city"><span> </span></li><br/>
+        <li id="data"><span></span></li>
+      </div>
+      <div class="city">
+        <input id="search" type="text" name="Test" placeholder="   Enter City Name"/>
+        <button id="locate">Locate</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="weather.js"></script>
+</body></html>

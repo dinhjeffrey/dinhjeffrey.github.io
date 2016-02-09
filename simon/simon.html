@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+<head>
+  <!-- this allows emojis in comment -->
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  <!--  this is the css, lobster font, fa fa font, website icon, mobile url bar color  -->
+  <link rel='stylesheet' href="simon.css" type="text/css" charset="utf-8">
+  <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" sizes="57x57" href="simon.png" >
+  <meta name="theme-color" content="#e862aa">
+
+  <!--  this makes the phone screens zoom way in -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+  <title>Simon Game</title>
+
+  <!-- google analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69817751-2', 'auto');
+  ga('send', 'pageview');
+  </script>
+
+</head>
+
+
+<body>
+
+
+
+<div class="wrap">
+<div class="wrap-in">
+  <div class="rw">
+    <div class="t-l inline push green unclickable" id='3' ></div><div class="t-r inline push red but unclickable" id='2'></div>
+  </div>
+  <div class="rw">
+    <div class="b-l inline push yellow unclickable" id='1'></div><div class="b-r inline push blue but unclickable" id='0'></div>
+  </div>
+</div>
+   <div class="center">
+     <h1 class="brand">Simon<span class="small">®</span></h1>
+     <div class="rw">
+       <div class="display inline">
+         <h1 class="count led-off">--</h1>
+         <h3 class="label">COUNT</h3>
+       </div>
+       <div class="btn-box inline">
+         <div class="round-btn full-red but clickable" id="start"></div>
+         <h3 class="label">START</h3>
+       </div>
+       <div class="btn-box inline">
+         <div class="round-btn but clickable" id="mode"></div>
+         <h3 class="label">STRICT</h3>
+         <div class="led" id="mode-led"></div>
+       </div>
+     </div>
+     <div class="rw bot">
+       <h3 class="label inline">OFF</h3>
+       <div class="sw-slot inline">
+         <div class="switch" id="pwr-sw"></div>
+       </div>
+       <h3 class="label inline">ON</h3>
+     </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://raw.githubusercontent.com/shinnn/AudioContext-Polyfill/master/audiocontext-polyfill.js"></script>
+<script src="simon.js"></script>
+
+
+</body></html>

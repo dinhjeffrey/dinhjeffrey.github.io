@@ -98,15 +98,13 @@ function background(city){
 }
 function setBackgroundGif(type){
   var gifs = {
-    rain : "https://media.giphy.com/media/rR2AWZ3ip77r2/giphy.gif",
-    thunderstorm : "http://24.media.tumblr.com/tumblr_mc6ev8S1j71r84emlo1_500.gif",
-    clouds : "https://45.media.tumblr.com/7b31ca748a52dc3157cdd8f0a4e174db/tumblr_njh1vl149B1unuxago1_500.gif",
-    clear: "https://media0.giphy.com/media/gIsilviPHZ0iY/200.gif",
-    snow: "https://media0.giphy.com/media/fraFWJOtGih9u/200.gif",
-    drizzle: "https://media3.giphy.com/media/2SwbBd39ak7YY/200.gif",
-    atmosphere: "https://33.media.tumblr.com/f05cf4eaa6970b665ca49d3778b5367a/tumblr_mx1izjy2Di1szg5ddo1_500.gif",
-    extreme: "http://static.comicvine.com/uploads/scale_super/11113/111130700/4755736-3274899146-Yzvq8.gif",
-    additional: "https://s-media-cache-ak0.pinimg.com/originals/f1/14/1e/f1141edf46b06052939f8fa1c890feb6.gif",
+    rain : "goo.gl/yVEY3a",
+    thunderstorm : "goo.gl/WRHRjL",
+    clouds : "https://goo.gl/JLKV3r",
+    clear: "goo.gl/M8lDlJ",
+    haze: "goo.gl/MnPfrF",
+    mist: "goo.gl/MnPfrF",
+    dust: "goo.gl/ts92X3"
   }  
   $('.main').append("<style>.main { background: url(" + gifs[type.toLowerCase()] + ") no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;          background-size: cover;        }</style>");    
 }

@@ -11,27 +11,30 @@ block {
   position : relative;
 }
 
+
+/*transparency of weather box is changeable via opacity*/
 .weather {
   opacity: 0.7;
-  background-color: #000;
+  background-color: white;
   font-size: 2em;
-  color: #000;
-  text-align: center;    
   height: 300px;
   width: 450px;
   position: absolute;
   top: 30%;
   left: 45%;
   margin: -70px 0 0 -170px;
+  font-family:avenir;
+  color: #666666;
 }
 
+/*temperature box*/
 .temp {  
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-  background-color : #666;
-  padding-bottom: 20px;
-}
+  background-color : white;
+/*  padding-bottom: 20px;
+*/}
 
 .temp li {
   display : inline;  
@@ -44,32 +47,35 @@ block {
 
 #search {
   height: 40px;
-  width: 13em;
+  width: 18em;
   position: absolute;
-  bottom: 10px;
-  right: 7em;
+  bottom: 0.1px;
+  right: 4.35em;
   outline: none;
   font-size: 20px;
-  opacity : 0.5;  
-  border-radius: 15px;  
+  opacity : 1; 
+  font-family: avenir; 
+  border:0;
+  outline:0;
+  border-bottom: 0.1px solid #ddd;
 }
 
+button:focus {outline:0;}
 #locate {
   height: 46px;
   width: 20%;
   background-color: red;
   position: absolute;
-  bottom: 10px;
-  right: 2em;
+  bottom: 0.001px;
+  right: 0em;
   outline: none;
   border : 0; 
   font-size: 20px;
   color : #FFF;  
-  opacity : 0.7;  
-  border-radius: 15px;
+  opacity : 1;  
 }
 
-#convert {
+/*#convert {
   height: 30px;
   width: 30px;
   border-radius: 25px;
@@ -78,4 +84,43 @@ block {
   top: 26px;  
   outline : none;
   font-size: 18px;
-}
+  }*/
+
+  .sunrise{
+    position: relative;
+    font-family: avenir;
+    font-size: 16px;
+    top:-68px;
+  }
+  button.link { 
+    background:none;border:none; 
+  }
+
+
+
+  .cityCountry{
+    font-size: 16px;
+    font-family: avenir;
+    position: relative;
+    text-align: right;
+    right: 3px;
+    top: -48px;
+  }
+
+  #temp{
+    font-family: 'Avenir Next';
+    font-weight: bold;
+    font-size: 55px;
+    color:black;
+    position:relative;
+  }
+
+  #data{
+    font-family: 'Avenir Next';
+    font-weight: bold;
+    font-size: 40px;
+    color:black;
+    position:relative;
+    top:-25px;
+    right: -9.5px;
+  }

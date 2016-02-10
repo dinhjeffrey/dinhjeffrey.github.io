@@ -99,12 +99,13 @@ function background(city){
 function setBackgroundGif(type){
   var gifs = {
     rain : "https://media.giphy.com/media/rR2AWZ3ip77r2/giphy.gif",
-    thunderstorm : "http://24.media.tumblr.com/2cd64c701591f057ac595f25a8fcf6ea/tumblr_mfyy10MhkD1rh3cbfo3_r3_250.gif",
-    clouds : "http://33.media.tumblr.com/tumblr_m8k6eosYbm1qkvue8o4_500.gif",
-    clear: "https://s-media-cache-ak0.pinimg.com/originals/96/51/fa/9651fa37beeba7e7390a7262ed562c0a.gif",
+    thunderstorm : "https://s-media-cache-ak0.pinimg.com/originals/8f/5d/24/8f5d24447dc5bb0630323f8db9aaf5e2.gif",
+    clouds : "https://49.media.tumblr.com/e6d98d675d54123af32ace5829470452/tumblr_o10o5xzrM31udnvg3o1_500.gif",
+    clear: "https://45.media.tumblr.com/d644a794735885c7f91cd454a63496c3/tumblr_nigue1Rkfu1tqnefqo1_500.gif",
     haze: "https://chicgeekspeaks.files.wordpress.com/2014/04/tumblr_n2s1pkcyib1r93041o1_500.gif",
     mist: "https://chicgeekspeaks.files.wordpress.com/2014/04/tumblr_n2s1pkcyib1r93041o1_500.gif",
-    dust: "https://s-media-cache-ak0.pinimg.com/originals/c8/db/48/c8db4861b237898512da1c1f35e87231.jpg"
+    dust: "https://s-media-cache-ak0.pinimg.com/originals/c8/db/48/c8db4861b237898512da1c1f35e87231.jpg",
+    snow: "http://33.media.tumblr.com/d7502507d4b5974314ae72e61ee581db/tumblr_nb32o9WTxa1r8zm42o1_500.gif"
   }  
   $('.main').append("<style>.main { background: url(" + gifs[type.toLowerCase()] + ") no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;          background-size: cover;        }</style>");    
 }

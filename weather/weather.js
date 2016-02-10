@@ -98,13 +98,13 @@ function background(city){
 }
 function setBackgroundGif(type){
   var gifs = {
-    rain : "goo.gl/yVEY3a",
-    thunderstorm : "goo.gl/WRHRjL",
-    clouds : "https://goo.gl/JLKV3r",
-    clear: "goo.gl/M8lDlJ",
-    haze: "goo.gl/MnPfrF",
-    mist: "goo.gl/MnPfrF",
-    dust: "goo.gl/ts92X3"
+    rain : "https://media.giphy.com/media/rR2AWZ3ip77r2/giphy.gif",
+    thunderstorm : "http://24.media.tumblr.com/2cd64c701591f057ac595f25a8fcf6ea/tumblr_mfyy10MhkD1rh3cbfo3_r3_250.gif",
+    clouds : "http://33.media.tumblr.com/tumblr_m8k6eosYbm1qkvue8o4_500.gif",
+    clear: "https://s-media-cache-ak0.pinimg.com/originals/96/51/fa/9651fa37beeba7e7390a7262ed562c0a.gif",
+    haze: "https://chicgeekspeaks.files.wordpress.com/2014/04/tumblr_n2s1pkcyib1r93041o1_500.gif",
+    mist: "https://chicgeekspeaks.files.wordpress.com/2014/04/tumblr_n2s1pkcyib1r93041o1_500.gif",
+    dust: "https://s-media-cache-ak0.pinimg.com/originals/c8/db/48/c8db4861b237898512da1c1f35e87231.jpg"
   }  
   $('.main').append("<style>.main { background: url(" + gifs[type.toLowerCase()] + ") no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;          background-size: cover;        }</style>");    
 }

@@ -80,7 +80,7 @@
             'status': channel.status,
             // used game to get viewers because 'viewers': doesn't work.
             'game': data.streams[k].viewers,
-            'url': 'http://www.twitch.tv/' + streamer,
+            'url': 'http://www.twitch.tv/' + data.streams[k].channel.display_name,
             'logo': channel.logo || 'http://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_150x150.png'
           });
 

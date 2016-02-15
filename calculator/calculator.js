@@ -1,4 +1,3 @@
-
 // document.onkeypress = function (e) { // when user presses 'enter', it evaluates by calling upon answer()
 //     if (e.keyCode == 13) {
 //         answer();
@@ -56,6 +55,6 @@ function answer2() { // display answer for 2nd text box
     display2JS.value = result;
 }
 
-function lastAns(){
+function lastAns() {
     document.getElementById("display").value += lastAnsJS;
 }

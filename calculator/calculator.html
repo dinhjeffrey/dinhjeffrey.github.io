@@ -1,34 +1,41 @@
 <html>
-    
-    <head>
-        <!-- allows emojis in comments -->
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        
 
-        <!-- css, fa fa font, orange url for mobile, and zoom -->
-        <link rel="stylesheet" href="calculator.css" media="screen" type="text/css" />
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-                <meta name="theme-color" content="orange">
+<head>
+    <!-- allows emojis in comments -->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+
+    <!-- css, fa fa font, orange url for mobile, and zoom -->
+    <link rel="stylesheet" href="calculator.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <meta name="theme-color" content="orange">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!--icon -->
-    <link rel="shortcut icon" sizes="57x57" href="calculator.png" >
+    <!--icon -->
+    <link rel="shortcut icon" sizes="57x57" href="calculator.png">
     <title>Calculator</title>
 
     <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-69817751-2', 'auto');
-  ga('send', 'pageview');
-  </script>
+        ga('create', 'UA-69817751-2', 'auto');
+        ga('send', 'pageview');
+    </script>
 
 
-    </head>
-    <!-- 
-table = table .
+</head>
+<!-- 
+table = table.
 
 tr = table row.
 
@@ -38,142 +45,142 @@ th = table header. (also a cell but bold and centered).
 
 -->
 
-     <body>
-        <table>
-            <tr> 
-                <td colspan="7">
-                    <input type="text" id="display" value=""/>
-                </td>
-            </tr>
+<body>
+    <table>
+        <tr>
+            <td colspan="7">
+                <input type="text" id="display" value="" />
+            </td>
+        </tr>
 
 
 
-            <tr>
-                <td colspan="7">
-                    <input type="noText" id="display2" value="" disabled/>
-                </td>
-            </tr>
+        <tr>
+            <td colspan="7">
+                <input type="noText" id="display2" value="" disabled/>
+            </td>
+        </tr>
 
 
 
-            <tr>
-                <td>
-                    <input id="btnAns" type="button" name="btnAnsOp" value="Ans" onclick="lastAns(); answer2();"/>
-                </td>
-                <td>
-                    <input id="btnPi" type="button" name="operator" value="" disabled/>
-                </td>
-                <td>
-                    <input id="btnE" type="button" name="operator" value="" disabled/>
-                </td>
-                <td>
-                    <!-- sets '(' -->
-                    <input id="btnOParen" type="button" name="operator" value="(" onclick="set('(')" /> 
-                </td>
-                <td>
-                    <input id="btnCParen" type="button" name="operator" value=")" onclick="set(')')" />
-                </td>
-                <td>
-                    <input id="btnPcnt" type="button" name="operator" value="<" onclick="back()" />
-                </td>
-                <td>
-                    <input id="btnCE" type="button" name="operator" value="C" onclick="ce()" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input id="btnRad" type="button" name="operator" value="" disabled/>
-                </td>
-                <td>
-                    <input id="btnDeg" type="button" name="operator" value="" disabled/>
-                </td>
-                <td>
-                    <input id="btnFact" type="button" name="operator" value="" disabled/>
-                </td>
-                <td>
-                    <!-- onkeydown="if (event.keyCode == 13) { answer(); return false; }" makes it evaluate answer() and not input the number again -->
-                    <input id="btn7" type="button" value="7" onclick="set('7'); answer2();" onkeydown="if (event.keyCode == 13) { answer(); return false; }"/>
-                </td>
-                <td>
-                    <input id="btn8" type="button" value="8" onclick="set('8'); answer2();" onkeydown="if (event.keyCode == 13) { answer(); return false; }"/>
-                </td>
-                <td>
-                    <input id="btn9" type="button" value="9" onclick="set('9'); answer2();" onkeydown="if (event.keyCode == 13) { answer(); return false; }"/>
-                </td>
-                <td>
-                    <input id="btnDiv" type="button" name="operator" value="÷" onclick="set('/')" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input id="btnSineInv" type="button" name="operator" value="" onclick="asine()" disabled/>
-                </td>
-                <td>
-                    <input id="btnSine" type="button" name="operator" value="" onclick="sine()" disabled/>
-                </td>
-                <td>
-                    <input id="btnLN" type="button" name="operator" value="" disabled/>
-                </td>
-                <td>
-                    <input id="btn4" type="button" value="4" onclick="set('4'); answer2();" onkeydown="if (event.keyCode == 13) { answer(); return false; }"/>
-                </td>
-                <td>
-                    <input id="btn5" type="button" value="5" onclick="set('5'); answer2();" onkeydown="if (event.keyCode == 13) { answer(); return false; }"/>
-                </td>
-                <td>
-                    <input id="btn6" type="button" value="6" onclick="set('6'); answer2();" onkeydown="if (event.keyCode == 13) { answer(); return false; }"/>
-                </td>
-                <td>
-                    <input id="btnMul" type="button" name="operator" value="×" onclick="set('*')" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input id="btnCosInv" type="button" name="operator" value="" onclick="acosine()" disabled/>
-                </td>
-                <td>
-                    <input id="btnCos" type="button" name="operator" value="" onclick="cosine()" disabled/>
-                </td>
-                <td>
-                    <input id="btnLog" type="button" name="operator" value="" onclick="fLog()" disabled/>
-                </td>
-                <td>
-                    <input id="btn1" type="button" value="1" onclick="set('1'); answer2();" onkeydown="if (event.keyCode == 13) { answer(); return false; }"/>
-                </td>
-                <td>
-                    <input id="btn2" type="button" value="2" onclick="set('2'); answer2();" onkeydown="if (event.keyCode == 13) { answer(); return false; }"/>
-                </td>
-                <td>
-                    <input id="btn3" type="button" value="3" onclick="set('3'); answer2();" onkeydown="if (event.keyCode == 13) { answer(); return false; }"/>
-                </td>
-                <td>
-                    <input id="btnSub" type="button" name="operator" value="-" onclick="set('-')" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input id="btnTanInv" type="button" name="operator" value="" onclick="atangent()" disabled/>
-                </td>
-                <td>
-                    <input id="btnTan" type="button" name="operator" value="" onclick="tangent()" disabled/>
-                </td>
-                <td>
-                    <input id="btnSqrt" type="button" name="operator" value="" onclick="sqrRoot()" disabled/>
-                </td>
-                <td>
-                    <input id="btn0" type="button" value="0" onclick="set('0'); answer2();" />
-                </td>
-                <td>
-                    <input id="btnPeriod" type="button" value="." onclick="set('.')" />
-                </td>
-                <td>
-                    <input id="btnEqual" type="button" name="equal" value="=" onclick="answer()" />
-                </td>
-                <td>
-                    <input id="btnAdd" type="button" name="operator" value="+" onclick="set('+')" />
-                </td>
-        </table>
-        <script src="calculator.js"></script>
-    </body>
+        <tr>
+            <td>
+                <input id="btnAns" type="button" name="btnAnsOp" value="Ans" onclick="lastAns(); answer2();" />
+            </td>
+            <td>
+                <input id="btnPi" type="button" name="operator" value="" disabled/>
+            </td>
+            <td>
+                <input id="btnE" type="button" name="operator" value="" disabled/>
+            </td>
+            <td>
+                <!-- sets '(' -->
+                <input id="btnOParen" type="button" name="operator" value="(" onclick="set('(')" />
+            </td>
+            <td>
+                <input id="btnCParen" type="button" name="operator" value=")" onclick="set(')')" />
+            </td>
+            <td>
+                <input id="btnPcnt" type="button" name="operator" value="<" onclick="back()" />
+            </td>
+            <td>
+                <input id="btnCE" type="button" name="operator" value="C" onclick="ce()" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input id="btnRad" type="button" name="operator" value="" disabled/>
+            </td>
+            <td>
+                <input id="btnDeg" type="button" name="operator" value="" disabled/>
+            </td>
+            <td>
+                <input id="btnFact" type="button" name="operator" value="" disabled/>
+            </td>
+            <td>
+                <!-- onkeydown="if (event.keyCode == 13) { answer(); return false; }" makes it evaluate answer() and not input the number again -->
+                <input id="btn7" type="button" value="7" onclick="set('7'); answer2();" onkeydown="if (event.keyCode == 13) { answer(); return false; }" />
+            </td>
+            <td>
+                <input id="btn8" type="button" value="8" onclick="set('8'); answer2();" onkeydown="if (event.keyCode == 13) { answer(); return false; }" />
+            </td>
+            <td>
+                <input id="btn9" type="button" value="9" onclick="set('9'); answer2();" onkeydown="if (event.keyCode == 13) { answer(); return false; }" />
+            </td>
+            <td>
+                <input id="btnDiv" type="button" name="operator" value="÷" onclick="set('/')" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input id="btnSineInv" type="button" name="operator" value="" onclick="asine()" disabled/>
+            </td>
+            <td>
+                <input id="btnSine" type="button" name="operator" value="" onclick="sine()" disabled/>
+            </td>
+            <td>
+                <input id="btnLN" type="button" name="operator" value="" disabled/>
+            </td>
+            <td>
+                <input id="btn4" type="button" value="4" onclick="set('4'); answer2();" onkeydown="if (event.keyCode == 13) { answer(); return false; }" />
+            </td>
+            <td>
+                <input id="btn5" type="button" value="5" onclick="set('5'); answer2();" onkeydown="if (event.keyCode == 13) { answer(); return false; }" />
+            </td>
+            <td>
+                <input id="btn6" type="button" value="6" onclick="set('6'); answer2();" onkeydown="if (event.keyCode == 13) { answer(); return false; }" />
+            </td>
+            <td>
+                <input id="btnMul" type="button" name="operator" value="×" onclick="set('*')" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input id="btnCosInv" type="button" name="operator" value="" onclick="acosine()" disabled/>
+            </td>
+            <td>
+                <input id="btnCos" type="button" name="operator" value="" onclick="cosine()" disabled/>
+            </td>
+            <td>
+                <input id="btnLog" type="button" name="operator" value="" onclick="fLog()" disabled/>
+            </td>
+            <td>
+                <input id="btn1" type="button" value="1" onclick="set('1'); answer2();" onkeydown="if (event.keyCode == 13) { answer(); return false; }" />
+            </td>
+            <td>
+                <input id="btn2" type="button" value="2" onclick="set('2'); answer2();" onkeydown="if (event.keyCode == 13) { answer(); return false; }" />
+            </td>
+            <td>
+                <input id="btn3" type="button" value="3" onclick="set('3'); answer2();" onkeydown="if (event.keyCode == 13) { answer(); return false; }" />
+            </td>
+            <td>
+                <input id="btnSub" type="button" name="operator" value="-" onclick="set('-')" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input id="btnTanInv" type="button" name="operator" value="" onclick="atangent()" disabled/>
+            </td>
+            <td>
+                <input id="btnTan" type="button" name="operator" value="" onclick="tangent()" disabled/>
+            </td>
+            <td>
+                <input id="btnSqrt" type="button" name="operator" value="" onclick="sqrRoot()" disabled/>
+            </td>
+            <td>
+                <input id="btn0" type="button" value="0" onclick="set('0'); answer2();" />
+            </td>
+            <td>
+                <input id="btnPeriod" type="button" value="." onclick="set('.')" />
+            </td>
+            <td>
+                <input id="btnEqual" type="button" name="equal" value="=" onclick="answer()" />
+            </td>
+            <td>
+                <input id="btnAdd" type="button" name="operator" value="+" onclick="set('+')" />
+            </td>
+    </table>
+    <script src="calculator.js"></script>
+</body>
 
 </html>

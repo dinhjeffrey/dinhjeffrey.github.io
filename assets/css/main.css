@@ -278,6 +278,15 @@ input {
   font-size: 260px;
   color: white;
 }
+#pot{
+  position: relative;
+  display: inline;
+}
+.paintPot {
+  position: relative;
+  font-size: 260px;
+  color: #9b6954;
+}
 
 
 

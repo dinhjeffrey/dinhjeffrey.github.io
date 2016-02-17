@@ -27,7 +27,7 @@ quotes[5] = '\"I\'ve become a big fan of Vietnamese and Cambodian food. Because 
 quotes[6] = '\"Balancing family life and hobbies being President is hard - truthfully the main thing other than work is just making sure that I\'m spending enough time with michelle and the girls. So we make sure that when I\'m in DC I never miss dinner with them at 6:30 pm - even if I have to go back down to the Oval for work later in the evening. I do work out every morning as well, and try to get a basketball or golf game in on the weekends just to get out of the bubble.\"<span class="author">Barack Obama</span>';
 quotes[7] = '\"It would be nice if all governments were as rational as the Nordic governments - reaching compromise and providing services broadly. The Economist had a nice special section on this last week. Africa governments have often been weak but you can\'t write a check to change that.\"<span class="author">Bill Gates</span>';
 quotes[8] = '\"Winning once is better than winning twice.\"<span class="author">Joseph Dinh</span>';
-quotes[9] = '\"You can read all you want in the world, but you aren\'t going to be effective if you don\'t take action. Action, research, review, create a more effective plan, help of friends, and consistency is what I believe is the key to success in any field.\"<span class="author">Jeffrey Dinh</span>';
+quotes[9] = '\"Commitment is the key to success.\"<span class="author">Jeffrey Dinh</span>';
 
 
 background[0] = "url('z-elon.jpg')";

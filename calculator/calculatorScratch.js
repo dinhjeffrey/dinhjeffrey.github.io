@@ -1,3 +1,4 @@
+
 // display numbers and operators inputted in the textbox
 function set(numbers){
 
@@ -73,7 +74,8 @@ function OK(){
 	if (display[beforeE] === "E"){
 		document.getElementById("display").value = Number(num1)*Math.pow(1, Number(num2));
 	}
-	globalAns = document.getElementById("display").value
+	globalAns = document.getElementById("display").value;
+	document.getElementById("display2").value = globalAns;
 }
 
 function Clear(){

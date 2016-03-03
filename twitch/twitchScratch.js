@@ -28,7 +28,7 @@ function getChannelInfo2(input) {
 			return 'https://api.twitch.tv/kraken/streams/' + name;
 		};
 		function makeURL2(name) {
-			return 'https://api.twitch.tv/kraken/channels/' + name;
+			return 'https://api.twitch.tv/kraken/channels/' + name;	
 		};
 		// function(data) is a plain object or string that is sent to the server with the request
 		$.getJSON(makeURL(input), function(data) { // load JSON encoded data from server via HTTP request
@@ -45,10 +45,10 @@ function getChannelInfo2(input) {
 				status = "online"; 
 			};
 			$.getJSON(makeURL2(input), function(data) {
+				
 				if (data.logo === null){
 					data.logo = 'http://img12.deviantart.net/1778/i/2014/159/2/8/offline_banner_by_eeveeflare-d7lhsnr.png';
 				}
-				console.log(data.logo);
 				// defining var logo, name, description status
 				var logo = data.logo != null ? data.logo : "http://dummyimage.com/50x50/ecf0e7/5c5457.jpg&text=0x3F", // makes the logo
 				name = data.display_name != null ? data.display_name : channels,
@@ -61,8 +61,15 @@ function getChannelInfo2(input) {
 				// prepend: inserts content, specified by the parameter, to the beginning of each element in the set of matched elements
 				// append: inserts content, specified by the parameter, to the end of each element in the set of matched elements 
 				status === "online" ? $("#display").prepend(html) : $("#display").append(html2);
-			});
-		});
+			})
+		})
+		.fail(function() {
+    		var html2 = '<div class="grey offline"><h2 class="darkGrey"><i>' + input + '`s account is closed.</i>' + 
+				'</h2><img src=https://pbs.twimg.com/media/CMiMvsQWIAE2W2G.png height="300" width="600"></div>';
+				// prepend: inserts content, specified by the parameter, to the beginning of each element in the set of matched elements
+				// append: inserts content, specified by the parameter, to the end of each element in the set of matched elements 
+				status === "online" ? $("#display").prepend(html) : $("#display").append(html2);
+  		})
 	});
 };
 
@@ -89,7 +96,6 @@ function getChannelInfo() {
 				game = data.stream.game;
 				status = "online"; 
 			};
-			console.log(channels, status)
 			$.getJSON(makeURL2(channels), function(data) {
 				// defining var logo, name, description status
 				var logo = data.logo != null ? data.logo : "http://dummyimage.com/50x50/ecf0e7/5c5457.jpg&text=0x3F", // makes the logo

@@ -37,8 +37,8 @@
 
 
 <body>
-	<input type="text" id="textBox">
-	<input type="submit" onclick="addChannels();">
+	<input type="text" id="textBox" onkeydown="if (event.keyCode == 13) { addChannels(); return false; }">
+	<input type="submit" onclick="addChannels();" >
 	<div class="menu">
 		<button class="selector active" id="all" >All</button>
 		<button class="selector" id="online">Online</button>

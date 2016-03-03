@@ -45,16 +45,19 @@ function getChannelInfo2(input) {
 				status = "online"; 
 			};
 			$.getJSON(makeURL2(input), function(data) {
+				if (data.logo === null){
+					data.logo = 'http://img12.deviantart.net/1778/i/2014/159/2/8/offline_banner_by_eeveeflare-d7lhsnr.png';
+				}
+				console.log(data.logo);
 				// defining var logo, name, description status
 				var logo = data.logo != null ? data.logo : "http://dummyimage.com/50x50/ecf0e7/5c5457.jpg&text=0x3F", // makes the logo
 				name = data.display_name != null ? data.display_name : channels,
 				description = status === "online" ? ': ' + data.status : '';
 				// making the html in vanillajs
-				console.log(data.status)
-				var html = '<div class="fbBlue"><h2 class="white">' + data.name + ' playing ' + data.game + 
+				var html = '<div class="fbBlue online"><h2 class="white">' + data.name + ' playing ' + data.game + 
 				'</h2><a href='+  data.url +'><img src=' + data.logo + '></a><br><i class="white">' + data.status +'</i></div>';
-				var html2 = '<div class="grey"><h2 class="darkGrey"><i>' + data.name + ' is Offline</i>' + 
-				'</h2><a href='+  data.url +'><img src=' + data.logo + '></a><br><i class="darkGrey">' + data.status +'</i></div>';
+				var html2 = '<div class="grey offline"><h2 class="darkGrey"><i>' + data.name + ' is Offline</i>' + 
+				'</h2><a href='+  data.url +'><img src=' + data.logo + ' height="300" width="300"></a><br><i class="darkGrey">' + data.status +'</i></div>';
 				// prepend: inserts content, specified by the parameter, to the beginning of each element in the set of matched elements
 				// append: inserts content, specified by the parameter, to the end of each element in the set of matched elements 
 				status === "online" ? $("#display").prepend(html) : $("#display").append(html2);
@@ -93,10 +96,9 @@ function getChannelInfo() {
 				name = data.display_name != null ? data.display_name : channels,
 				description = status === "online" ? ': ' + data.status : '';
 				// making the html in vanillajs
-				console.log(data.status)
-				var html = '<div class="fbBlue"><h2 class="white">' + data.name + ' playing ' + data.game + 
+				var html = '<div class="fbBlue online"><h2 class="white">' + data.name + ' playing ' + data.game + 
 				'</h2><a href='+  data.url +'><img src=' + data.logo + '></a><br><i class="white">' + data.status +'</i></div>';
-				var html2 = '<div class="grey"><h2 class="darkGrey"><i>' + data.name + ' is Offline</i>' + 
+				var html2 = '<div class="grey offline"><h2 class="darkGrey"><i>' + data.name + ' is Offline</i>' + 
 				'</h2><a href='+  data.url +'><img src=' + data.logo + '></a><br><i class="darkGrey">' + data.status +'</i></div>';
 				// prepend: inserts content, specified by the parameter, to the beginning of each element in the set of matched elements
 				// append: inserts content, specified by the parameter, to the end of each element in the set of matched elements 
@@ -107,20 +109,22 @@ function getChannelInfo() {
 };
 
 // runs once in the beginning to make sure JS is working
+//http://jsfiddle.net/YnFWX/1/ on how hiding and showing context works
+// uses jQuery .hide() and .show()
 $(document).ready(function() { // will run once DOM is ready for JS to execute safely
 	getChannelInfo(); // invokes getChannelInfo()
 	$(".selector").click(function() { // bind an event handler to the "click" JS event
 		$(".selector").removeClass("active"); // remove a single class, multiple classes, or all classes from each element in the set of matched elements
 		$(this).addClass("active"); // add the specified class(es) to each element in the set of matched elements
-		var status = $(this).attr('id'); // get the value of an attribute for the first element in the set of matched elements
+		var status = $(this).attr('id'); // get the value of an attribute for the first element in the set of matched elements)
 		if (status === "all") {
-			$(".online, .offline").removeClass("hidden"); 
+			$(".online, .offline").show(); 
 		} else if (status === "online") {
-			$(".online").removeClass("hidden");
-			$(".offline").addClass("hidden");
+			$(".online").show();
+			$(".offline").hide();
 		} else {
-			$(".offline").removeClass("hidden");
-			$(".online").addClass("hidden");
+			$(".offline").show();
+			$(".online").hide();
 		}
 	})
 });

@@ -40,7 +40,7 @@ function geoLocation() {
       }
     }
     processUserLoc();
-  }
+}
 
 // uses api.openweathermap.org for weather
 

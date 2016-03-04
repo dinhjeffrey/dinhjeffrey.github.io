@@ -29,9 +29,10 @@ function geoLocation() {
         }
         var address = arrAddress.join(' ');
         console.log(address);
-        var html = "<div><h1>" + address + "</h1></div>"; 
+        var html = "<div><h3>" + address + "</h3></div>"; 
         $("#display").prepend(html);
-
+        // weather(address);
+        $(".legend2").show();
       } else { console.log("Could not find city"); }
     });
   }
@@ -66,6 +67,7 @@ function geoLocation() {
 
 $(document).ready(function(){
   console.log("0")
+  $(".legend2").hide();
   geoLocation();
 // done
 });

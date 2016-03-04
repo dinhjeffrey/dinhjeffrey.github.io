@@ -29,6 +29,9 @@ function geoLocation() {
         }
         var address = arrAddress.join(' ');
         console.log(address);
+        var html = "<div><h1>" + address + "</h1></div>"; 
+        $("#display").prepend(html);
+
       } else { console.log("Could not find city"); }
     });
   }

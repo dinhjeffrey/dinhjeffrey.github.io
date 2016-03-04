@@ -1,31 +1,4 @@
 
-// function geoLocation() {
-//   console.log("1")
-//   function getCity(latlng) {
-//     console.log("4")
-//     var geocoder = new google.maps.Geocoder();
-//     geocoder.geocode({
-//       'latLng': latlng
-//     }, function(results, status) {
-//       if (status == google.maps.GeocoderStatus.OK) {
-//               //console.log(results[0].address_components);
-//               if (results[0]) {
-//                 var city;
-//                 var i = 0;
-//                 while (!city && i < results[0].address_components.length) {
-//                   if (results[0].address_components[i].types.indexOf("locality") >= 0) {
-//                     city = results[0].address_components[i].long_name;                                       
-//                     weather(city); // not defined yet
-//                   }
-//                   i++;
-//                 }
-//               }
-//             } 
-//             else {
-//               console.log("Could not find city");
-//             }
-//           });
-//   }
 
 function geoLocation() {
   console.log('1');
@@ -38,17 +11,23 @@ function geoLocation() {
     }, function(results, status) {
       if (status == google.maps.GeocoderStatus.OK) {
         console.log(results[0].address_components);
-        if (results[0]) {
-          var city;
-          var i = 0;
-          while (!city && i< results[0].address_components.length) {
-            if (results[0].address_components[i].types.indexOf("locality") >= 0) {
-              city = results[0].address_components[i].long_name;
-              weather(city); // weather() function not defined yet
-            }
-            i++;
-          }
+        // if (results[0]) {
+        //   var city;
+        //   var i = 0;
+        //   while (!city && i< results[0].address_components.length) {
+        //     if (results[0].address_components[i].types.indexOf("locality") >= 0) {
+        //       city = results[0].address_components[i].long_name;
+        //       weather(city); // weather() function not defined yet
+        //     }
+        //     i++;
+        //   }
+        // }
+        var arrAddress = [];
+        for (i=0; i<results[0].address_components.length; i++){
+          arrAddress.push(results[0].address_components[i][long_name]);
         }
+        var address = arrAddress.join(' ');
+        console.log(address);
       } else { console.log("Could not find city"); }
     });
   }

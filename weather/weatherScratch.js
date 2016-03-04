@@ -59,7 +59,7 @@ function geoLocation() {
 function weather(location) {
   var url = "http://api.openweathermap.org/data/2.5/weather?";
   var key = "542afbcbe3814ee16b8e8754895f5c1e";
-  $.getJSON(url + "q=" + location + "&APP=" + key + "&units=imperial", function(data) {
+  $.getJSON(url + "q=" + location + "&APPID=" + key + "&units=imperial", function(data) {
     var html = "<div><h3>It is " + data.main.temp + " degrees and it outside seems likely " + data.weather.description + "</h3></div>";
     $("#temp").prepend(html);
   })

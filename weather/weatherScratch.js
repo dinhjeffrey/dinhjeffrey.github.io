@@ -24,6 +24,7 @@ function geoLocation() {
         // }
         var arrAddress = [];
         for (i=0; i<results[0].address_components.length; i++){
+          console.log(results[0].address_components[i]);
           arrAddress.push(results[0].address_components[i][long_name]);
         }
         var address = arrAddress.join(' ');

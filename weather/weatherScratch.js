@@ -60,9 +60,7 @@ function weather(location) {
   var key = "3a53d3f03d189f460e7bd9e53adfa628";
   $.getJSON(url + "q=" + location + "&APPID=" + key + "&units=imperial", function(data) {
     console.log("1", data.weather)
-    console.log("2", data.weather.description)
-    console.log("3", data.weather.main)
-    console.log("4", weather.description)
+    console.log("2", data.weather[0].description)
     var html = "<div><h3>It is " + data.main.temp + " degrees and it outside seems likely " + data.weather.description + "</h3></div>";
     $("#temp").prepend(html);
     $(".legend2").show();

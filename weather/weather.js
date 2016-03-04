@@ -129,5 +129,5 @@ $('#search').keypress(function (e) {
 }
 });   
 
-
+geoLocation();
 // done

@@ -39,7 +39,6 @@ function geoLocation() {
         alert("location is not available")
       }
     }
-
     processUserLoc();
   }
 
@@ -110,8 +109,6 @@ function setBackgroundGif(type){
   $('.main').append("<style>.main { background: url(" + gifs[type.toLowerCase()] + ") no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;          background-size: cover;        }</style>");    
 }
 
-
-
 $('#locate').click(function(e){
   var city = $('#search').val();  
   if(!city){
@@ -132,4 +129,5 @@ $('#search').keypress(function (e) {
 }
 });   
 
-geoLocation();
+
+// done

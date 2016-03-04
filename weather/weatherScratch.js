@@ -31,7 +31,7 @@ function geoLocation() {
         console.log(address);
         var html = "<div><h3>" + address + "</h3></div>"; 
         $("#display").prepend(html);
-        // weather(address);
+        weather(address);
         $(".legend2").show();
       } else { console.log("Could not find city"); }
     });
@@ -52,12 +52,18 @@ function geoLocation() {
         alert("location is not available")
       }
   }
-    
-
   processUserLoc();
 }
 
 // uses api.openweathermap.org for weather
+function weather(location) {
+  var url = "http://api.openweathermap.org/data/2.5/weather?";
+  var key = "3a53d3f03d189f460e7bd9e53adfa628";
+  $.getJSON(url + "q=" + location + "&APP=" + key + "&units=imperial", function(data) {
+    var html = "<div><h3>It is " + data.main.temp + " degrees and it outside seems likely " + data.weather.description + "</h3></div>";
+    $("#temp").prepend(html);
+  })
+}
 
 
 
@@ -69,5 +75,7 @@ $(document).ready(function(){
   console.log("0")
   $(".legend2").hide();
   geoLocation();
-// done
 });
+
+
+// done

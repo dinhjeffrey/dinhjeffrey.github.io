@@ -60,7 +60,7 @@ function weather(location) {
   var key = "3a53d3f03d189f460e7bd9e53adfa628";
   $.getJSON(url + "q=" + location + "&APPID=" + key + "&units=imperial", function(data) {
     // console.log(data.weather[0].description)
-    var html = "<div><h3>It is <text id=convert>" + data.main.temp + "F</text> and it outside seems likely " + data.weather[0].description + "</h3><img src=http://openweathermap.org/img/w/" + data.weather[0].icon + ".png></div>";
+    var html = "<div><h3>It is <div id=convert>" + data.main.temp + "F</div> and it outside seems likely " + data.weather[0].description + "</h3><img src=http://openweathermap.org/img/w/" + data.weather[0].icon + ".png></div>";
     $("#temp").prepend(html);
     $(".legend2").show();
   })

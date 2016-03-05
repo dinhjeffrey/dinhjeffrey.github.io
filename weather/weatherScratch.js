@@ -88,7 +88,7 @@ $(document).ready(function(){
   console.log("0")
   $(".legend2").hide();
   geoLocation();
-  $('#convert').live('click', function(e) {  
+  $('#convert').on('click', function() {  
         var temp = document.getElementById("convert").innerHTML;
         console.log(temp);
         if(temp.slice(-1) === 'C'){ // 

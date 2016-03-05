@@ -60,11 +60,24 @@ function weather(location) {
   var key = "3a53d3f03d189f460e7bd9e53adfa628";
   $.getJSON(url + "q=" + location + "&APPID=" + key + "&units=imperial", function(data) {
     // console.log(data.weather[0].description)
-    var html = "<div><h3>It is " + data.main.temp + " degrees and it outside seems likely " + data.weather[0].description + "</h3><img src=http://openweathermap.org/img/w/" + data.weather[0].icon + ".png></div>";
+    var html = "<div><h3>It is <text id=convert>" + data.main.temp + "F</text> and it outside seems likely " + data.weather[0].description + "</h3><img src=http://openweathermap.org/img/w/" + data.weather[0].icon + ".png></div>";
     $("#temp").prepend(html);
     $(".legend2").show();
   })
 }
+
+$("#convert").click(function(){
+  // .innerHTML used for divs and similar tags
+  // .value used for forms and inputs
+  var temp = document.getElementById("convert").innerHTML;
+  console.log(temp);
+  if(temp.slice(-1) === 'C'){ // 
+    document.getElementById('convert').innerHTML = Math.round(32 + temp2 * 1.8).toFixed(1)  +  "F";     
+  }
+  if(temp.slice(-1) === 'F') {
+    document.getElementById('convert').innerHTML = Math.round((temp2 - 32) / 1.8).toFixed(1) +  "C";
+  }
+});
 
 
 

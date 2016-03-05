@@ -88,14 +88,14 @@ $(document).ready(function(){
   console.log("0")
   $(".legend2").hide();
   geoLocation();
-  $('#convert').on('click', function() {  
+  $('#convert').click(function() {  
         var temp = document.getElementById("convert").innerHTML;
-        console.log(temp);
-        if(temp.slice(-1) === 'C'){ // 
-          document.getElementById('convert').innerHTML = Math.round(32 + temp2 * 1.8).toFixed(1)  +  "F";     
+        var tempNoDegrees = temp.slice(0,-1);
+        if(temp.slice(-1) === 'C'){ 
+          document.getElementById('convert').innerHTML = Math.round(32 + tempNoDegrees * 1.8).toFixed(1)  +  "F";     
         }
         if(temp.slice(-1) === 'F') {
-          document.getElementById('convert').innerHTML = Math.round((temp2 - 32) / 1.8).toFixed(1) +  "C";
+          document.getElementById('convert').innerHTML = Math.round((tempNoDegrees - 32) / 1.8).toFixed(1) +  "C";
         }
     });
 });

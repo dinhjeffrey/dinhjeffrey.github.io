@@ -79,7 +79,15 @@ function weather(location) {
 //   }
 // });
 
-  $('#convert').click(function() {  
+  
+
+
+
+$(document).ready(function(){
+  console.log("0")
+  $(".legend2").hide();
+  geoLocation();
+  $('#convert').live("click", function() {  
         var temp = document.getElementById("convert").innerHTML;
         var tempNoDegrees = temp.slice(0,-1);
         if(temp.slice(-1) === 'C'){ 
@@ -90,13 +98,6 @@ function weather(location) {
         }
 });
 
-
-
-
-$(document).ready(function(){
-  console.log("0")
-  $(".legend2").hide();
-  geoLocation();
 });
 
 

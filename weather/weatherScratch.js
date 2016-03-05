@@ -66,19 +66,18 @@ function weather(location) {
   })
 }
 
-$("#convert").click(function(){
-  // .innerHTML used for divs and similar tags
-  // .value used for forms and inputs
-  var temp = document.getElementById("convert").innerHTML;
-  console.log(temp);
-  if(temp.slice(-1) === 'C'){ // 
-    document.getElementById('convert').innerHTML = Math.round(32 + temp2 * 1.8).toFixed(1)  +  "F";     
-  }
-  if(temp.slice(-1) === 'F') {
-    document.getElementById('convert').innerHTML = Math.round((temp2 - 32) / 1.8).toFixed(1) +  "C";
-  }
-});
-
+// $("#convert").click(function(){
+//   // .innerHTML used for divs and similar tags
+//   // .value used for forms and inputs
+//   var temp = document.getElementById("convert").innerHTML;
+//   console.log(temp);
+//   if(temp.slice(-1) === 'C'){ // 
+//     document.getElementById('convert').innerHTML = Math.round(32 + temp2 * 1.8).toFixed(1)  +  "F";     
+//   }
+//   if(temp.slice(-1) === 'F') {
+//     document.getElementById('convert').innerHTML = Math.round((temp2 - 32) / 1.8).toFixed(1) +  "C";
+//   }
+// });
 
 
 
@@ -89,6 +88,16 @@ $(document).ready(function(){
   console.log("0")
   $(".legend2").hide();
   geoLocation();
+  $('#convert').live('click', function(e) {  
+        var temp = document.getElementById("convert").innerHTML;
+        console.log(temp);
+        if(temp.slice(-1) === 'C'){ // 
+          document.getElementById('convert').innerHTML = Math.round(32 + temp2 * 1.8).toFixed(1)  +  "F";     
+        }
+        if(temp.slice(-1) === 'F') {
+          document.getElementById('convert').innerHTML = Math.round((temp2 - 32) / 1.8).toFixed(1) +  "C";
+        }
+    });
 });
 
 

@@ -79,15 +79,8 @@ function weather(location) {
 //   }
 // });
 
-  
-
-
-
-$(document).ready(function(){
-  console.log("0")
-  $(".legend2").hide();
-  geoLocation();
-  $('#convert').click(function() {  
+$('#convert').click(function() {  
+        console.log("success :)")
         var temp = document.getElementById("convert").innerHTML;
         var tempNoDegrees = temp.slice(0,-1);
         if(temp.slice(-1) === 'C'){ 
@@ -97,6 +90,14 @@ $(document).ready(function(){
           document.getElementById('convert').innerHTML = Math.round((tempNoDegrees - 32) / 1.8).toFixed(1) +  "C";
         }
 });
+  
+
+
+
+$(document).ready(function(){
+  console.log("0")
+  $(".legend2").hide();
+  geoLocation();
 
 });
 

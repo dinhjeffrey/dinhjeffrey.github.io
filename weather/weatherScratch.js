@@ -80,6 +80,7 @@ function weather(location) {
 //         }
 // });
   
+// it is a dynamically created button so we got to use $document.(on) function
 $(document).on('click', '#temp #convert', function(){ 
      // Your Code
      var temp = document.getElementById("convert").innerHTML;

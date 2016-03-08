@@ -1,0 +1,12 @@
+.box {
+  border: 3px solid black;
+  padding: 15px;
+  font-family: avenir;
+}
+.grey{
+  color: #ccc;
+  font-size: 14px;
+}
+a:link {
+    text-decoration: none;
+}

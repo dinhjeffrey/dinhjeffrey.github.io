@@ -33,45 +33,37 @@
 
 <body>
 
-<div id="wrap">
-	<div id="body">
-		<div class="game_area">
-			<div class="block"></div>
-			<div class="block"></div>
-			<div class="block"></div>
-			<div class="block"></div>
-			<div class="block"></div>
-			<div class="block"></div>
-			<div class="block"></div>
-			<div class="block"></div>
-			<div id="a" class="block"></div>
-			<div id="line0" class="line"></div>
-			<div id="line1" class="line"></div>
-			<div id="line2" class="line"></div>
-			<div id="line3" class="line"></div>
-		</div>
-	</div>
-	<div id="start_screen">
-		<div id="select_box">
-			<div id="selectO">
-				<div class="o"></div>
-			</div>
-			<div id="selectX">
-				<div class="x"></div>
-			</div>
-			<div class="info_bubble" id="info_1">first</div>
-			<div class="info_bubble" id="info_2">choose one</div>
-		</div>
-	</div>
-	<div id="end_screen">
-		<div id="end_box">
-			<div id="end_info"></div>
-			<div class="circle"></div>
-			<div class="info_bubble" id="btn_restart">restart</div>
-		</div>
-	</div>
-</div>
+<h1>Tic Tac Toe</h1>
+<table>
+
+<tr>
+<td>
+<input type="button" id="one" onclick="one()" value=" " />
+<input type="button" id="two" onclick="two()" value=" " />
+<input type="button" id="three" onclick="three()" value=" " />
+</td>
+</tr>
+
+<tr>
+<td>
+<input type="button" id="four" onclick="four()" value=" " />
+<input type="button" id="five" onclick="five()" value=" " />
+<input type="button" id="six" onclick="six()" value=" " />
+</td>
+</tr>
+
+<tr>
+<td>
+<input type="button" id="seven" onclick="seven()" value=" " />
+<input type="button" id="eight" onclick="eight()" value=" " />
+<input type="button" id="nine" onclick="nine()" value=" " />
+</td>
+</tr>
 
 
+
+
+
+</table>
 <script src="tic-tac-toe.js"></script>
 </body></html>

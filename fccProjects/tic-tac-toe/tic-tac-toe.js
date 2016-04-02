@@ -1,3 +1,49 @@
+// ============================== share-stuff ==========================
+$(".fa-share-alt").click(function(){
+  $(".share").animate({
+    width: "400px",
+    height: "300px"
+  }, 400, function(){
+    $(".fa-share-alt").animate({
+      opacity: 0
+    }, 400, function(){
+      $(".social").animate({
+        top:"50%",
+        opacity: 1,
+        easing: "ease-in"
+      }, 1000)
+    })
+  });
+})
+$(".fa-twitter").click(function(){
+  $(this).toggleClass("shared");
+})
+$(".fa-facebook").click(function(){
+  $(this).toggleClass("shared");
+})
+$(".fa-google-plus").click(function(){
+  $(this).toggleClass("shared");
+})
+
+$(".fa-close").click(function(){
+  $(".social").animate({
+    top: "-250%",
+    opacity: 0,
+    easing: "ease-out"
+  }, 500, function(){
+    $(".share").animate({
+      width: "40px",
+      height: "40px"
+    }, 400, function(){
+      $(".fa-share-alt").animate({
+        opacity: 1
+      }, 400)
+    })
+  });
+})
+
+
+// ============================== end:share-stuff ==========================
 $(document).ready(function(){
   $(".tableXO").hide();
 });
@@ -15,6 +61,7 @@ function playO() {
 	document.getElementById("buttonX").disabled = true;
 	document.getElementById("buttonO").disabled = true;
 	$(".tableXO").show();
+	opponent1()
 }
 
 var a = "success ;)";

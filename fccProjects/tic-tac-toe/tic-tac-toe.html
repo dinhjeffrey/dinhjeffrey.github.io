@@ -8,6 +8,7 @@
   <link rel='stylesheet' href="tic-tac-toe.css" type="text/css" charset="utf-8">
   <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
   <link rel="shortcut icon" sizes="57x57" href="xo.png" >
   <meta name="theme-color" content="black">
 
@@ -28,46 +29,65 @@
   ga('send', 'pageview');
   </script>
 
-</head>
+</head><body>
+<!-- Facebook-share -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- end:Facebook-share -->
 
+<div class="fb-share-button" data-href="http://www.dindledoo.com/fccProjects/tic-tac-toe/tic-tac-toe.html" data-layout="link"></div>
 
-<body>
+<article>
+  <div class="share">
+    <div class="fa fa-share-alt"></div>
+    <div class="social">
+      <div class="fa fa-twitter"></div>
+      <div class="fa fa-facebook fb-share-button" data-href="http://www.dindledoo.com/fccProjects/tic-tac-toe/tic-tac-toe.html" data-layout="link"></div>
+      <div class="fa fa-google-plus"></div>
+      <div class="fa fa-close"></div>
+    </div>
+  </div>
 
-<h1>Tic Tac Toe</h1>
-<button onclick="playX();" id="buttonX">Play as X</button>
-<button onclick="playO();" id="buttonO">Play as O</button>
-
+<div id="bodyDiv" align="center">
+<button class="button-error pure-button" style="background: rgb(202, 60, 60);" onclick="playX();" id="buttonX">Play as X</button>
+<button class="button-error pure-button" style="background: rgb(202, 60, 60);" onclick="playO();" id="buttonO">Play as O</button>
+<br><br>
 <table class="tableXO">
 
 <tr>
 <td>
-<input type="button" id="one" onclick="if (play ==='X') { one();}else{ one1(); }" value=" " />
-<input type="button" id="two" onclick="if (play ==='X') { two();}else{ two1(); }" value=" " />
-<input type="button" id="three" onclick="if (play ==='X') { three();}else{ three1(); }" value=" " />
+<input class="btn pure-button" style="padding:20px 30px; background: rgb(223, 117, 20);" type="button" id="one" onclick="if (play ==='X') { one();}else{ one1(); }" value=" " />
+<input class="btn pure-button" style="padding:20px 30px; background: rgb(223, 117, 20);" type="button" id="two" onclick="if (play ==='X') { two();}else{ two1(); }" value=" " />
+<input class="btn pure-button" style="padding:20px 30px; background: rgb(223, 117, 20);" type="button" id="three" onclick="if (play ==='X') { three();}else{ three1(); }" value=" " />
 </td>
 </tr>
 
 <tr>
 <td>
-<input type="button" id="four" onclick="if (play ==='X') { four();}else{ four1(); }" value=" " />
-<input type="button" id="five" onclick="if (play ==='X') { five();}else{ five1(); }" value=" " />
-<input type="button" id="six" onclick="if (play ==='X') { six();}else{ six1(); }" value=" " />
+<input class="btn pure-button" style="padding:20px 30px; background: rgb(223, 117, 20);" type="button" id="four" onclick="if (play ==='X') { four();}else{ four1(); }" value=" " />
+<input class="btn pure-button" style="padding:20px 30px; background: rgb(223, 117, 20);" type="button" id="five" onclick="if (play ==='X') { five();}else{ five1(); }" value=" " />
+<input class="btn pure-button" style="padding:20px 30px; background: rgb(223, 117, 20);" type="button" id="six" onclick="if (play ==='X') { six();}else{ six1(); }" value=" " />
 </td>
 </tr>
 
 <tr>
 <td>
-<input type="button" id="seven" onclick="if (play ==='X') { seven();}else{ seven1(); }" value=" " />
-<input type="button" id="eight" onclick="if (play ==='X') { eight();}else{ eight1(); }" value=" " />
-<input type="button" id="nine" onclick="if (play ==='X') { nine();}else{ nine1(); }" value=" " />
+<input class="btn pure-button" style="padding:20px 30px; background: rgb(223, 117, 20);" type="button" id="seven" onclick="if (play ==='X') { seven();}else{ seven1(); }" value=" " />
+<input class="btn pure-button" style="padding:20px 30px; background: rgb(223, 117, 20);" type="button" id="eight" onclick="if (play ==='X') { eight();}else{ eight1(); }" value=" " />
+<input class="btn pure-button" style="padding:20px 30px; background: rgb(223, 117, 20);" type="button" id="nine" onclick="if (play ==='X') { nine();}else{ nine1(); }" value=" " />
 </td>
 </tr>
-
-
-
-
-
 </table>
+</div>
+
+
+</article>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="tic-tac-toe.js"></script>
 </body></html>

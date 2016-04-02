@@ -16,13 +16,16 @@ $(".fa-share-alt").click(function(){
   });
 })
 $(".fa-twitter").click(function(){
-  $(this).toggleClass("shared");
+  $(this).addClass("shared");
+  window.open('https://www.twitter.com/intent/tweet?url=http://www.dindledoo.com/fccProjects/tic-tac-toe/tic-tac-toe.html', 'twitterShareWindow', 'height=450, width=550, top=' + ($(window).height() / 2 - 275) + ', left=' + ($(window).width() / 2 - 225) + ', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
 })
 $(".fa-facebook").click(function(){
-  $(this).toggleClass("shared");
+  $(this).addClass("shared");
+  window.open('https://www.facebook.com/sharer/sharer.php?u=http://www.dindledoo.com/fccProjects/tic-tac-toe/tic-tac-toe.html', 'fbShareWindow', 'height=450, width=550, top=' + ($(window).height() / 2 - 275) + ', left=' + ($(window).width() / 2 - 225) + ', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
 })
 $(".fa-google-plus").click(function(){
-  $(this).toggleClass("shared");
+  $(this).addClass("shared");
+  window.open('https://plus.google.com/share?url=http://www.dindledoo.com/fccProjects/tic-tac-toe/tic-tac-toe.html', 'googleShareWindow', 'height=450, width=550, top=' + ($(window).height() / 2 - 275) + ', left=' + ($(window).width() / 2 - 225) + ', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
 })
 
 $(".fa-close").click(function(){

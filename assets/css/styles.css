@@ -224,10 +224,14 @@ h6 {
     color: #131314
 }
 
+
+
 h4 {
+    font-size: 2em
+}
+.quote{
     font-size: 1.3em
 }
-
 h5 {
     font-size: 1.3em;
     font-weight: 500

@@ -225,7 +225,7 @@ h6 {
 }
 
 h4 {
-    font-size: 2em
+    font-size: 1.3em
 }
 
 h5 {
@@ -283,7 +283,7 @@ nav {
 }
 
 header {
-    height: 155px;
+    height: 195px;
     position: fixed;
     width: 100%;
     padding: 40px 0 0;
@@ -417,7 +417,7 @@ section {
 }
 
 .skill-list li {
-    width: 200px;
+    width: 290px;
     margin: 20px 10px;
     vertical-align: top
 }

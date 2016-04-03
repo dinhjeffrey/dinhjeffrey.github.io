@@ -1,3 +1,4 @@
+
 var channels = ["rozoken", "medrybw"];
 var newChannels = [];
 var a = 'success :)';
@@ -101,11 +102,14 @@ function getChannelInfo() {
 				var logo = data.logo != null ? data.logo : "http://dummyimage.com/50x50/ecf0e7/5c5457.jpg&text=0x3F", // makes the logo
 				name = data.display_name != null ? data.display_name : channels,
 				description = status === "online" ? ': ' + data.status : '';
-				// making the html in vanillajs
-				var html = '<div class="fbBlue online"><h2 class="white">' + data.name + ' playing ' + data.game + 
-				'</h2><a href='+  data.url +'><img src=' + data.logo + '></a><br><i class="white">' + data.status +'</i></div>';
-				var html2 = '<div class="grey offline"><h2 class="darkGrey"><i>' + data.name + ' is Offline</i>' + 
-				'</h2><a href='+  data.url +'><img src=' + data.logo + '></a><br><i class="darkGrey">' + data.status +'</i></div>';
+				// ================ online =================
+				var html = '<a href='+  data.url + ' target=_"blank" style="text-decoration: none;"><div class="fbBlue online"><h4 class="white">' + data.name + ' playing ' + data.game + 
+				'</h4><img src=' + data.logo + ' style="width:60px;height:60px;border-radius:50%"><i class="white">' + data.status +'</i></div></a>';
+				// =============== end:online =================
+				// ================ offline =================
+				var html2 = '<a href='+  data.url + ' target=_"blank" style="text-decoration: none;"><div class="grey offline"><h4 class="darkGrey"><i>' + data.name + ' is Offline</i>' + 
+				'</h4><img src=' + data.logo + ' style="width:60px;height:60px;border-radius:50%"><i class="darkGrey">' + data.status +'</i></div></a>';
+				// ================ end:offline =================
 				// prepend: inserts content, specified by the parameter, to the beginning of each element in the set of matched elements
 				// append: inserts content, specified by the parameter, to the end of each element in the set of matched elements 
 				status === "online" ? $("#display").prepend(html) : $("#display").append(html2);
@@ -137,7 +141,57 @@ $(document).ready(function() { // will run once DOM is ready for JS to execute s
 
 
 
+// ============================== share-stuff ==========================
+$(".fa-share-alt").click(function(){
+  $(".share").animate({
+    width: "400px",
+    height: "300px"
+  }, 400, function(){
+    $(".fa-share-alt").animate({
+      opacity: 0
+    }, 400, function(){
+      $(".social").animate({
+        top:"50%",
+        opacity: 1,
+        easing: "ease-in"
+      }, 1000)
+    })
+  });
+})
+$(".fa-twitter").click(function(){
+  $(this).addClass("shared");
+  window.open('https://www.twitter.com/intent/tweet?url=http://www.dindledoo.com/fccProjects/twitch/twitchScratch.html', 'twitterShareWindow', 'height=450, width=550, top=' + ($(window).height() / 2 - 275) + ', left=' + ($(window).width() / 2 - 225) + ', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+})
+$(".fa-facebook").click(function(){
+  $(this).addClass("shared");
+  window.open('https://www.facebook.com/sharer/sharer.php?u=http://www.dindledoo.com/fccProjects/twitch/twitchScratch.html', 'fbShareWindow', 'height=450, width=550, top=' + ($(window).height() / 2 - 275) + ', left=' + ($(window).width() / 2 - 225) + ', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+})
+$(".fa-google-plus").click(function(){
+  $(this).addClass("shared");
+  window.open('https://plus.google.com/share?url=http://www.dindledoo.com/fccProjects/twitch/twitchScratch.html', 'googleShareWindow', 'height=450, width=550, top=' + ($(window).height() / 2 - 275) + ', left=' + ($(window).width() / 2 - 225) + ', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+})
+
+$(".fa-close").click(function(){
+  $(".social").animate({
+    top: "-250%",
+    opacity: 0,
+    easing: "ease-out"
+  }, 500, function(){
+    $(".share").animate({
+      width: "40px",
+      height: "40px"
+    }, 400, function(){
+      $(".fa-share-alt").animate({
+        opacity: 1
+      }, 400)
+    })
+  });
+})
+
+
+// ============================== end:share-stuff ==========================
 
 
 
-// done
+
+

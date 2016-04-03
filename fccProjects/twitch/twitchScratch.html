@@ -8,6 +8,7 @@
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<!-- this allows red url bar in mobile -->
 	<meta name="theme-color" content="#6441A5">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- icon -->
 
@@ -15,6 +16,7 @@
 
 	<!-- local ccs-->
 	<link rel="stylesheet" href="twitchScratch.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 	<!-- mobile -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,10 +35,22 @@
   ga('send', 'pageview');
   </script>
 
-</head>
+</head><body>
+
+<article>
+  <div class="share">
+    <div class="fa fa-share-alt"></div>
+    <div class="social">
+      <div class="fa fa-twitter"></div>
+      <div class="fa fa-facebook"></div>
+      <div class="fa fa-google-plus"></div>
+      <div class="fa fa-close"></div>
+    </div>
+  </div>
+  </article>
 
 
-<body>
+
 	<input type="text" id="textBox" onkeydown="if (event.keyCode == 13) { addChannels(); return false; }" placeholder="Add by username...">
 	<input type="submit" onclick="addChannels();" >
 	<div class="menu">
@@ -46,7 +60,7 @@
 	</div>
  
 
-	<div id="display"></div>
+	<div id="display" align="center"></div>
 
 
 

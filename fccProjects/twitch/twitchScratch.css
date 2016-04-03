@@ -1,5 +1,16 @@
-.white{
+#display {
+	display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: column /* works with row or column */
+   flex-direction: row;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+}
+.title{
 	color: white;
+	font: avenir;
 }
 .grey{
 	background-color: #ddd;
@@ -15,3 +26,137 @@
 	padding: 10px;
 	margin: 5px;
 }
+.centerMe{
+	 
+	text-align:center;
+	height: 30px;
+	width: 700px;
+}
+
+/************** share *******************/
+body {
+  height: 100vh;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+p {
+  text-align: justify;
+  text-indent: 2rem;
+  line-height: 1.6rem;
+}
+article {
+  position: absolute;
+  top: 21%;
+  left: 85%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 400px;
+  height: 300px;
+  background: opacity:0.0;
+  padding: 2rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.share {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background: #2ecc71;
+  cursor: pointer;
+}
+.share:hover {
+  -webkit-animation: glow 1s infinite;
+          animation: glow 1s infinite;
+}
+.share .fa-share-alt {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: #2ecc71;
+}
+.share .social {
+  opacity: 1;
+  position: absolute;
+  top: -200%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 99;
+}
+.share .social .fa {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 100%;
+  background: #ccc;
+}
+.share .social .fa.fa-twitter {
+  background: #ccc;
+  color: #000;
+  border: solid 2px transparent;
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.share .social .fa.fa-twitter.shared {
+  background: #0084b4;
+  color: #fff;
+  border: solid 2px #fff;
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.share .social .fa.fa-facebook {
+  background: #ccc;
+  color: #000;
+  border: solid 2px transparent;
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.share .social .fa.fa-facebook.shared {
+  background: #3b5998;
+  color: #fff;
+  border: solid 2px #fff;
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.share .social .fa.fa-google-plus {
+  background: #ccc;
+  color: #000;
+  border: solid 2px transparent;
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.share .social .fa.fa-google-plus.shared {
+  background: #d34836;
+  color: #fff;
+  border: solid 2px #fff;
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.share .social .fa.fa-close:hover {
+  background: crimson;
+  color: #fff;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+/************** end:share *******************/

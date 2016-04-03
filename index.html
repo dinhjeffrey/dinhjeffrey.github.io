@@ -9,15 +9,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Software Developer"/>
 <!-- end: logo and mobile url bar color -->
-
 <link rel="stylesheet" href="assets/css/styles.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
-
+<style>
+p{
+}
+</style>
+</head>
 <div class="animated fadeIn container">
 <div class="container">
 <header>
-<h1>Jeffrey Dinh</h1>
+<h1 class="name" style="font-weight:bold">Jeffrey Dinh</h1>
 <h3>Software Developer</h3>
 <h3>
 <ul class="socials">
@@ -46,14 +49,6 @@
 </a>
 </li>
 <li>
-<a href="https://www.facebook.com/jffrydnh" target="_blank">
-<span class="fa-stack">
-<i class="fa fa-circle fa-stack-2x"></i>
-<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-</span>
-</a>
-</li>
-<li>
 <a href="https://twitter.com/Dindledoo" target="_blank">
 <span class="fa-stack">
 <i class="fa fa-circle fa-stack-2x"></i>
@@ -67,6 +62,7 @@
 <a href="#experience">Experience</a>
 <a href="#projects">Projects</a>
 <a href="#events">Extracurriculars</a>
+<a id="kickass" href="javascript:var%20KICKASSVERSION='2.0';var%20s%20=%20document.createElement('script');s.type='text/javascript';document.body.appendChild(s);s.src='assets/js/kickass.js';void(0);">Destroy</a>
 </nav>
 </header>
 <section class="story">
@@ -79,76 +75,10 @@
 </div>
 <div>
 <div class="about">
-<h4>I like JavaScript and fitness.<br></h4>
-<h4>Most of my time is spent learning JavaScript, doing muscleups, or relaxing on a hammock.</h4>
+<h4 align="center">I like JavaScript, solving algorithms, and fitness.<br></h4>
+<h4 align="center">Most of my time is spent learning to code, doing muscleups, or relaxing on a hammock.</h4>
 </div>
 </div>
-<section>
-<h2 id="experience"></h2>
-<h4>Experience</h4>
-<ul>
-<li>
-<p class="company"></i> Chegg Inc.</p>
-<span class="work-time">July 2015 - Present</span>
-<p>Online tutor for college-leveled sciences</p>
-</li>
-<li>
-<p class="company">Studio Plazas Apartments</p>
-<span class="work-time">Dec 2014 - June 2015</span>
-<p>Front lobby supervisor</p>
-</li>
-<li>
-<p class="company">UCSB Dining Commons</p>
-<span class="work-time">Oct 2014 - Nov 2014</span>
-<p>Busser, dish washer, janitor</p>
-</li>
-<li>
-<p class="company">UCSB Disabled Students Program</p>
-<span class="work-time">September 2011 - June 2015</span>
-<p>Note taker for disabled students</p>
-</li>
-<li>
-<p class="company">University of California, Santa Barbara</p>
-<span class="work-time">2011 - 2015</span>
-<p>Bachelor's degree in Chemistry</p>
-</li>
-</ul>
-</section>
-<section>
-<h2 id="skills"></h2>
-<h4>Skills</h4>
-<ul class="skill-list">
-<li>
-<p class="company"><i class="fa fa-paint-brush"></i> Front End</p>
-<p>HTML, CSS, JavaScript, jQuery, Jade, Handlebars, Sass, EJS, React, D3</p>
-</li>
-<li>
-<p class="company"><i class="fa fa-shield"></i> Back End</p>
-<p>Node.js, Express.js, Git</p>
-</li>
-<li>
-<p class="company"><i class="fa fa-desktop"></i> General Programming</p>
-<p>JavaScript, Java, Python</p>
-</li>
-<li>
-<p class="company"><i class="fa fa-mobile"></i> Mobile</p>
-<p>React Native</p>
-</li>
-<li>
-<p class="company"><i class="fa fa-database"></i> Databases</p>
-<p>MongoDB, Mongoose, MS Sql</p>
-</li>
-<li>
-<p class="company"><i class="fa fa-wrench"></i> Tools</p>
-<p>Gulp, Bower, Heroku</p>
-</li>
-<li>
-<a target="blank" href="assets/JeffreyD_Resume.pdf">
-<span class="moreBadge demoBadge">Resume.pdf</span>
-</a>
-</li>
-</ul>
-</section>
 <section>
 <h2 id="projects"></h2>
 <h4>Personal Projects</h4>
@@ -244,30 +174,93 @@
 </ul>
 </section>
 <section>
+<h2 id="skills"></h2>
+<h4>Skills</h4>
+<ul class="skill-list">
+<li>
+<p class="company"><i class="fa fa-paint-brush"></i> Front End</p>
+<p>HTML, CSS, JavaScript, jQuery, Jade, Handlebars, Sass, EJS, React, D3</p>
+</li>
+<li>
+<p class="company"><i class="fa fa-shield"></i> Back End</p>
+<p>Node.js, Express.js, Git</p>
+</li>
+<li>
+<p class="company"><i class="fa fa-desktop"></i> General Programming</p>
+<p>JavaScript, Java, Python</p>
+</li>
+<li>
+<p class="company"><i class="fa fa-mobile"></i> Mobile</p>
+<p>React Native</p>
+</li>
+<li>
+<p class="company"><i class="fa fa-database"></i> Databases</p>
+<p>MongoDB, Mongoose, MS Sql</p>
+</li>
+<li>
+<p class="company"><i class="fa fa-wrench"></i> Tools</p>
+<p>Gulp, Bower, Heroku</p>
+</li>
+<li>
+<a target="blank" href="assets/JeffreyD_Resume.pdf">
+<span class="moreBadge demoBadge">Resume.pdf</span>
+</a>
+</li>
+</ul>
+</section>
+<section>
 <h2 id="events"></h2>
 <h4>Extracurriculars</h4>
-<ul class="project-list">
+<ul class="extra-list">
 <li>
 <p class="company">FreeCodeCamp</p>
-<p>Meet up with the FreeCodeCamp Orange County programmers weekly and help beginners set up their computer environment to code, solve algorithms, and present lessons on JavaScript. I have taught JavaScript scope and closures and maintain the group's GitHub repository.</p>
+<p>Weekly meet up with the FreeCodeCamp Orange County programmers. Helping beginners set up their computer environment to code, solving algorithms, and presenting lessons on JavaScript. I taught a lesson on JavaScript scope and closures and I am maintaining the meetup group's GitHub repository.</p>
 <a target="_blank" href="https://github.com/dinhjeffrey/FreeCodeCampOC"><span class="moreBadge">Source</span></a>
 </li>
 </ul>
 </section>
 <section>
-<h2 id="reading"></h2>
-<h4>Reading List</h4>
-<div id="reading-list" class="owl-carousel owl-theme">
-</div>
-</section>
-</section>
-<section>
+<h2 id="experience"></h2>
+<h4>Experience</h4>
+<br>
 <ul>
-<li class="footer">
-<p id="quotes">"It doesn't matter if the glass is half empty or half full; all that matters is you're the one pouring the water." - Mark Cuban</p>
-<p><a id="kickass" href="javascript:var%20KICKASSVERSION='2.0';var%20s%20=%20document.createElement('script');s.type='text/javascript';document.body.appendChild(s);s.src='assets/js/kickass.js';void(0);">Destroy Site</a></p>
+<li>
+<p class="company"></i>Chegg Inc.</p>
+<span class="work-time">July 2015 - Present</span> 
+&#8227; Online tutor in math, chemistry, stats, engineering
+</li>
+<li>
+<p class="company"></i>Karate For All</p>
+<span class="work-time">July 2015 - February 2016</span> 
+&#8227; Helped kids age 5-15 yrs with karate. Also fixed IT problems
+</li>
+<li>
+<p class="company"></i>Hope Community Services</p>
+<span class="work-time">June 2015 - August 2016</span> 
+&#8227; Helped 6th graders in math and science. Grades data entry
+</li>
+<li>
+<p class="company">Studio Plazas Apartments</p>
+<span class="work-time">Dec 2014 - June 2015</span>
+&#8227; Front lobby supervisor. Fixed computer, internet, printer, and TV problems for residents
+</li>
+<li>
+<p class="company">Nhan Hoa Clinic</p>
+<span class="work-time">June 2014 - September 2014</span>
+&#8227; Medical drugs data entry
+</li>
+<li>
+<p class="company">Aihien, LLC</p>
+<span class="work-time">2001 - 2011</span>
+&#8227; Clothing data entry
+</li>
+<li>
+<p class="company">University of California, Santa Barbara</p>
+<span class="work-time">2011 - 2015</span>
+&#8227; Bachelor's degree in Chemistry
 </li>
 </ul>
+</section>
 </section>
 </div>
 </div>

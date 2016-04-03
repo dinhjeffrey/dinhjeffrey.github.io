@@ -58,7 +58,7 @@ function getChannelInfo2(input) {
 				var html = '<div class="fbBlue online"><h2 class="white">' + data.name + ' playing ' + data.game + 
 				'</h2><a href='+  data.url +'><img src=' + data.logo + '></a><br><i class="white">' + data.status +'</i></div>';
 				var html2 = '<div class="grey offline"><h2 class="darkGrey"><i>' + data.name + ' is Offline</i>' + 
-				'</h2><a href='+  data.url +'><img src=' + data.logo + ' height="300" width="300"></a><br><i class="darkGrey">' + data.status +'</i></div>';
+				'</h2><a href='+  data.url +'><img src=' + data.logo + ' style="width:60px;height:60px;border-radius:50%"></a><br><i class="darkGrey">' + data.status +'</i></div>';
 				// prepend: inserts content, specified by the parameter, to the beginning of each element in the set of matched elements
 				// append: inserts content, specified by the parameter, to the end of each element in the set of matched elements 
 				status === "online" ? $("#display").prepend(html) : $("#display").append(html2);
@@ -66,7 +66,7 @@ function getChannelInfo2(input) {
 		})
 		.fail(function() {
     		var html2 = '<div class="grey offline"><h2 class="darkGrey"><i>' + input + '`s account is closed.</i>' + 
-				'</h2><img src=https://pbs.twimg.com/media/CMiMvsQWIAE2W2G.png height="300" width="600"></div>';
+				'</h2><img src=https://pbs.twimg.com/media/CMiMvsQWIAE2W2G.png style="width:60px;height:60px;border-radius:50%></div>';
 				// prepend: inserts content, specified by the parameter, to the beginning of each element in the set of matched elements
 				// append: inserts content, specified by the parameter, to the end of each element in the set of matched elements 
 				status === "online" ? $("#display").prepend(html) : $("#display").append(html2);

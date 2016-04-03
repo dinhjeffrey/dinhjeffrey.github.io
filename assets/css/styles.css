@@ -1,3 +1,9 @@
+/********************** Fixes ************************************/
+.name{
+    font-size:70px;
+}
+/********************** Fixes:End ************************************/
+/********************** Bootstrap ************************************/
 a,
 h1,
 h2,
@@ -319,6 +325,7 @@ header {
 .owl-next,
 .owl-prev,
 .project-list li,
+.extra-list li,
 .skill-list li,
 .socials li {
     display: inline-block
@@ -479,6 +486,11 @@ section {
 .project-list li {
     margin: 10px 0 30px 10px;
     max-width: 300px;
+    vertical-align: top
+}
+.extra-list li {
+    margin: 10px 0 30px 10px;
+    max-width: 450px;
     vertical-align: top
 }
 
@@ -1410,3 +1422,5 @@ footer img {
     -o-animation-name: bounceInRight;
     animation-name: bounceInRight
 }
+
+/********************** Bootstrap:end ************************************/

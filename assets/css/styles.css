@@ -224,13 +224,16 @@ h6 {
     color: #131314
 }
 
-
-
 h4 {
     font-size: 2em
 }
 .quote{
+    text-align:center;
     font-size: 1.3em
+}
+.musk{
+    font-size: 1.7em;
+    text-align: center;
 }
 h5 {
     font-size: 1.3em;
@@ -282,7 +285,7 @@ nav a {
 }
 
 nav {
-    float: right;
+    float: left;
     word-spacing: 70px
 }
 
@@ -349,7 +352,10 @@ header {
 }
 
 .socials li {
-    font-size: 15px
+    font-size: 15px;
+    margin-left:-3px;
+    margin-top:5px;
+    margin-bottom:10px;
 }
 
 .about {
@@ -419,11 +425,17 @@ section {
     font-size: 10px;
     color: #fff
 }
+.font20{
+    font-size:20px;
+    margin: 0px, -5px;
+}
 
 .skill-list li {
     width: 290px;
-    margin: 20px 10px;
-    vertical-align: top
+    margin: 10px -5px 0px;
+    vertical-align: top;
+    margin-right: 25px;
+    margin-bottom: 10px;
 }
 
 .moreBadge {
@@ -488,14 +500,17 @@ section {
 }
 
 .project-list li {
-    margin: 10px 0 30px 10px;
-    max-width: 300px;
+    margin: 10px 0 30px -5px;
+    max-width: 315px;
     vertical-align: top
 }
 .extra-list li {
-    margin: 10px 0 30px 10px;
-    max-width: 450px;
+    margin: 10px 0 30px -5px;
+    max-width: 1000px;
     vertical-align: top
+}
+.experience-list{
+    margin: 10px -5px;
 }
 
 #reading-list {

@@ -623,7 +623,7 @@ footer img {
     header {
         padding: 40px 20px 0
     }
-    nav {
+    .nav {
         display: none
     }
     .story {
@@ -642,7 +642,7 @@ footer img {
     header {
         padding: 40px 20px 0
     }
-    nav {
+    .nav {
         display: none
     }
     .story {
@@ -665,7 +665,7 @@ footer img {
     header {
         padding: 40px 20px 0
     }
-    nav {
+    .nav {
         display: none
     }
     .story {

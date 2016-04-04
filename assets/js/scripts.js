@@ -6,7 +6,7 @@ $(document).ready(function() {
         offset: function() {
             return 0
         }
-    }), /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && $("#kickass").hide(), /(Mac|iPhone|iPod|iPad)/i.test(navigator.userAgent) || (console.log("here"), $("head").append("<link href='https://fonts.googleapis.com/css?family=Muli:300' rel='stylesheet' type='text/css'>")), $(".freelance-proj-email-button").click(function() { emailSampleHandler() }), $(".freelance-proj-email-field").keydown(function(e) { 13 == e.keyCode && emailSampleHandler() }), setInterval(changeQuote, 1e4)
+    })
 })
 
 // enable smooth scrolling for nav bar

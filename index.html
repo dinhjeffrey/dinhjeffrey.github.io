@@ -10,6 +10,7 @@
 <meta name="description" content="Software Developer"/>
 <!-- end: logo and mobile url bar color -->
 <link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="assets/css/animate.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
 
@@ -17,13 +18,12 @@
 <div class="animated fadeIn container">
 <div class="container">
 
-
 <header>
-<h1 class="name" style="font-weight:bold">Jeffrey Dinh</h1>
+<h1 class="name wow bounce" data-wow-duration="1s" data-wow-delay="1.5s" style="font-weight:bold">Jeffrey Dinh</h1>
 <h3>Software Developer</h3>
 <h3>
 <ul class="socials">
-<li>
+<li class="wow bounce" data-wow-duration="1s" data-wow-delay="0s">
 <a href="mailto:dinhjeffreyy@gmail.com">
 <span class="fa-stack">
 <i class="fa fa-circle fa-stack-2x"></i>
@@ -31,7 +31,7 @@
 </span>
 </a>
 </li>
-<li>
+<li class="wow bounce" data-wow-duration="1s" data-wow-delay="0.25s">
 <a href="https://www.linkedin.com/in/jeffrey-dinh-21221834" target="_blank">
 <span class="fa-stack">
 <i class="fa fa-circle fa-stack-2x"></i>
@@ -39,7 +39,7 @@
 </span>
 </a>
 </li>
-<li>
+<li class="wow bounce" data-wow-duration="1s" data-wow-delay="0.5s">
 <a href="https://github.com/dinhjeffrey" target="_blank">
 <span class="fa-stack">
 <i class="fa fa-circle fa-stack-2x"></i>
@@ -47,7 +47,7 @@
 </span>
 </a>
 </li>
-<li>
+<li class="wow bounce" data-wow-duration="1s" data-wow-delay="0.75s">
 <a href="https://twitter.com/Dindledoo" target="_blank">
 <span class="fa-stack">
 <i class="fa fa-circle fa-stack-2x"></i>
@@ -57,17 +57,18 @@
 </li>
 </ul>
 </h3>
-<nav>
-<a href="#experience">Experience</a>
+<nav class="nav">
 <a href="#projects">Projects</a>
 <a href="#events">Extracurriculars</a>
+<a href="#experience">Experience</a>
 <a id="kickass" href="javascript:var%20KICKASSVERSION='2.0';var%20s%20=%20document.createElement('script');s.type='text/javascript';document.body.appendChild(s);s.src='assets/js/kickass.js';void(0);">Destroy</a>
 </nav>
 </header>
 
 
 
-<section class="story">
+
+
 <h2 id="concept"></h2>
 <div class="concept-statement">
 <h4 class="musk">
@@ -80,10 +81,10 @@
 <h4 class="quote">I like JavaScript, solving algorithms, and fitness.<br></h4>
 <h4 class="quote">Most of my time is spent learning to code, doing muscleups, or relaxing on a hammock.</h4>
 </div>
-</div>
+</div>  
 <section>
 <h2 id="projects"></h2>
-<h4>Personal Projects</h4>
+<h4 class="wow slideInLeft" data-wow-duration="2s">Personal Projects</h4>
 <ul class="project-list">
 <li>
 <p class="company">Header Parser</p>
@@ -177,7 +178,7 @@
 </section>
 <section>
 <h2 id="skills"></h2>
-<h4>Skills</h4>
+<h4 class="wow slideInLeft" data-wow-duration="2s">Skills</h4>
 <ul class="skill-list">
 <li>
 <p class="company"><i class="fa fa-paint-brush"></i> Front End</p>
@@ -212,7 +213,7 @@
 </section>
 <section>
 <h2 id="events"></h2>
-<h4>Extracurriculars</h4>
+<h4 class="wow slideInLeft" data-wow-duration="2s">Extracurriculars</h4>
 <ul class="extra-list">
 <li>
 <p class="company">FreeCodeCamp</p>
@@ -223,7 +224,7 @@
 </section>
 <section>
 <h2 id="experience"></h2>
-<h4>Experience</h4>
+<h4 class="wow slideInLeft" data-wow-duration="2s">Experience</h4>
 <ul class="experience-list">
 <li>
 <p class="company"></i>Chegg Inc.</p>
@@ -283,5 +284,25 @@
 </script>
 <!-- end:Google analytics -->
 
-<script type="text/javascript" src="assets/js/kloudSec.js"></script></body>
+<script type="text/javascript" src="assets/js/kloudSec.js"></script>
+<script type="text/javascript" src="assets/js/wow.js"></script>
+<script>
+    wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset:       100,
+        callback:     function(box) {
+          console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+        }
+      }
+    );
+    wow.init();
+    document.getElementById('moar').onclick = function() {
+      var section = document.createElement('section');
+      section.className = 'section--purple wow fadeInDown';
+      this.parentNode.insertBefore(section, this);
+    };
+</script>
+
+</body>
 </html>

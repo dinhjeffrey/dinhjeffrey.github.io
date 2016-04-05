@@ -502,17 +502,17 @@ section {
 }
 
 .project-list li {
-    margin: 10px 0 30px -5px;
+    margin: 10px 0 30px 0px;
     max-width: 315px;
     vertical-align: top
 }
 .extra-list li {
-    margin: 10px 0 30px -5px;
+    margin: 10px 0 30px 0px;
     max-width: 1000px;
     vertical-align: top
 }
 .experience-list{
-    margin: 10px -5px;
+    margin: 10px 0px;
 }
 
 #reading-list {

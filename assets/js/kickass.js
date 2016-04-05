@@ -374,7 +374,7 @@
                     if (this.bullets.hasOwnProperty(t))
                         for (var e, s = 0; e = this.bullets[t][s]; s++) e.destroy();
                 this.bullets = {} } }),
-        SessionManager = new Class({ initialize: function() { this.isPlaying = !1 }, update: function() { this.isPlaying && 0 == this.game.bulletManager.enemyIndex.length && this.weHaveWon() }, weHaveWon: function() { this.isPlaying = !1, this.game.ui.showMessage('All clear! <br>Now why don\'t you say hi? :) <br><br>lt@ucsd.edu', 9e4) } }),
+        SessionManager = new Class({ initialize: function() { this.isPlaying = !1 }, update: function() { this.isPlaying && 0 == this.game.bulletManager.enemyIndex.length && this.weHaveWon() }, weHaveWon: function() { this.isPlaying = !1, this.game.ui.showMessage('All clear! <br>Now why don\'t you say hi? :) <br><br>jeffreydinh@umail.ucsb.edu', 9e4) } }),
         ExplosionManager = new Class({ initialize: function() { this.explosions = [] }, update: function(t) {
                 for (var e, s = now(), i = 0; e = this.explosions[i]; i++) s - e.bornAt > (e.ttl || 500) ? (e.destroy(), this.explosions.splice(i, 1)) : e.update(t) }, addExplosion: function(t, e, s) { s = s || ParticleExplosion;
                 var i = new s(t, e);

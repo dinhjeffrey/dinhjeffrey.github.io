@@ -104,9 +104,9 @@ function weather(city){
   $.getJSON(url + 'q=' + city + "&APPID=" + key +"&units=metric", function(data){
     var main = data.main, weather = data.weather[0], temp = main.temp.toFixed(1), name = data.name, 
     country = data.sys.country, sunrise = new Date(data.sys.sunrise * 1000), sunset = new Date(data.sys.sunset * 1000); 
-    var sunIcon = "sunset.png";
+    var sunIcon = "sunrise.png";
     document.getElementById('sunrise').innerHTML = '<img src='+sunIcon+'>' + sunrise.getHours() + ":" + sunrise.getMinutes()+"am"; 
-    var moonIcon = "sunrise.png"; 
+    var moonIcon = "sunset.png"; 
     document.getElementById('sunset').innerHTML = '<img src='+moonIcon+'>' + Number(sunset.getHours()-12) + ":" + sunset.getMinutes()+"pm";
     document.getElementById('temp').innerHTML = (32 + temp * 1.8).toFixed(0) +  "&deg; F";      
     document.getElementById('city').innerHTML = name;

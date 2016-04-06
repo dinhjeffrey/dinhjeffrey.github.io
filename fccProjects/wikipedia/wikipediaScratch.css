@@ -15,11 +15,15 @@
   font-family: Helvetica;
 }
 
-.box:hover{
+.grey:hover{
   text-decoration: underline;
 }
 a:link {
     text-decoration: none;
+}
+
+.userInput{
+  width:40%;
 }
 
 /************** share *******************/

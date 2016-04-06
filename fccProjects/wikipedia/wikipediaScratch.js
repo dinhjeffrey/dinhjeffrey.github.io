@@ -71,7 +71,7 @@ function display(search) {
 		console.log(data)
 		var html = "<div id='remove'>";
 		for (var i=0; i<data[1].length; i++){
-			html+= "<a href=" + data[3][i] + "><div class='box'><div class='line'>" + data[1][i] + "</div><text class='grey'>" + data[2][i] + ".." + "</text></div></a>"
+			html+= "<div class='box'><div class='line'>" + data[1][i] + "</div><a href=" + data[3][i] + "><text class='grey'>" + data[2][i] + ".." + "</text></div></a>"
 		}
 		html += "</div>";
 		// var html = "<div>" + data[1][0] + "</div><div>" + data[1][1];

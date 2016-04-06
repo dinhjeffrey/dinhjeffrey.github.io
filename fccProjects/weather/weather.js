@@ -1,4 +1,52 @@
+// ============================== share-stuff ==========================
+$(".fa-share-alt").click(function(){
+  $(".share").animate({
+    width: "400px",
+    height: "300px"
+  }, 400, function(){
+    $(".fa-share-alt").animate({
+      opacity: 0
+    }, 400, function(){
+      $(".social").animate({
+        top:"50%",
+        opacity: 1,
+        easing: "ease-in"
+      }, 1000)
+    })
+  });
+})
+$(".fa-twitter").click(function(){
+  $(this).addClass("shared");
+  window.open('https://www.twitter.com/intent/tweet?url=http://www.dindledoo.com/fccProjects/weather/weather.html', 'twitterShareWindow', 'height=450, width=550, top=' + ($(window).height() / 2 - 275) + ', left=' + ($(window).width() / 2 - 225) + ', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+})
+$(".fa-facebook").click(function(){
+  $(this).addClass("shared");
+  window.open('https://www.facebook.com/sharer/sharer.php?u=http://www.dindledoo.com/fccProjects/weather/weather.html', 'fbShareWindow', 'height=450, width=550, top=' + ($(window).height() / 2 - 275) + ', left=' + ($(window).width() / 2 - 225) + ', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+})
+$(".fa-google-plus").click(function(){
+  $(this).addClass("shared");
+  window.open('https://plus.google.com/share?url=http://www.dindledoo.com/fccProjects/weather/weather.html', 'googleShareWindow', 'height=450, width=550, top=' + ($(window).height() / 2 - 275) + ', left=' + ($(window).width() / 2 - 225) + ', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+})
 
+$(".fa-close").click(function(){
+  $(".social").animate({
+    top: "-250%",
+    opacity: 0,
+    easing: "ease-out"
+  }, 500, function(){
+    $(".share").animate({
+      width: "40px",
+      height: "40px"
+    }, 400, function(){
+      $(".fa-share-alt").animate({
+        opacity: 1
+      }, 400)
+    })
+  });
+})
+
+
+// ============================== end:share-stuff ==========================
 function geoLocation() {
   function getCity(latlng) {
     var geocoder = new google.maps.Geocoder();
@@ -56,9 +104,9 @@ function weather(city){
   $.getJSON(url + 'q=' + city + "&APPID=" + key +"&units=metric", function(data){
     var main = data.main, weather = data.weather[0], temp = main.temp.toFixed(1), name = data.name, 
     country = data.sys.country, sunrise = new Date(data.sys.sunrise * 1000), sunset = new Date(data.sys.sunset * 1000); 
-    var sunIcon = "http://findicons.com/files/icons/2232/wireframe_mono/16/sun.png";
+    var sunIcon = "sunset.png";
     document.getElementById('sunrise').innerHTML = '<img src='+sunIcon+'>' + sunrise.getHours() + ":" + sunrise.getMinutes()+"am"; 
-    var moonIcon = "http://findicons.com/files/icons/1667/iconic/12/moon_fill.png"; 
+    var moonIcon = "sunrise.png"; 
     document.getElementById('sunset').innerHTML = '<img src='+moonIcon+'>' + Number(sunset.getHours()-12) + ":" + sunset.getMinutes()+"pm";
     document.getElementById('temp').innerHTML = (32 + temp * 1.8).toFixed(0) +  "&deg; F";      
     document.getElementById('city').innerHTML = name;

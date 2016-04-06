@@ -1,4 +1,52 @@
+// ============================== share-stuff ==========================
+$(".fa-share-alt").click(function(){
+  $(".share").animate({
+    width: "400px",
+    height: "300px"
+  }, 400, function(){
+    $(".fa-share-alt").animate({
+      opacity: 0
+    }, 400, function(){
+      $(".social").animate({
+        top:"50%",
+        opacity: 1,
+        easing: "ease-in"
+      }, 1000)
+    })
+  });
+})
+$(".fa-twitter").click(function(){
+  $(this).addClass("shared");
+  window.open('https://www.twitter.com/intent/tweet?url=http://www.dindledoo.com/fccProjects/tic-tac-toe/tic-tac-toe.html', 'twitterShareWindow', 'height=450, width=550, top=' + ($(window).height() / 2 - 275) + ', left=' + ($(window).width() / 2 - 225) + ', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+})
+$(".fa-facebook").click(function(){
+  $(this).addClass("shared");
+  window.open('https://www.facebook.com/sharer/sharer.php?u=http://www.dindledoo.com/fccProjects/tic-tac-toe/tic-tac-toe.html', 'fbShareWindow', 'height=450, width=550, top=' + ($(window).height() / 2 - 275) + ', left=' + ($(window).width() / 2 - 225) + ', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+})
+$(".fa-google-plus").click(function(){
+  $(this).addClass("shared");
+  window.open('https://plus.google.com/share?url=http://www.dindledoo.com/fccProjects/tic-tac-toe/tic-tac-toe.html', 'googleShareWindow', 'height=450, width=550, top=' + ($(window).height() / 2 - 275) + ', left=' + ($(window).width() / 2 - 225) + ', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+})
 
+$(".fa-close").click(function(){
+  $(".social").animate({
+    top: "-250%",
+    opacity: 0,
+    easing: "ease-out"
+  }, 500, function(){
+    $(".share").animate({
+      width: "40px",
+      height: "40px"
+    }, 400, function(){
+      $(".fa-share-alt").animate({
+        opacity: 1
+      }, 400)
+    })
+  });
+})
+
+
+// ============================== end:share-stuff ==========================
 
 function geoLocation() {
   console.log('1');
@@ -62,7 +110,7 @@ function weather(location) {
     // console.log(data.weather[0].description)
     var html = "<div><h3>It is <button id='convert'>" + data.main.temp + "F</button> and it outside seems likely " + data.weather[0].description + "</h3><img src=http://openweathermap.org/img/w/" + data.weather[0].icon + ".png></div>";
     $("#temp").prepend(html);
-    $(".legend2").show();
+    $(".legend").hide();
   })
 }
 
@@ -99,7 +147,6 @@ $(document).on('click', '#temp #convert', function(){
 
 $(document).ready(function(){
   console.log("0")
-  $(".legend2").hide();
   geoLocation();
 });
 

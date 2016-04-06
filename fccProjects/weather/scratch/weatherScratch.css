@@ -1,3 +1,14 @@
+/************** fixes *******************/
+.legend{
+  text-align: left;
+  font-family: avenir;
+}
+
+
+
+
+
+/************** end:fixes *******************/
 /************** share *******************/
 body {
   height: 100vh;
@@ -16,15 +27,16 @@ p {
 }
 article {
   position: absolute;
-  top: 8%;
-  left: 54%;
+  top: 50%;
+  left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 400px;
-  height: 100px;
-  background: opacity:1;
+  height: 300px;
+  background: #eee;
   padding: 2rem;
   box-sizing: border-box;
+  box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
 .share {
@@ -45,7 +57,7 @@ article {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -10%);
+          transform: translate(-50%, -50%);
   text-align: center;
   line-height: 40px;
   width: 40px;
@@ -56,10 +68,10 @@ article {
 .share .social {
   opacity: 1;
   position: absolute;
-  top: -500%;
+  top: -200%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -300%);
+          transform: translate(-50%, -50%);
   z-index: 99;
 }
 .share .social .fa {
@@ -125,130 +137,3 @@ article {
   transition: all 0.4s ease;
 }
 /************** end:share *******************/
-
-.main {
-  opacity: 0.6;
-  position: absolute;  
-  margin-left: -10px;
-  margin-top: -10px;
-  height: 100%;
-  width: 100%;  
-}
-
-block {
-  position : relative;
-}
-
-
-/*transparency of weather box is changeable via opacity*/
-.weather {
-  opacity: 0.7;
-  background-color: white;
-  font-size: 2em;
-  height: 300px;
-  width: 450px;
-  position: absolute;
-  top: 30%;
-  left: 45%;
-  margin: -70px 0 0 -170px;
-  font-family:avenir;
-  color: #666666;
-}
-
-/*temperature box*/
-.temp {  
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color : white;
-/*  padding-bottom: 20px;
-*/}
-
-.temp li {
-  display : inline;  
-}
-
-#icon {
-  position: relative;
-  bottom: -17px;
-}
-
-#search {
-  height: 40px;
-  width: 18em;
-  position: absolute;
-  bottom: 0.1px;
-  right: 4.35em;
-  outline: none;
-  font-size: 20px;
-  opacity : 1; 
-  font-family: avenir; 
-  border:0;
-  outline:0;
-  border-bottom: 0.1px solid #ddd;
-}
-
-button:focus {outline:0;}
-#locate {
-  height: 46px;
-  width: 20%;
-  background-color: red;
-  position: absolute;
-  bottom: 0.001px;
-  right: 0em;
-  outline: none;
-  border : 0; 
-  font-size: 20px;
-  color : #FFF;  
-  opacity : 1;  
-}
-
-/*#convert {
-  height: 30px;
-  width: 30px;
-  border-radius: 25px;
-  outline: none;  
-  position: absolute;
-  top: 26px;  
-  outline : none;
-  font-size: 18px;
-  }*/
-
-  .sunrise{
-    position: relative;
-    font-family: avenir;
-    font-size: 16px;
-    top:-68px;
-  }
-  button.link { 
-    background:none;border:none; 
-  }
-
-
-
-  .cityCountry{
-    font-size: 16px;
-    font-family: avenir;
-    position: relative;
-    text-align: right;
-    right: 3px;
-    top: -48px;
-    color: #4aa3df;
-  }
-
-  #temp{
-    font-family: 'Avenir Next';
-    font-weight: bold;
-    font-size: 55px;
-    color:blue;
-    position:relative;
-  }
-
-  #data{
-    font-family: 'Avenir Next';
-    font-size: 40px;
-    color:black;
-    position:relative;
-    top:-25px;
-    right: -9.5px;
-  }

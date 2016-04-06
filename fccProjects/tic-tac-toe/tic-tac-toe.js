@@ -50,6 +50,9 @@ $(".fa-close").click(function(){
 $(document).ready(function(){
   $(".tableXO").hide();
 });
+$(".XorO").click( function() {
+    $(this).addClass("black");
+});
 
 function playX() {
 	play = "X";

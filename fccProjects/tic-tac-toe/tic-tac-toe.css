@@ -131,5 +131,8 @@ article {
 .btn{
   margin: 3px;
 }
+button.black{
+  background-color: rgb(202, 60, 60);
+}
 
 /************** end:XO-button *******************/

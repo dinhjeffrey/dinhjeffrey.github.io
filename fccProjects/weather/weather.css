@@ -17,7 +17,7 @@ p {
 article {
   position: absolute;
   top: 5%;
-  left: 54%;
+  left: 45%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 400px;

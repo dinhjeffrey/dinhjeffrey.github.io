@@ -11,7 +11,7 @@ require('dotenv').config({
 
 var app = express();
 mongo.MongoClient.connect("mongodb://localhost:27017/charmander"||"mongodb://admin:password@ds015710.mlab.com:15710/charmander-url", function(err, db) {
-
+  console.log("using charmander database")
   if (err) {
     throw new Error('Database failed to connect!');
   } else {

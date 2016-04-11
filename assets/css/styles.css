@@ -1,5 +1,4 @@
 /********************** Fixes ************************************/
-
 .name{
     margin-top:-20px;
     font-size:70px;
@@ -183,15 +182,16 @@ h4 {
 }
 
 a {
-    text-decoration: none
+    text-decoration: none;
+    transition: color .2s linear;
 }
 
-a:hover {
+a:hover, a:focus{
     opacity: .8;
     color: #ff3232;
     -webkit-transition: color .2s;
     -moz-transition: color .2s;
-    transition: color .2s
+    transition: all 0.2s ease-in;
 }
 
 h1 {

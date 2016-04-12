@@ -302,16 +302,7 @@
 <script type="text/javascript" src="assets/js/kloudSec.js"></script>
 <script type="text/javascript" src="assets/js/wow.js"></script>
 <script>
-    wow = new WOW(
-      {
-        animateClass: 'animated',
-        offset:       100,
-        callback:     function(box) {
-          console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
-        }
-      }
-    );
-    wow.init();
+    new WOW().init();
 </script>
 
 </body>

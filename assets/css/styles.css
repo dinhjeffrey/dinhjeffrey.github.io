@@ -3,6 +3,20 @@
     margin-top:-20px;
     font-size:70px;
 }
+.fa-stack-1x.fa-inverse:hover {
+    transform: scale(1.5, 1.5);
+    -webkit-transform: scale(1.5, 1.5);
+    transition: 0.2s ease-in;
+    -webkit-transition: 0.2s ease-in;
+}
+.fa-inverse {
+    color: #fff;
+    transition: 0.2s linear;
+    -webkit-transition: 0.2s linear;
+}
+.name{
+    visibility:visible;
+}
 /********************** Fixes:End ************************************/
 /********************** Bootstrap ************************************/
 a,
@@ -184,6 +198,7 @@ h4 {
 a {
     text-decoration: none;
     transition: color .2s linear;
+    -webkit-transition: color .2s linear;
 }
 
 a:hover, a:focus{
@@ -441,7 +456,9 @@ section {
 }
 
 .moreBadge {
-    background: #191919
+    background: #191919;
+    transition: 0.2s linear;
+    -webkit-transition: 0.2s linear;
 }
 
 .techBadge {
@@ -454,7 +471,9 @@ section {
 }
 
 .moreBadge:hover {
-    background-color: #ff3232
+    background-color: #ff3232;
+    transition: 0.2s ease-in;
+    -webkit-transition: 0.2s ease-in;
 }
 
 .freelance-proj-email-field {

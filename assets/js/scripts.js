@@ -6,7 +6,7 @@ $(document).ready(function() {
         offset: function() {
             return 0
         }
-    })
+    }) 
 })
 
 // enable smooth scrolling for nav bar
@@ -20,3 +20,5 @@ function scrollNav() {
   });
   $('.scrollTop a').scrollTop();
 }
+
+

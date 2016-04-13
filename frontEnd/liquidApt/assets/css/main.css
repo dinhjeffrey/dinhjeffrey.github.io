@@ -632,6 +632,9 @@ a.button-hollow:hover, a.button-hollow:focus {
 
 
 /* Header: Navigation */
+a.button.button-signup-trigger:focus {
+    outline: none;
+}
 
 .nav-trigger {
   font-size: 22px;

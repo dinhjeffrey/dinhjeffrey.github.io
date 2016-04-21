@@ -77,7 +77,7 @@ function geoLocation() {
         }
         var address = arrAddress.join(' ');
         console.log(address);
-        var html = "<div><h3>" + address + "</h3></div>"; 
+        var html = `<div><h3>  ${address}  </h3></div>`; 
         $("#display").prepend(html);
         weather(address);
       } else { console.log("Could not find city"); }

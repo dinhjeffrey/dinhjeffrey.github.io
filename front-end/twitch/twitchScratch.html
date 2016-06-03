@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+
+<html>
+
+
+<head>
+	<!-- this allows emojis in comment -->
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<!-- this allows red url bar in mobile -->
+	<meta name="theme-color" content="#6441A5">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- icon -->
+
+	<link rel="shortcut icon" sizes="57x57" href="twitch.png" >
+
+	<!-- local ccs-->
+	<link rel="stylesheet" href="twitchScratch.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	<!-- mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<title>Twitch</title>
+
+	  <!-- google analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69817751-2', 'auto');
+  ga('send', 'pageview');
+  </script>
+
+</head><body>
+
+<article>
+  <div class="share">
+    <div class="fa fa-share-alt"></div>
+    <div class="social">
+      <div class="fa fa-twitter"></div>
+      <div class="fa fa-facebook"></div>
+      <div class="fa fa-google-plus"></div>
+      <div class="fa fa-close"></div>
+    </div>
+  </div>
+  </article>
+
+
+
+	<input type="text" id="textBox" onkeydown="if (event.keyCode == 13) { addChannels(); return false; }" placeholder="Add by username...">
+	<input type="submit" onclick="addChannels();" >
+	<div class="menu">
+		<button class="selector active" id="all" >All</button>
+		<button class="selector" id="online">Online</button>
+		<button class="selector" id="offline">Offline</button>
+	</div>
+ 
+
+	<div id="display" align="center"></div>
+
+
+
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+<script src='twitchScratch.js'></script>
+
+</body>
+</html>
+

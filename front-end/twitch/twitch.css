@@ -1,0 +1,251 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+body {
+  background: url("http://pre02.deviantart.net/c123/th/pre/f/2014/277/3/6/deemo_by_rmck2-d81n2e6.jpg");
+  background-size: 100%, auto;
+  background-attachment: fixed;
+  /*http://i1167.photobucket.com/albums/q633/mattkuo/website-backgrounds/escheresque_ste_zps4eq0cibc.png*/
+  font-family: Raleway, Helvetica, Roboto, Arial, sans-serif;
+}
+
+.alert-box.alert {
+  position: absolute;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  padding: 0.5rem;
+}
+.alert-box.alert.ng-hide-add {
+  -moz-animation: slideOutUp 1s;
+  -webkit-animation: slideOutUp 1s;
+  animation: slideOutUp 1s;
+}
+.alert-box.alert.ng-hide-remove {
+  -moz-animation: slideInDown 1s;
+  -webkit-animation: slideInDown 1s;
+  animation: slideInDown 1s;
+}
+
+#wrap {
+  width: 300px;
+  margin: 0 auto 40px;
+  position: relative;
+  top: 40px;
+  background: transparent;
+  -moz-box-shadow: 0px 0px 5px #333333;
+  -webkit-box-shadow: 0px 0px 5px #333333;
+  box-shadow: 0px 0px 5px #333333;
+}
+
+#streamList .search {
+  position: relative;
+}
+#streamList .search > i.fa-search {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-left: none;
+  border-right: none;
+  z-index: 1;
+}
+#streamList .search > input {
+  float: left;
+  margin: 0;
+  padding-left: 2rem;
+  width: 80%;
+}
+#streamList .search a.add-streamer {
+  float: left;
+  width: 20%;
+  text-align: center;
+  background: #4aa3df;
+  color: white;
+}
+#streamList .search a.add-streamer:active:hover {
+
+  background: #ddd;
+}
+#streamList .search a.add-streamer:hover {
+
+  background: #93CCEA;
+}
+#streamList .search a.add-streamer > i {
+  line-height: 2.3125rem;
+
+}
+#streamList .search a.add-streamer.activated {
+  background-color: #2980b9; 
+}
+
+#streamList .search .bubble {
+  opacity: 0.9;
+  position: absolute;
+  right: 3px;
+  top: 30px;
+  background-color: #ecf0f1;
+  padding: 15px;
+  margin: 1rem 0 3rem;
+  z-index: 100;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+#streamList .search .bubble.ng-hide-add {
+  -moz-animation: fadeOutUp 0.5s;
+  -webkit-animation: fadeOutUp 0.5s;
+  animation: fadeOutUp 0.5s;
+}
+#streamList .search .bubble.ng-hide-remove {
+  -moz-animation: flipInX 0.8s;
+  -webkit-animation: flipInX 0.8s;
+  animation: flipInX 0.8s;
+}
+
+
+#streamList .search .bubble input[type="text"] {
+  float: left;
+  width: 80%;
+}
+#streamList .search .bubble input[type="submit"] {
+  float: left;
+  width: 20%;
+  line-height: 2.3125rem;
+  color: rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+#streamList .search .bubble:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  border-width: 0 15px 15px;
+  border-style: solid;
+  border-color: #ecf0f1 transparent;
+  top: -15px;
+  right: 15px;
+}
+#streamList .search .bubble input {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+#streamList ul {
+  margin: 0;
+}
+#streamList ul li {
+  position: relative;
+  list-style: none;
+  background: #fff;
+  padding: 16px;
+  border-bottom: 1px solid #ecf0f1;
+}
+#streamList ul li .delete-streamer {
+  position: absolute;
+  width: 20%;
+  height: 83px;
+  background: #c0392b;
+  top: 0;
+  right: 0;
+  text-align: center;
+  cursor: pointer;
+}
+#streamList ul li .delete-streamer i {
+  line-height: 83px;
+  color: white;
+}
+#streamList ul li .delete-streamer.ng-hide-add {
+  -moz-animation: fadeOut 0.3s;
+  -webkit-animation: fadeOut 0.3s;
+  animation: fadeOut 0.3s;
+}
+#streamList ul li .delete-streamer.ng-hide-remove {
+  -moz-animation: fadeIn 0.3s;
+  -webkit-animation: fadeIn 0.3s;
+  animation: fadeIn 0.3s;
+}
+
+#streamList ul li.ng-enter {
+  -moz-animation: zoomInLeft 0.5s;
+  -webkit-animation: zoomInLeft 0.5s;
+  animation: zoomInLeft 0.5s;
+}
+#streamList ul li.ng-leave {
+  -moz-animation: zoomOutRight 0.5s;
+  -webkit-animation: zoomOutRight 0.5s;
+  animation: zoomOutRight 0.5s;
+}
+#streamList ul li a {
+  display: table;
+  color: inherit;
+}
+#streamList ul li a > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+#streamList ul li a .logo {
+  position: relative;
+  display: inline-block;
+}
+#streamList ul li a .logo img {
+  width: 50px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+#streamList ul li a .logo .status-icon {
+  opacity: 0.9;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #c0392b;
+  right: 0;
+  bottom: 0;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+#streamList ul li a .logo .status-icon.online {
+  background-color: #27ae60;
+}
+#streamList ul li a .info {
+  display: inline-block;
+  width: 196px;
+  margin-left: 16px;
+}
+#streamList ul li a .info .status {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 11px;
+  color: #4aa3df;
+}
+
+.tabs dd {
+  width: 33.33333%;
+}
+.tabs dd:nth-child(2) a {
+  color: #27ae60;
+}
+.tabs dd:nth-child(3) a {
+  color: #c0392b;
+}
+.tabs dd.active a {
+  -moz-box-shadow: 0 5px 0 0 #4aa3df inset;
+  -webkit-box-shadow: 0 5px 0 0 #4aa3df inset;
+  box-shadow: 0 5px 0 0 #4aa3df inset;
+}
+.tabs dd a {
+  text-align: center;
+  font-size: 1.575rem;
+}
+
+.viewers {
+  display:inline;
+  font-size: 15px;
+  color: red;
+  font-family:courier;
+}

@@ -1,0 +1,433 @@
+/**/
+JSON_CALLBACK({
+    "_total": 46,
+    "_links": {
+        "self": "https://api.twitch.tv/kraken/search/streams?limit=10&offset=0&query=programming",
+        "next": "https://api.twitch.tv/kraken/search/streams?limit=10&offset=10&query=programming"
+    },
+    "streams": [{
+        "_id": 19546799696,
+        "game": "Board Games",
+        "viewers": 320,
+        "video_height": 1080,
+        "average_fps": 29.9796747967,
+        "delay": 0,
+        "created_at": "2016-02-13T07:00:16Z",
+        "is_playlist": false,
+        "preview": {
+            "small": "https://static-cdn.jtvnw.net/previews-ttv/live_user_geekandsundry-80x45.jpg",
+            "medium": "https://static-cdn.jtvnw.net/previews-ttv/live_user_geekandsundry-320x180.jpg",
+            "large": "https://static-cdn.jtvnw.net/previews-ttv/live_user_geekandsundry-640x360.jpg",
+            "template": "https://static-cdn.jtvnw.net/previews-ttv/live_user_geekandsundry-{width}x{height}.jpg"
+        },
+        "_links": {
+            "self": "https://api.twitch.tv/kraken/streams/geekandsundry"
+        },
+        "channel": {
+            "mature": false,
+            "status": "FRIDAY PROGRAMMING END OF THE WEEK REBROADCAST!  #GnSLive",
+            "broadcaster_language": "en",
+            "display_name": "GeekandSundry",
+            "game": "Board Games",
+            "language": "en",
+            "_id": 36619809,
+            "name": "geekandsundry",
+            "created_at": "2012-10-03T18:22:15Z",
+            "updated_at": "2016-02-13T23:47:58Z",
+            "delay": null,
+            "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/geekandsundry-profile_image-2d33767f0e54e51c-300x300.jpeg",
+            "banner": null,
+            "video_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/geekandsundry-channel_offline_image-f758518f93208dcf-1920x1080.png",
+            "background": null,
+            "profile_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/geekandsundry-profile_banner-c22b3a4db61a50ca-480.jpeg",
+            "profile_banner_background_color": "#f2eaf2",
+            "partner": true,
+            "url": "http://www.twitch.tv/geekandsundry",
+            "views": 6151510,
+            "followers": 152715,
+            "_links": {
+                "self": "https://api.twitch.tv/kraken/channels/geekandsundry",
+                "follows": "https://api.twitch.tv/kraken/channels/geekandsundry/follows",
+                "commercial": "https://api.twitch.tv/kraken/channels/geekandsundry/commercial",
+                "stream_key": "https://api.twitch.tv/kraken/channels/geekandsundry/stream_key",
+                "chat": "https://api.twitch.tv/kraken/chat/geekandsundry",
+                "features": "https://api.twitch.tv/kraken/channels/geekandsundry/features",
+                "subscriptions": "https://api.twitch.tv/kraken/channels/geekandsundry/subscriptions",
+                "editors": "https://api.twitch.tv/kraken/channels/geekandsundry/editors",
+                "teams": "https://api.twitch.tv/kraken/channels/geekandsundry/teams",
+                "videos": "https://api.twitch.tv/kraken/channels/geekandsundry/videos"
+            }
+        }
+    }, {
+        "_id": 19554448816,
+        "game": "Creative",
+        "viewers": 283,
+        "video_height": 720,
+        "average_fps": 61.4250614251,
+        "delay": 0,
+        "created_at": "2016-02-13T16:13:47Z",
+        "is_playlist": false,
+        "preview": {
+            "small": "https://static-cdn.jtvnw.net/previews-ttv/live_user_dasmehdi-80x45.jpg",
+            "medium": "https://static-cdn.jtvnw.net/previews-ttv/live_user_dasmehdi-320x180.jpg",
+            "large": "https://static-cdn.jtvnw.net/previews-ttv/live_user_dasmehdi-640x360.jpg",
+            "template": "https://static-cdn.jtvnw.net/previews-ttv/live_user_dasmehdi-{width}x{height}.jpg"
+        },
+        "_links": {
+            "self": "https://api.twitch.tv/kraken/streams/dasmehdi"
+        },
+        "channel": {
+            "mature": true,
+            "status": "#programming #DevStream | !schedule | !slotmachineinfo",
+            "broadcaster_language": "en",
+            "display_name": "dasMEHDI",
+            "game": "Creative",
+            "language": "en",
+            "_id": 31557869,
+            "name": "dasmehdi",
+            "created_at": "2012-06-23T02:19:17Z",
+            "updated_at": "2016-02-13T19:08:56Z",
+            "delay": null,
+            "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/dasmehdi-profile_image-d3f2c6f1dce8e78a-300x300.jpeg",
+            "banner": null,
+            "video_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/dasmehdi-channel_offline_image-59e94797ed72670b-1920x1080.png",
+            "background": null,
+            "profile_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/dasmehdi-profile_banner-52f795d57340cfa9-480.png",
+            "profile_banner_background_color": null,
+            "partner": true,
+            "url": "http://www.twitch.tv/dasmehdi",
+            "views": 792354,
+            "followers": 41021,
+            "_links": {
+                "self": "https://api.twitch.tv/kraken/channels/dasmehdi",
+                "follows": "https://api.twitch.tv/kraken/channels/dasmehdi/follows",
+                "commercial": "https://api.twitch.tv/kraken/channels/dasmehdi/commercial",
+                "stream_key": "https://api.twitch.tv/kraken/channels/dasmehdi/stream_key",
+                "chat": "https://api.twitch.tv/kraken/chat/dasmehdi",
+                "features": "https://api.twitch.tv/kraken/channels/dasmehdi/features",
+                "subscriptions": "https://api.twitch.tv/kraken/channels/dasmehdi/subscriptions",
+                "editors": "https://api.twitch.tv/kraken/channels/dasmehdi/editors",
+                "teams": "https://api.twitch.tv/kraken/channels/dasmehdi/teams",
+                "videos": "https://api.twitch.tv/kraken/channels/dasmehdi/videos"
+            }
+        }
+    }, {
+        "_id": 19561834480,
+        "game": "Creative",
+        "viewers": 11,
+        "video_height": 720,
+        "average_fps": 30,
+        "delay": 0,
+        "created_at": "2016-02-13T21:29:12Z",
+        "is_playlist": false,
+        "preview": {
+            "small": "https://static-cdn.jtvnw.net/previews-ttv/live_user_peoplepoweredgames-80x45.jpg",
+            "medium": "https://static-cdn.jtvnw.net/previews-ttv/live_user_peoplepoweredgames-320x180.jpg",
+            "large": "https://static-cdn.jtvnw.net/previews-ttv/live_user_peoplepoweredgames-640x360.jpg",
+            "template": "https://static-cdn.jtvnw.net/previews-ttv/live_user_peoplepoweredgames-{width}x{height}.jpg"
+        },
+        "_links": {
+            "self": "https://api.twitch.tv/kraken/streams/peoplepoweredgames"
+        },
+        "channel": {
+            "mature": false,
+            "status": "Portal Walker RPG #gamedev #programming",
+            "broadcaster_language": "en",
+            "display_name": "PeoplePoweredGames",
+            "game": "Creative",
+            "language": "en",
+            "_id": 63083590,
+            "name": "peoplepoweredgames",
+            "created_at": "2014-05-24T16:48:13Z",
+            "updated_at": "2016-02-12T19:19:49Z",
+            "delay": null,
+            "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/peoplepoweredgames-profile_image-e105dc1b5458f2df-300x300.png",
+            "banner": null,
+            "video_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/peoplepoweredgames-channel_offline_image-8a1606981d07c6e6-1920x1080.png",
+            "background": null,
+            "profile_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/peoplepoweredgames-profile_banner-7d04a381214f26a6-480.png",
+            "profile_banner_background_color": null,
+            "partner": false,
+            "url": "http://www.twitch.tv/peoplepoweredgames",
+            "views": 8608,
+            "followers": 527,
+            "_links": {
+                "self": "https://api.twitch.tv/kraken/channels/peoplepoweredgames",
+                "follows": "https://api.twitch.tv/kraken/channels/peoplepoweredgames/follows",
+                "commercial": "https://api.twitch.tv/kraken/channels/peoplepoweredgames/commercial",
+                "stream_key": "https://api.twitch.tv/kraken/channels/peoplepoweredgames/stream_key",
+                "chat": "https://api.twitch.tv/kraken/chat/peoplepoweredgames",
+                "features": "https://api.twitch.tv/kraken/channels/peoplepoweredgames/features",
+                "subscriptions": "https://api.twitch.tv/kraken/channels/peoplepoweredgames/subscriptions",
+                "editors": "https://api.twitch.tv/kraken/channels/peoplepoweredgames/editors",
+                "teams": "https://api.twitch.tv/kraken/channels/peoplepoweredgames/teams",
+                "videos": "https://api.twitch.tv/kraken/channels/peoplepoweredgames/videos"
+            }
+        }
+    }, {
+        "_id": 19562913680,
+        "game": "Creative",
+        "viewers": 9,
+        "video_height": 1080,
+        "average_fps": 31.875,
+        "delay": 0,
+        "created_at": "2016-02-13T22:17:09Z",
+        "is_playlist": false,
+        "preview": {
+            "small": "https://static-cdn.jtvnw.net/previews-ttv/live_user_distortednet-80x45.jpg",
+            "medium": "https://static-cdn.jtvnw.net/previews-ttv/live_user_distortednet-320x180.jpg",
+            "large": "https://static-cdn.jtvnw.net/previews-ttv/live_user_distortednet-640x360.jpg",
+            "template": "https://static-cdn.jtvnw.net/previews-ttv/live_user_distortednet-{width}x{height}.jpg"
+        },
+        "_links": {
+            "self": "https://api.twitch.tv/kraken/streams/distortednet"
+        },
+        "channel": {
+            "mature": true,
+            "status": "DN | #NodeJS #webdev #programming and stuffs.",
+            "broadcaster_language": "en",
+            "display_name": "Distortednet",
+            "game": "Creative",
+            "language": "en",
+            "_id": 41257196,
+            "name": "distortednet",
+            "created_at": "2013-03-12T10:46:10Z",
+            "updated_at": "2016-02-13T02:12:37Z",
+            "delay": null,
+            "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/distortednet-profile_image-b7b0bc51279b165b-300x300.png",
+            "banner": null,
+            "video_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/distortednet-channel_offline_image-170e418e4bbe30c7-1920x1080.png",
+            "background": null,
+            "profile_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/distortednet-profile_banner-131201c8b0ec0484-480.png",
+            "profile_banner_background_color": "#1b2849",
+            "partner": false,
+            "url": "http://www.twitch.tv/distortednet",
+            "views": 20270,
+            "followers": 985,
+            "_links": {
+                "self": "https://api.twitch.tv/kraken/channels/distortednet",
+                "follows": "https://api.twitch.tv/kraken/channels/distortednet/follows",
+                "commercial": "https://api.twitch.tv/kraken/channels/distortednet/commercial",
+                "stream_key": "https://api.twitch.tv/kraken/channels/distortednet/stream_key",
+                "chat": "https://api.twitch.tv/kraken/chat/distortednet",
+                "features": "https://api.twitch.tv/kraken/channels/distortednet/features",
+                "subscriptions": "https://api.twitch.tv/kraken/channels/distortednet/subscriptions",
+                "editors": "https://api.twitch.tv/kraken/channels/distortednet/editors",
+                "teams": "https://api.twitch.tv/kraken/channels/distortednet/teams",
+                "videos": "https://api.twitch.tv/kraken/channels/distortednet/videos"
+            }
+        }
+    }, {
+        "_id": 19565942624,
+        "game": "Programming",
+        "viewers": 3,
+        "video_height": 720,
+        "average_fps": 30.7933194154,
+        "delay": 0,
+        "created_at": "2016-02-14T00:49:30Z",
+        "is_playlist": false,
+        "preview": {
+            "small": "https://static-cdn.jtvnw.net/previews-ttv/live_user_nulltf-80x45.jpg",
+            "medium": "https://static-cdn.jtvnw.net/previews-ttv/live_user_nulltf-320x180.jpg",
+            "large": "https://static-cdn.jtvnw.net/previews-ttv/live_user_nulltf-640x360.jpg",
+            "template": "https://static-cdn.jtvnw.net/previews-ttv/live_user_nulltf-{width}x{height}.jpg"
+        },
+        "_links": {
+            "self": "https://api.twitch.tv/kraken/streams/nulltf"
+        },
+        "channel": {
+            "mature": null,
+            "status": "fixing my shitty code",
+            "broadcaster_language": "zh",
+            "display_name": "nullTF",
+            "game": "Programming",
+            "language": "en",
+            "_id": 51588696,
+            "name": "nulltf",
+            "created_at": "2013-11-15T22:46:22Z",
+            "updated_at": "2016-02-13T23:51:50Z",
+            "delay": null,
+            "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/nulltf-profile_image-f097a0e973b49024-300x300.jpeg",
+            "banner": null,
+            "video_banner": null,
+            "background": null,
+            "profile_banner": null,
+            "profile_banner_background_color": null,
+            "partner": false,
+            "url": "http://www.twitch.tv/nulltf",
+            "views": 1323,
+            "followers": 69,
+            "_links": {
+                "self": "https://api.twitch.tv/kraken/channels/nulltf",
+                "follows": "https://api.twitch.tv/kraken/channels/nulltf/follows",
+                "commercial": "https://api.twitch.tv/kraken/channels/nulltf/commercial",
+                "stream_key": "https://api.twitch.tv/kraken/channels/nulltf/stream_key",
+                "chat": "https://api.twitch.tv/kraken/chat/nulltf",
+                "features": "https://api.twitch.tv/kraken/channels/nulltf/features",
+                "subscriptions": "https://api.twitch.tv/kraken/channels/nulltf/subscriptions",
+                "editors": "https://api.twitch.tv/kraken/channels/nulltf/editors",
+                "teams": "https://api.twitch.tv/kraken/channels/nulltf/teams",
+                "videos": "https://api.twitch.tv/kraken/channels/nulltf/videos"
+            }
+        }
+    }, {
+        "_id": 19566336864,
+        "game": "Creative",
+        "viewers": 1,
+        "video_height": 720,
+        "average_fps": 60,
+        "delay": 0,
+        "created_at": "2016-02-14T01:11:06Z",
+        "is_playlist": false,
+        "preview": {
+            "small": "https://static-cdn.jtvnw.net/previews-ttv/live_user_dotsarecoolp-80x45.jpg",
+            "medium": "https://static-cdn.jtvnw.net/previews-ttv/live_user_dotsarecoolp-320x180.jpg",
+            "large": "https://static-cdn.jtvnw.net/previews-ttv/live_user_dotsarecoolp-640x360.jpg",
+            "template": "https://static-cdn.jtvnw.net/previews-ttv/live_user_dotsarecoolp-{width}x{height}.jpg"
+        },
+        "_links": {
+            "self": "https://api.twitch.tv/kraken/streams/dotsarecoolp"
+        },
+        "channel": {
+            "mature": true,
+            "status": "SNES Homebrew - Mario Party #65c816 #programming",
+            "broadcaster_language": "en",
+            "display_name": "DotsarecooLP",
+            "game": "Creative",
+            "language": "en",
+            "_id": 43005148,
+            "name": "dotsarecoolp",
+            "created_at": "2013-04-29T02:11:23Z",
+            "updated_at": "2016-02-14T00:53:44Z",
+            "delay": null,
+            "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/dotsarecoolp-profile_image-9445b1af1ce98c7e-300x300.png",
+            "banner": null,
+            "video_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/dotsarecoolp-channel_offline_image-d55be239666e0a3e-1920x1080.png",
+            "background": null,
+            "profile_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/dotsarecoolp-profile_banner-d5701c568a650a86-480.png",
+            "profile_banner_background_color": null,
+            "partner": false,
+            "url": "http://www.twitch.tv/dotsarecoolp",
+            "views": 34173,
+            "followers": 2929,
+            "_links": {
+                "self": "https://api.twitch.tv/kraken/channels/dotsarecoolp",
+                "follows": "https://api.twitch.tv/kraken/channels/dotsarecoolp/follows",
+                "commercial": "https://api.twitch.tv/kraken/channels/dotsarecoolp/commercial",
+                "stream_key": "https://api.twitch.tv/kraken/channels/dotsarecoolp/stream_key",
+                "chat": "https://api.twitch.tv/kraken/chat/dotsarecoolp",
+                "features": "https://api.twitch.tv/kraken/channels/dotsarecoolp/features",
+                "subscriptions": "https://api.twitch.tv/kraken/channels/dotsarecoolp/subscriptions",
+                "editors": "https://api.twitch.tv/kraken/channels/dotsarecoolp/editors",
+                "teams": "https://api.twitch.tv/kraken/channels/dotsarecoolp/teams",
+                "videos": "https://api.twitch.tv/kraken/channels/dotsarecoolp/videos"
+            }
+        }
+    }, {
+        "_id": 19564937616,
+        "game": "Programming",
+        "viewers": 1,
+        "video_height": 1080,
+        "average_fps": 11,
+        "delay": 0,
+        "created_at": "2016-02-13T23:55:31Z",
+        "is_playlist": false,
+        "preview": {
+            "small": "https://static-cdn.jtvnw.net/previews-ttv/live_user_camilosasuke-80x45.jpg",
+            "medium": "https://static-cdn.jtvnw.net/previews-ttv/live_user_camilosasuke-320x180.jpg",
+            "large": "https://static-cdn.jtvnw.net/previews-ttv/live_user_camilosasuke-640x360.jpg",
+            "template": "https://static-cdn.jtvnw.net/previews-ttv/live_user_camilosasuke-{width}x{height}.jpg"
+        },
+        "_links": {
+            "self": "https://api.twitch.tv/kraken/streams/camilosasuke"
+        },
+        "channel": {
+            "mature": false,
+            "status": "Ubuntu : waven Audio Player",
+            "broadcaster_language": "en",
+            "display_name": "camilosasuke",
+            "game": "Programming",
+            "language": "en",
+            "_id": 91075860,
+            "name": "camilosasuke",
+            "created_at": "2015-05-15T01:52:19Z",
+            "updated_at": "2016-02-13T23:24:51Z",
+            "delay": null,
+            "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/camilosasuke-profile_image-1fea940eeaf43908-300x300.png",
+            "banner": null,
+            "video_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/camilosasuke-channel_offline_image-d52fa5f27f9121cd-1920x1080.png",
+            "background": null,
+            "profile_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/camilosasuke-profile_banner-d728ca4ccc624c2e-480.png",
+            "profile_banner_background_color": null,
+            "partner": false,
+            "url": "http://www.twitch.tv/camilosasuke",
+            "views": 2436,
+            "followers": 50,
+            "_links": {
+                "self": "https://api.twitch.tv/kraken/channels/camilosasuke",
+                "follows": "https://api.twitch.tv/kraken/channels/camilosasuke/follows",
+                "commercial": "https://api.twitch.tv/kraken/channels/camilosasuke/commercial",
+                "stream_key": "https://api.twitch.tv/kraken/channels/camilosasuke/stream_key",
+                "chat": "https://api.twitch.tv/kraken/chat/camilosasuke",
+                "features": "https://api.twitch.tv/kraken/channels/camilosasuke/features",
+                "subscriptions": "https://api.twitch.tv/kraken/channels/camilosasuke/subscriptions",
+                "editors": "https://api.twitch.tv/kraken/channels/camilosasuke/editors",
+                "teams": "https://api.twitch.tv/kraken/channels/camilosasuke/teams",
+                "videos": "https://api.twitch.tv/kraken/channels/camilosasuke/videos"
+            }
+        }
+    }, {
+        "_id": 19564700896,
+        "game": "Creative",
+        "viewers": 1,
+        "video_height": 720,
+        "average_fps": 30,
+        "delay": 0,
+        "created_at": "2016-02-13T23:43:07Z",
+        "is_playlist": false,
+        "preview": {
+            "small": "https://static-cdn.jtvnw.net/previews-ttv/live_user_geothtv-80x45.jpg",
+            "medium": "https://static-cdn.jtvnw.net/previews-ttv/live_user_geothtv-320x180.jpg",
+            "large": "https://static-cdn.jtvnw.net/previews-ttv/live_user_geothtv-640x360.jpg",
+            "template": "https://static-cdn.jtvnw.net/previews-ttv/live_user_geothtv-{width}x{height}.jpg"
+        },
+        "_links": {
+            "self": "https://api.twitch.tv/kraken/streams/geothtv"
+        },
+        "channel": {
+            "mature": false,
+            "status": "Adding 2d Multiplayer #programming #gamedev",
+            "broadcaster_language": "en",
+            "display_name": "GeothTV",
+            "game": "Creative",
+            "language": "en",
+            "_id": 20629799,
+            "name": "geothtv",
+            "created_at": "2011-02-21T10:34:59Z",
+            "updated_at": "2016-02-14T00:45:51Z",
+            "delay": null,
+            "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/geothtv-profile_image-e330c748f87f6e76-300x300.jpeg",
+            "banner": null,
+            "video_banner": null,
+            "background": null,
+            "profile_banner": null,
+            "profile_banner_background_color": null,
+            "partner": false,
+            "url": "http://www.twitch.tv/geothtv",
+            "views": 553,
+            "followers": 5,
+            "_links": {
+                "self": "https://api.twitch.tv/kraken/channels/geothtv",
+                "follows": "https://api.twitch.tv/kraken/channels/geothtv/follows",
+                "commercial": "https://api.twitch.tv/kraken/channels/geothtv/commercial",
+                "stream_key": "https://api.twitch.tv/kraken/channels/geothtv/stream_key",
+                "chat": "https://api.twitch.tv/kraken/chat/geothtv",
+                "features": "https://api.twitch.tv/kraken/channels/geothtv/features",
+                "subscriptions": "https://api.twitch.tv/kraken/channels/geothtv/subscriptions",
+                "editors": "https://api.twitch.tv/kraken/channels/geothtv/editors",
+                "teams": "https://api.twitch.tv/kraken/channels/geothtv/teams",
+                "videos": "https://api.twitch.tv/kraken/channels/geothtv/videos"
+            }
+        }
+    }]
+})

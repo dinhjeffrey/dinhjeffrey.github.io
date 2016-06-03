@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+
+<html lang='en'>
+<head>
+	<!-- this allows emojis in comment -->
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<!-- this allows red url bar in mobile -->
+	<meta name="theme-color" content="red">
+	<!-- lobster font and fa fa fonts and css buttons-->
+	<link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+	<!-- icon -->
+
+	<link rel="shortcut icon" sizes="57x57" href="tomato.png" >
+
+	<!-- local ccs-->
+	<link rel="stylesheet" href="pomodoro.css">
+
+	<!-- mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<title>Pomodoro</title>
+
+	  <!-- google analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69817751-2', 'auto');
+  ga('send', 'pageview');
+  </script>
+
+</head>
+<body id="body">
+
+	<div class="container">
+
+		<div class="set-time">
+			
+			<p align="center" class="box">
+
+
+				<input id="mins-textfield" min="0" max="60" type='number'  placeholder="m" style="width: 60px"/><br>
+
+				<input id="secs-textfield" min='0' max='60' type="number" placeholder="s" style="width: 60px"/><br>
+
+				<input id="setButton" type="submit" value="SET" onclick="change()"/></div>
+
+				
+				
+				<div id="timer">
+					<!-- secs-left gets assigned to secsLeft in JS -->
+					<div class="clock"><span id="mins-left">25</span> : <span id="secs-left">00</span></div>
+		<!-- start is a variable that gets change to startButton in JS
+		startTimer() function in JS gets executed set to the "Start" button ON CLICK-->
+
+
+
+		<div id="outer">
+			<div class='inner'><button id="start" onclick="startTimer()"><i class="fa fa-play"></i></button></div>
+
+			<div class='inner'><button id="stop" onclick="stopTimer()"><i class="fa fa-stop"></i></button></div>
+
+			<div class='inner'><button id="reset" onclick="resetTimer()"><i class="fa fa-repeat"></i></button></div>
+
+		</div>
+
+		<div class="count-box">
+			<p>You have stayed focused for <span id='countMin'>0</span> minutes today.
+			</div>
+		</div>
+
+	</div>
+
+</div>
+<script src="pomodoro.js">
+</script>
+</body>
+</html>

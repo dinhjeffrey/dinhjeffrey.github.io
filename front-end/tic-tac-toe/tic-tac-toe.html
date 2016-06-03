@@ -1,0 +1,86 @@
+<!-- can add scoring system. reset. -->
+
+<!DOCTYPE HTML>
+<html lang='en'>
+<head>
+  <!-- this allows emojis in comment -->
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  <!--  this is the css, lobster font, fa fa font, website icon, mobile url bar color  -->
+  <link rel='stylesheet' href="tic-tac-toe.css" type="text/css" charset="utf-8">
+  <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  <link rel="shortcut icon" sizes="57x57" href="xo.png" >
+  <meta name="theme-color" content="black">
+
+  <!--  this makes the phone screens zoom way in -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <title>Tic Tac Toe</title>
+
+  <!-- google analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69817751-2', 'auto');
+  ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- Facebook-share -->
+
+<!-- end:Facebook-share -->
+
+<article>
+  <div class="share">
+    <div class="fa fa-share-alt"></div>
+    <div class="social">
+      <div class="fa fa-twitter"></div>
+      <div class="fa fa-facebook"></div>
+      <div class="fa fa-google-plus"></div>
+      <div class="fa fa-close"></div>
+    </div>
+  </div>
+
+<div id="bodyDiv" align="center"><!-- rgb(202, 60, 60) -->
+<button class="XorO pure-button"  onclick="playX();" id="buttonX">X</button>
+<button class="XorO pure-button"  onclick="playO();" id="buttonO">O</button>
+<br><br>
+<table class="tableXO">
+
+<tr>
+<td>
+<input class="btn pure-button" style="padding:20px 30px; background: rgb(223, 117, 20);" type="button" id="one" onclick="if (play ==='X') { one();}else{ one1(); }" value=" " />
+<input class="btn pure-button" style="padding:20px 30px; background: rgb(223, 117, 20);" type="button" id="two" onclick="if (play ==='X') { two();}else{ two1(); }" value=" " />
+<input class="btn pure-button" style="padding:20px 30px; background: rgb(223, 117, 20);" type="button" id="three" onclick="if (play ==='X') { three();}else{ three1(); }" value=" " />
+</td>
+</tr>
+
+<tr>
+<td>
+<input class="btn pure-button" style="padding:20px 30px; background: rgb(223, 117, 20);" type="button" id="four" onclick="if (play ==='X') { four();}else{ four1(); }" value=" " />
+<input class="btn pure-button" style="padding:20px 30px; background: rgb(223, 117, 20);" type="button" id="five" onclick="if (play ==='X') { five();}else{ five1(); }" value=" " />
+<input class="btn pure-button" style="padding:20px 30px; background: rgb(223, 117, 20);" type="button" id="six" onclick="if (play ==='X') { six();}else{ six1(); }" value=" " />
+</td>
+</tr>
+
+<tr>
+<td>
+<input class="btn pure-button" style="padding:20px 30px; background: rgb(223, 117, 20);" type="button" id="seven" onclick="if (play ==='X') { seven();}else{ seven1(); }" value=" " />
+<input class="btn pure-button" style="padding:20px 30px; background: rgb(223, 117, 20);" type="button" id="eight" onclick="if (play ==='X') { eight();}else{ eight1(); }" value=" " />
+<input class="btn pure-button" style="padding:20px 30px; background: rgb(223, 117, 20);" type="button" id="nine" onclick="if (play ==='X') { nine();}else{ nine1(); }" value=" " />
+</td>
+</tr>
+</table>
+</div>
+
+
+</article>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="tic-tac-toe.js"></script>
+</body></html>

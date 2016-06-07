@@ -1,4 +1,26 @@
 jQuery(document).ready(function($) {
+    /*
+    =========================================================================================
+    0. scrollNav 
+    =========================================================================================
+    */
+
+    function scrollNav() {
+        $('.right-menu-list a').click(function() {
+            //Animate
+            $('html, body').stop().animate({
+                scrollTop: $($(this).attr('href')).offset().top - 160
+            }, 1000);
+            return false;
+        });
+        $('.scrollTop a').scrollTop();
+    }
+    $('.hero_btn a').click(function() {
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 1000);
+        return false;
+    });
 
     'use strict';
     $(window).on('load', function() {

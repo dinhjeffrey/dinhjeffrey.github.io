@@ -711,6 +711,33 @@
             </div>
         </div>
     </footer>
+     <h2 class="page-header">Dashboard</h2>
+<p>Welcome to your dashboard</p>  
+
+<button id='submit' value='submit'>Post Data</button>
+<div id='info'>The Data</div>
+
+<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+<script>
+$('#submit').click(function(event) {
+    // event.preventDefault(); // prevents page from refreshing
+    $.ajax({
+        type: "POST",
+        url: 'http://cryptophoto.com/api/get/session',
+        data: { 
+            publickey: "06f980e1e4442b60676610f2dfb54e6c", 
+            uid : "1f4da2087b4cde81fccad9f6e9b56b03ab3c2536", 
+            time: "1472239794", 
+            signature: "d1c2924b4d52107b8535c18ed7fec43d1ef32cc8"
+        } ,
+        ip: "192.30.252.154",
+        success: function (data) {
+            $('#info').text(data)
+            console.log(data)
+        }
+    })
+})
+</script>
     <!-- =========================
              START FOOTER
         ============================== -->
